@@ -118,7 +118,7 @@ eleventyExcludeFromCollections: true
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Lectures &amp; events</span>
-      <h2>The Sanjaya Lall Lecture and panel events</h2>
+      <h2>University lectures and panel events</h2>
       <p>
         Each Professorship brings a public lecture and a panel discussion, organised by
         the Sanjaya Lall Memorial Fund, that regularly draw audiences in the hundreds.
@@ -147,7 +147,15 @@ eleventyExcludeFromCollections: true
             {% if e.venue %}
             <p class="evitem__line"><span class="evitem__label">Venue</span> {{ e.venue }}</p>
             {% endif %}
-            {% if e.link %}<a class="evitem__link" href="{{ e.link }}">{{ e.linkLabel or "More" }} &rarr;</a>{% endif %}
+            <div class="evitem__links">
+              {% if e.video %}
+              <a class="evitem__watch" href="{{ e.video }}">
+                <svg width="13" height="13" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 1.8v12.4L14 8z" fill="currentColor"/></svg>
+                {{ e.videoLabel or "Watch the recording" }}
+              </a>
+              {% endif %}
+              {% if e.link %}<a class="evitem__link" href="{{ e.link }}">{{ e.linkLabel or "More" }} &rarr;</a>{% endif %}
+            </div>
           </div>
           {% if e.poster %}
           <figure class="evposter">

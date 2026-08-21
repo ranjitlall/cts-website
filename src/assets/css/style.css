@@ -1160,3 +1160,26 @@ strong { font-weight: 600; color: var(--navy); }
 .holder__year { color: var(--gold-deep); }
 .holder:nth-child(3n+2) .holder__year { color: var(--coral-deep); }
 .holder:nth-child(3n+3) .holder__year { color: #5c4382; }
+
+
+/* --- Recording links in the events archive --------------------------------- */
+
+.evitem__links { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.25rem; margin-top: 0.7rem; }
+.evitem__watch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #fff;
+  background: var(--coral);
+  padding: 0.4rem 0.85rem;
+  border-radius: 100px;
+  text-decoration: none;
+}
+.evitem__watch:hover { background: #f2765f; color: #fff; }
+.evitem__watch svg { flex-shrink: 0; }
+.evitem__link { margin-top: 0; }
+
+.hero__art { width: 100%; max-width: 340px; margin-inline: auto; }
+@media (max-width: 859px) { .hero__art { display: none; } }
