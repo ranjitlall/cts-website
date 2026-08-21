@@ -777,14 +777,14 @@ strong { font-weight: 600; color: var(--navy); }
 
 .people-row {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(1.5rem, 2.5vw, 2.25rem);
-  max-width: 780px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(1.25rem, 2.2vw, 2rem);
+  max-width: 960px;
 }
 .people-row--secondary { margin-top: clamp(2rem, 4vw, 3rem); }
 
 @media (max-width: 1000px) {
-  .people-row { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 600px; }
+  .people-row { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 620px; }
 }
 @media (max-width: 620px) {
   .people-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
