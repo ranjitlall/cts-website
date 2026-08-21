@@ -11,7 +11,7 @@
 
 backend:
   name: github
-  repo: YOUR-GITHUB-USERNAME/YOUR-REPO-NAME
+  repo: ranjitlall/cts-website
   branch: main
   # Uncomment once your Cloudflare Worker authenticator is deployed:
   # base_url: https://sveltia-cms-auth.YOUR-SUBDOMAIN.workers.dev
