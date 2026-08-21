@@ -1,0 +1,98 @@
+[
+  {
+    "year": 2011,
+    "name": "Robert Wade",
+    "affiliation": "London School of Economics",
+    "initials": "RW",
+    "photo": "/assets/img/holders/robert-wade.jpg",
+    "credit": ""
+  },
+  {
+    "year": 2013,
+    "name": "Dani Rodrik",
+    "affiliation": "Harvard University",
+    "initials": "DR",
+    "photo": "/assets/img/holders/dani-rodrik.jpg",
+    "credit": ""
+  },
+  {
+    "year": 2014,
+    "name": "Paul Krugman",
+    "affiliation": "City University of New York",
+    "initials": "PK",
+    "photo": "/assets/img/holders/paul-krugman.jpg",
+    "credit": ""
+  },
+  {
+    "year": 2015,
+    "name": "Abhijit Banerjee",
+    "affiliation": "Massachusetts Institute of Technology",
+    "initials": "AB",
+    "photo": "/assets/img/holders/abhijit-banerjee.jpg",
+    "credit": ""
+  },
+  {
+    "year": 2016,
+    "name": "Avinash Dixit",
+    "affiliation": "Princeton University",
+    "initials": "AD",
+    "photo": "/assets/img/holders/avinash-dixit.jpg",
+    "credit": ""
+  },
+  {
+    "year": 2017,
+    "name": "Kenneth Rogoff",
+    "affiliation": "Harvard University",
+    "initials": "KR",
+    "photo": "/assets/img/holders/kenneth-rogoff.jpg",
+    "credit": ""
+  },
+  {
+    "year": 2018,
+    "name": "Esther Duflo",
+    "affiliation": "Massachusetts Institute of Technology",
+    "initials": "ED",
+    "photo": "/assets/img/holders/esther-duflo.jpg",
+    "credit": ""
+  },
+  {
+    "year": 2022,
+    "name": "Joseph Stiglitz",
+    "affiliation": "Columbia University",
+    "initials": "JS",
+    "photo": "/assets/img/holders/joseph-stiglitz.jpg",
+    "credit": ""
+  },
+  {
+    "year": 2023,
+    "name": "Raj Chetty",
+    "affiliation": "Harvard University",
+    "initials": "RC",
+    "photo": "/assets/img/holders/raj-chetty.jpg",
+    "credit": ""
+  },
+  {
+    "year": 2024,
+    "name": "Daron Acemoglu",
+    "affiliation": "Massachusetts Institute of Technology",
+    "initials": "DA",
+    "photo": "/assets/img/holders/daron-acemoglu.jpg",
+    "credit": ""
+  },
+  {
+    "year": 2025,
+    "name": "Rohini Pande",
+    "affiliation": "Yale University",
+    "initials": "RP",
+    "photo": "/assets/img/holders/rohini-pande.jpg",
+    "credit": ""
+  },
+  {
+    "year": 2026,
+    "name": "Sendhil Mullainathan",
+    "affiliation": "Massachusetts Institute of Technology",
+    "initials": "SM",
+    "photo": "/assets/img/holders/sendhil-mullainathan.jpg",
+    "credit": ""
+  }
+]

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 250">
+    <polygon points="122.0,18.0 227.7,201.0 16.3,201.0" fill="none" stroke="#ffffff" stroke-width="6" stroke-linejoin="round"/>
+    <g stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="46" y1="118" x2="78" y2="66"/>
+      <line x1="46" y1="118" x2="80" y2="170"/>
+      <line x1="78" y1="66" x2="122" y2="114"/>
+      <line x1="80" y1="170" x2="122" y2="114"/>
+      <line x1="78" y1="66" x2="118" y2="48"/>
+      <line x1="122" y1="114" x2="130" y2="190"/>
+      <line x1="80" y1="170" x2="130" y2="190"/>
+      <line x1="122" y1="114" x2="168" y2="78"/>
+      <line x1="122" y1="114" x2="172" y2="154"/>
+      <line x1="118" y1="48" x2="168" y2="78"/>
+      <line x1="130" y1="190" x2="172" y2="154"/>
+      <line x1="168" y1="78" x2="206" y2="118"/>
+      <line x1="172" y1="154" x2="206" y2="118"/>
+      <circle cx="46" cy="118" r="17" fill="#F5B72E"/>
+      <circle cx="78" cy="66" r="14" fill="#E8523C"/>
+      <circle cx="80" cy="170" r="14" fill="#D14E86"/>
+      <circle cx="122" cy="114" r="12" fill="#7B5EA7"/>
+      <circle cx="130" cy="190" r="11" fill="#2F7FC4"/>
+      <circle cx="118" cy="48" r="11" fill="#F2853C"/>
+      <circle cx="168" cy="78" r="10" fill="#1E9C8A"/>
+      <circle cx="172" cy="154" r="10" fill="#63BF72"/>
+      <circle cx="206" cy="118" r="8" fill="#F5B72E"/>
+    </g>
+
+  <text x="272" y="128" font-family="'Source Serif 4', Georgia, serif" font-size="104"
+        font-weight="700" fill="#ffffff" letter-spacing="1">CTS</text>
+  <line x1="275" y1="152" x2="528" y2="152" stroke="#F5B72E" stroke-width="4"/>
+  <text x="275" y="191" font-family="'Source Serif 4', Georgia, serif" font-size="38"
+        font-weight="600" fill="#ffffff">Centre for Technology</text>
+  <text x="275" y="233" font-family="'Source Serif 4', Georgia, serif" font-size="38"
+        font-weight="600" fill="#ffffff">and Society</text>
+</svg>

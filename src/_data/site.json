@@ -1,0 +1,19 @@
+{
+  "name": "Centre for Technology and Society",
+  "shortName": "CTS",
+  "url": "https://ranjitlall.github.io/cts-website",
+  "tagline": "Evidence-first research on how emerging technologies are reshaping work, power, and society.",
+  "description": "The Centre for Technology and Society at the University of Oxford produces rigorous, evidence-first research on the social impact of emerging technologies \u2014 the labour market implications of AI and the dispersion of power in society.",
+  "parent": "Oxford Martin AI Governance Initiative",
+  "department": "Oxford Martin AI Governance Initiative",
+  "university": "University of Oxford",
+  "email": "ranjit.lall@politics.ox.ac.uk",
+  "address": {
+    "line1": "Oxford Martin School, 34 Broad Street",
+    "line2": "Oxford OX1 3BD",
+    "line3": "United Kingdom"
+  },
+  "locale": "en_GB",
+  "parentShort": "Oxford Martin AIGI",
+  "parentUrl": "https://aigi.ox.ac.uk/"
+}

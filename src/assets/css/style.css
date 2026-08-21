@@ -1,0 +1,1162 @@
+/* ==========================================================================
+   Centre for Technology and Society — stylesheet
+   Palette   navy #002147 (Oxford) · verdigris #2E7D6E · ink #14202B
+   Type      Source Serif 4 (display) · IBM Plex Sans (body) · IBM Plex Mono (labels)
+   ========================================================================== */
+
+:root {
+  --navy: #002147;          /* Oxford navy: strip, headings, text on white */
+  --base: #002147;          /* Site base: hero, dark sections, callout
+                               (Steel Navy alternative: #16406B / #0D2C4E) */
+  --base-deep: #001730;     /* Site base, deeper: footer, gradient end */
+  --navy-deep: #001730;
+  --navy-soft: #12365c;
+  --verdigris: #2e7d6e;
+  --verdigris-light: #4a9e8d;
+  --ink: #14202b;
+  --slate: #4a5b6b;
+  --mist: #f4f6f8;
+  --mist-deep: #e8edf2;
+  --rule: #d8e0e8;
+  --paper: #ffffff;
+
+  --display: "Source Serif 4", Georgia, serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --measure: 68ch;
+  --wrap: 1180px;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --section-y: clamp(4rem, 9vw, 7.5rem);
+}
+
+/* --- Reset ---------------------------------------------------------------- */
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--body);
+  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--verdigris); text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+a:hover { color: var(--navy); }
+
+:focus-visible {
+  outline: 3px solid var(--verdigris);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--navy);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  z-index: 999;
+}
+.skip-link:focus { left: 0; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* --- Typography ----------------------------------------------------------- */
+
+h1, h2, h3, h4 {
+  font-family: var(--display);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  color: var(--navy);
+  margin: 0 0 0.6em;
+  text-wrap: balance;
+}
+
+h1 { font-size: clamp(2.25rem, 1.4rem + 3.6vw, 4rem); }
+h2 { font-size: clamp(1.75rem, 1.2rem + 2.2vw, 2.75rem); }
+h3 { font-size: clamp(1.125rem, 1rem + 0.6vw, 1.4rem); }
+
+p { margin: 0 0 1.1em; max-width: var(--measure); }
+p:last-child { margin-bottom: 0; }
+
+strong { font-weight: 600; color: var(--navy); }
+
+/* Eyebrow labels — the mono face signals the computational side of the work */
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--verdigris);
+  margin: 0 0 1rem;
+  display: block;
+}
+.eyebrow--light { color: var(--verdigris-light); }
+
+/* --- Layout --------------------------------------------------------------- */
+
+.wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section { padding-block: var(--section-y); }
+.section--mist { background: var(--mist); }
+.section--navy { background: var(--base); color: #cfdae6; }
+.section--navy h2,
+.section--navy h3 { color: #fff; }
+.section--navy strong { color: #fff; }
+.section--navy a { color: var(--verdigris-light); }
+
+.section-head { max-width: 46ch; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+.section-head p { color: var(--slate); font-size: 1.0625rem; }
+.section--navy .section-head p { color: #adc0d4; }
+
+.grid { display: grid; gap: clamp(1.5rem, 3vw, 2.5rem); }
+.grid--2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); }
+.grid--3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); }
+.grid--4 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); }
+
+/* --- Header --------------------------------------------------------------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--rule);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  min-height: 4.5rem;
+  justify-content: space-between;
+}
+
+.brand { display: flex; align-items: center; gap: 1rem; text-decoration: none; }
+.brand svg { height: 40px; width: auto; }
+.brand__divider { width: 1px; height: 32px; background: var(--rule); }
+
+.nav { display: flex; align-items: center; gap: 1.55rem; }
+.nav a {
+  font-family: var(--display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: -0.008em;
+  color: var(--navy);
+  text-decoration: none;
+  padding-block: 0.35rem;
+  position: relative;
+}
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 100%; bottom: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--coral));
+  transition: right 0.25s ease;
+}
+.nav a:hover::after { right: 0; }
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 0.5rem 0.7rem;
+  cursor: pointer;
+  color: var(--navy);
+}
+
+@media (max-width: 900px) {
+  .nav {
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    background: #fff;
+    border-bottom: 1px solid var(--rule);
+    padding: 0.5rem var(--gutter) 1.25rem;
+  }
+  .nav[hidden] { display: none; }
+  .nav a { width: 100%; padding-block: 0.7rem; border-bottom: 1px solid var(--mist-deep); }
+  .nav-toggle { display: block; }
+}
+
+/* --- Hero ----------------------------------------------------------------- */
+
+.hero {
+  background: linear-gradient(160deg, var(--base) 0%, var(--base-deep) 100%);
+  color: #cfdae6;
+  padding-block: clamp(3.5rem, 8vw, 6.5rem);
+  overflow: hidden;
+}
+
+.hero__inner {
+  display: grid;
+  gap: clamp(2.5rem, 5vw, 4rem);
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+@media (min-width: 1000px) {
+  .hero__inner { grid-template-columns: 1.05fr 0.95fr; }
+}
+
+.hero__kicker {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--verdigris-light);
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.hero h1 { color: #fff; margin-bottom: 1.25rem; }
+.hero h1 .thin { display: block; font-weight: 300; font-style: italic; color: #9fc4ba; }
+
+.hero__lede {
+  font-size: clamp(1.0625rem, 1rem + 0.4vw, 1.25rem);
+  color: #b9cade;
+  max-width: 46ch;
+  margin-bottom: 2rem;
+}
+
+.hero__actions { display: flex; flex-wrap: wrap; gap: 0.875rem; }
+
+/* --- Buttons -------------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--body);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 3px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+.btn--primary { background: var(--verdigris); color: #fff; }
+.btn--primary:hover { background: var(--verdigris-light); color: #fff; }
+.btn--ghost { border-color: rgba(255, 255, 255, 0.35); color: #fff; }
+.btn--ghost:hover { border-color: #fff; background: rgba(255, 255, 255, 0.08); color: #fff; }
+.btn--outline { border-color: var(--navy); color: var(--navy); }
+.btn--outline:hover { background: var(--navy); color: #fff; }
+
+/* --- Cards ---------------------------------------------------------------- */
+
+.card {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.card p { color: var(--slate); font-size: 0.96rem; }
+.card__meta {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--verdigris);
+  margin-bottom: 0.75rem;
+}
+.card__foot { margin-top: auto; padding-top: 1.25rem; }
+
+/* Numbered theme cards — the two primary research questions */
+.theme {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--verdigris);
+  border-radius: 4px;
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+}
+.theme__q {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: var(--verdigris);
+  margin-bottom: 1rem;
+  display: block;
+}
+.theme h3 { font-size: clamp(1.25rem, 1.05rem + 0.8vw, 1.6rem); margin-bottom: 0.75rem; }
+.theme p { color: var(--slate); }
+.theme__questions {
+  margin: 1.5rem 0 0;
+  padding: 1.25rem 0 0;
+  border-top: 1px solid var(--rule);
+  list-style: none;
+  display: grid;
+  gap: 0.7rem;
+}
+.theme__questions li {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1.02rem;
+  color: var(--navy);
+  padding-left: 1.1rem;
+  position: relative;
+  line-height: 1.45;
+}
+.theme__questions li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0.62em;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--verdigris);
+}
+
+/* Tag row for the wider concerns / methods */
+.tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
+.tag {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--rule);
+  border-radius: 100px;
+  color: var(--slate);
+  background: #fff;
+}
+.section--navy .tag { border-color: rgba(255,255,255,0.22); color: #b9cade; background: transparent; }
+
+/* --- Activities (numbered, because they describe a remit not a sequence) --- */
+
+.activity { border-top: 1px solid var(--rule); padding-top: 1.5rem; }
+.section--navy .activity { border-top-color: rgba(255, 255, 255, 0.18); }
+.activity h3 { margin-bottom: 0.5rem; }
+.activity p { font-size: 0.96rem; color: var(--slate); }
+.section--navy .activity p { color: #adc0d4; }
+
+/* --- People --------------------------------------------------------------- */
+
+.person { text-align: left; }
+.person__photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 4px;
+  background: var(--mist-deep);
+  margin-bottom: 1rem;
+}
+.person__name { font-family: var(--display); font-size: 1.15rem; font-weight: 600; color: var(--navy); margin: 0 0 0.25rem; }
+.person__name a { color: inherit; text-decoration: none; }
+.person__name a:hover { color: var(--verdigris); }
+.person__role { font-size: 0.875rem; color: var(--slate); margin: 0; line-height: 1.45; }
+
+/* --- Post lists (news & events) ------------------------------------------- */
+
+.post-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.post-item {
+  display: grid;
+  gap: 0.35rem 2rem;
+  padding-block: 1.75rem;
+  border-top: 1px solid var(--rule);
+  align-items: baseline;
+}
+.post-item:last-child { border-bottom: 1px solid var(--rule); }
+@media (min-width: 760px) {
+  .post-item { grid-template-columns: 11rem 1fr; }
+}
+.post-item__date {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--verdigris);
+  text-transform: uppercase;
+}
+.post-item__title { font-family: var(--display); font-size: 1.2rem; font-weight: 600; color: var(--navy); margin: 0 0 0.4rem; }
+.post-item__title a { color: inherit; text-decoration: none; }
+.post-item__title a:hover { color: var(--verdigris); text-decoration: underline; }
+.post-item__excerpt { color: var(--slate); font-size: 0.96rem; margin: 0; }
+.post-item__where {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  color: var(--slate);
+  margin-top: 0.5rem;
+}
+
+/* Single post */
+.post-header { border-bottom: 1px solid var(--rule); padding-bottom: 2rem; margin-bottom: 2.5rem; }
+.post-body { max-width: var(--measure); }
+.post-body h2 { font-size: 1.5rem; margin-top: 2rem; }
+.post-body h3 { margin-top: 1.75rem; }
+.post-body ul, .post-body ol { max-width: var(--measure); padding-left: 1.25rem; }
+.post-body li { margin-bottom: 0.5rem; }
+.post-body img { border-radius: 4px; margin-block: 2rem; }
+.post-body blockquote {
+  margin: 2rem 0;
+  padding-left: 1.5rem;
+  border-left: 3px solid var(--verdigris);
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--navy);
+}
+
+.back-link {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.empty-state {
+  border: 1px dashed var(--rule);
+  border-radius: 4px;
+  padding: 2.5rem;
+  text-align: center;
+  color: var(--slate);
+}
+
+/* --- Support / pull quote ------------------------------------------------- */
+
+.pullquote {
+  font-family: var(--display);
+  font-size: clamp(1.15rem, 1rem + 0.9vw, 1.5rem);
+  font-style: italic;
+  line-height: 1.45;
+  color: #fff;
+  border-left: 3px solid var(--verdigris-light);
+  padding-left: clamp(1.25rem, 3vw, 2rem);
+  margin: 0 0 2rem;
+  max-width: 40ch;
+}
+
+.checklist { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+.checklist li { padding-left: 1.75rem; position: relative; color: #adc0d4; }
+.checklist li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0.55em;
+  width: 8px; height: 8px;
+  border: 1.5px solid var(--verdigris-light);
+  border-radius: 50%;
+}
+
+/* --- Contact -------------------------------------------------------------- */
+
+.contact-card { border-top: 2px solid var(--navy); padding-top: 1.25rem; }
+.contact-card__name { font-family: var(--display); font-size: 1.15rem; font-weight: 600; color: var(--navy); margin: 0 0 0.2rem; }
+.contact-card__role { font-size: 0.875rem; color: var(--slate); margin: 0 0 0.75rem; }
+.contact-card a { font-size: 0.9rem; word-break: break-word; }
+
+/* --- Footer --------------------------------------------------------------- */
+
+.site-footer {
+  background: var(--base-deep);
+  color: #93a8bd;
+  padding-block: clamp(3rem, 6vw, 4.5rem) 2rem;
+  font-size: 0.9rem;
+}
+.site-footer__grid {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+.site-footer h4 {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 0 1rem;
+}
+.site-footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.6rem; }
+.site-footer a { color: #93a8bd; text-decoration: none; }
+.site-footer a:hover { color: #fff; text-decoration: underline; }
+.site-footer address { font-style: normal; line-height: 1.7; }
+.site-footer__base {
+  padding-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  justify-content: space-between;
+  font-size: 0.82rem;
+}
+.site-footer__logo { height: 34px; width: auto; margin-bottom: 1.25rem; }
+
+/* --- Reveal on scroll (respects reduced motion via the block above) -------- */
+
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
+
+/* ==========================================================================
+   Additions: brand lockups, parent affiliation bar, professorship roll
+   ========================================================================== */
+
+/* --- Header brand group: Oxford crest + CTS lockup ------------------------ */
+
+.brand-group { display: flex; align-items: center; gap: 1rem; min-width: 0; }
+.brand-oxford img { height: 40px; width: 40px; border-radius: 3px; }
+.brand { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; min-width: 0; }
+.brand__mark { height: 38px; width: auto; flex-shrink: 0; }
+.brand__text strong {
+  display: block;
+  font-family: var(--display);
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--navy);
+  letter-spacing: -0.012em;
+  line-height: 1.1;
+}
+.brand__text em {
+  display: block;
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 0.58rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--verdigris);
+  margin-top: 0.22rem;
+}
+
+@media (max-width: 520px) {
+  .brand__text strong { font-size: 0.95rem; }
+  .brand-oxford img { height: 34px; width: 34px; }
+  .brand__mark { height: 32px; }
+}
+
+/* --- Compact hero for interior pages -------------------------------------- */
+
+.hero--compact { padding-block: clamp(3rem, 6vw, 4.5rem); }
+.hero--compact h1 { font-size: clamp(2rem, 1.4rem + 2.6vw, 3.2rem); }
+.hero--compact .hero__lede { margin-bottom: 0; }
+
+/* --- Parent affiliation bar ----------------------------------------------- */
+
+.parent-bar { background: var(--mist); border-top: 1px solid var(--rule); padding-block: 2rem; }
+.parent-bar__inner { display: flex; align-items: center; justify-content: center; gap: 1.25rem; flex-wrap: wrap; }
+.parent-bar__label {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+.parent-bar__logo img { height: 56px; width: auto; border-radius: 4px; }
+
+/* --- Footer brand lockup -------------------------------------------------- */
+
+.footer-brand { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; }
+.footer-brand__mark { height: 40px; width: auto; }
+.footer-brand__text strong {
+  display: block;
+  font-family: var(--display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.15;
+}
+.footer-brand__text em {
+  display: block;
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 0.56rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--verdigris-light);
+  margin-top: 0.25rem;
+}
+
+/* --- Roll of previous holders --------------------------------------------- */
+
+.roll { list-style: none; margin: 0; padding: 0; counter-reset: none; }
+.roll li {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  gap: 0.15rem 1.5rem;
+  padding-block: 1rem;
+  border-top: 1px solid var(--rule);
+  align-items: baseline;
+}
+.roll li:last-child { border-bottom: 1px solid var(--rule); }
+@media (min-width: 700px) {
+  .roll li { grid-template-columns: 5rem 16rem 1fr; }
+}
+.roll__year {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--verdigris);
+  letter-spacing: 0.04em;
+}
+.roll__name {
+  font-family: var(--display);
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+.roll__aff { font-size: 0.88rem; color: var(--slate); }
+
+/* --- Professorship callout on the homepage -------------------------------- */
+
+.callout {
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 3rem);
+  align-items: center;
+  background: var(--base);
+  border-radius: 6px;
+  padding: clamp(2rem, 4vw, 3.25rem);
+  color: #b9cade;
+}
+@media (min-width: 860px) { .callout { grid-template-columns: 1.35fr 1fr; } }
+.callout h3 { color: #fff; font-size: clamp(1.35rem, 1.1rem + 1vw, 1.9rem); margin-bottom: 0.75rem; }
+.callout p { color: #adc0d4; }
+.callout__names {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1.02rem;
+  color: #9fc4ba;
+  line-height: 1.6;
+  border-left: 2px solid var(--verdigris-light);
+  padding-left: 1.25rem;
+}
+
+
+/* --- People grid: smaller portraits ---------------------------------------
+   Photos capped rather than filling the column, so the grid stays calm and
+   a six-person team doesn't read as six large faces. */
+
+.grid--people {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 9.5rem), 1fr));
+  gap: clamp(1.5rem, 2.5vw, 2.25rem);
+}
+.grid--people .person__photo {
+  max-width: 150px;
+  margin-bottom: 0.85rem;
+}
+.grid--people .person__name { font-size: 1rem; }
+.grid--people .person__role { font-size: 0.8rem; line-height: 1.4; }
+
+/* --- Portrait figure on the Professorship page ----------------------------- */
+
+.portrait {
+  margin: 0 0 2rem;
+  max-width: 285px;
+}
+.portrait img {
+  border-radius: 4px;
+  width: 100%;
+  filter: saturate(0.92);
+}
+.portrait figcaption {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--slate);
+  margin-top: 0.75rem;
+  line-height: 1.5;
+}
+
+/* --- Two-line people cards ------------------------------------------------ */
+
+.person__position {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--verdigris);
+  margin: 0 0 0.25rem;
+}
+.grid--people .person__position { font-size: 0.64rem; }
+
+/* --- Professorship callout aside ------------------------------------------ */
+
+.callout__aside { display: grid; gap: 1.5rem; }
+.portrait--inset { max-width: 260px; margin: 0; }
+.portrait--inset figcaption { color: #9fc4ba; }
+.section--navy .portrait figcaption,
+.callout .portrait figcaption { color: #9fc4ba; }
+
+/* --- Roll of holders as a portrait grid ----------------------------------- */
+
+.holders {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 8.5rem), 1fr));
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+}
+.holder__photo {
+  width: 100%;
+  max-width: 132px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+  background: var(--mist-deep);
+}
+.holder__photo--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(150deg, var(--base) 0%, #1d4a66 100%);
+}
+.holder__photo--placeholder span {
+  font-family: var(--display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.02em;
+}
+.holder__year {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: var(--verdigris);
+  margin: 0 0 0.2rem;
+}
+.holder__name {
+  font-family: var(--display);
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 0 0 0.15rem;
+  line-height: 1.2;
+}
+.holder__aff { font-size: 0.76rem; color: var(--slate); margin: 0; line-height: 1.4; }
+.holder__credit {
+  font-family: var(--mono);
+  font-size: 0.56rem;
+  color: #97a6b4;
+  margin: 0.4rem 0 0;
+  line-height: 1.4;
+}
+
+/* --- People in two explicit rows -------------------------------------------
+   Row one is the Centre's standing membership; row two is visiting. Both use
+   the same four-up rhythm so the second row aligns under the first rather
+   than stretching to fill the width. */
+
+.people-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(1.5rem, 2.5vw, 2.25rem);
+  max-width: 780px;
+}
+.people-row--secondary { margin-top: clamp(2rem, 4vw, 3rem); }
+
+@media (max-width: 1000px) {
+  .people-row { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 600px; }
+}
+@media (max-width: 620px) {
+  .people-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 380px) {
+  .people-row { grid-template-columns: 1fr; }
+}
+
+.people-row .person__photo { max-width: 150px; margin-bottom: 0.85rem; }
+.people-row .person__name { font-size: 1rem; }
+.people-row .person__position { font-size: 0.64rem; }
+.people-row .person__role { font-size: 0.8rem; line-height: 1.4; }
+
+.person__photo--placeholder {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  max-width: 150px;
+  border-radius: 4px;
+  background: linear-gradient(150deg, var(--mist-deep) 0%, #dfe6ed 100%);
+}
+
+/* --- Split hero for the Professorship page --------------------------------- */
+
+.hero__split { display: grid; gap: clamp(2rem, 4vw, 3.5rem); align-items: center; }
+@media (min-width: 860px) { .hero__split { grid-template-columns: 1.5fr 1fr; } }
+
+.portrait--hero { max-width: 300px; margin: 0; }
+.portrait--hero img { border-radius: 4px; }
+.portrait--hero figcaption { color: #9fc4ba; }
+
+/* ==========================================================================
+   COLOUR EXPANSION
+   A warm-to-cool accent family layered over the navy base. Gold and coral
+   carry emphasis in running text; teal and violet handle structure.
+   ========================================================================== */
+
+:root {
+  --gold: #f0b429;          /* on navy only */
+  --gold-deep: #9a6410;     /* on white — meets contrast for body text */
+  --coral: #e8604c;
+  --coral-deep: #b8391f;
+  --violet: #7b5ea7;
+  --cyan: #3aa9d6;
+  --green: #5fbf7f;
+}
+
+/* --- Oxford strip above the header ---------------------------------------- */
+
+.oxford-strip {
+  background: #002147;      /* fixed: the University's banner stays Oxford navy */
+  color: #b9cade;
+  font-size: 0.78rem;
+}
+.oxford-strip__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 2.6rem;
+  flex-wrap: wrap;
+}
+.oxford-strip__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+.oxford-strip__brand img { height: 22px; width: 22px; border-radius: 2px; }
+.oxford-strip__parent {
+  color: var(--gold);
+  text-decoration: none;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.oxford-strip__parent:hover { color: #fff; }
+@media (max-width: 620px) { .oxford-strip__parent { display: none; } }
+
+/* --- Header lockup --------------------------------------------------------- */
+
+.brand__lockup { height: 54px; width: auto; }
+@media (max-width: 900px) { .brand__lockup { height: 46px; } }
+@media (max-width: 420px) { .brand__lockup { height: 40px; } }
+
+.footer-lockup { height: 62px; width: auto; margin-bottom: 1.25rem; }
+
+/* --- Accent colour in running text ---------------------------------------- */
+
+.section strong,
+.hero strong { color: var(--gold-deep); }
+.section--navy strong,
+.hero strong,
+.callout strong { color: var(--gold); }
+
+.hl { color: var(--gold-deep); font-weight: 600; }
+.hl--coral { color: var(--coral-deep); font-weight: 600; }
+.section--navy .hl,
+.hero .hl { color: var(--gold); }
+.section--navy .hl--coral,
+.hero .hl--coral { color: #ff9d8a; }
+
+/* Eyebrow labels rotate through the accent family per section */
+#about .eyebrow { color: var(--gold-deep); }
+#research .eyebrow { color: var(--coral-deep); }
+#activities .eyebrow { color: var(--gold); }
+#people .eyebrow { color: var(--violet); }
+#professorship .eyebrow { color: var(--gold); }
+#support .eyebrow { color: var(--gold); }
+#contact .eyebrow { color: var(--cyan); }
+
+/* Theme cards take different accent rules so the two questions read apart */
+.theme { border-top-width: 4px; }
+.theme:nth-of-type(1) { border-top-color: var(--gold); }
+.theme:nth-of-type(1) .theme__q { color: var(--gold-deep); }
+.theme:nth-of-type(1) .theme__questions li::before { background: var(--gold); }
+.theme:nth-of-type(2) { border-top-color: var(--coral); }
+.theme:nth-of-type(2) .theme__q { color: var(--coral-deep); }
+.theme:nth-of-type(2) .theme__questions li::before { background: var(--coral); }
+
+/* Tag pills pick up a rotating tint */
+.tags .tag:nth-child(4n+1) { border-color: #f2d6a2; color: var(--gold-deep); }
+.tags .tag:nth-child(4n+2) { border-color: #f4c3ba; color: var(--coral-deep); }
+.tags .tag:nth-child(4n+3) { border-color: #cfc2e2; color: #5c4382; }
+.tags .tag:nth-child(4n+4) { border-color: #b9dcea; color: #1f6a8c; }
+
+/* Activity headings alternate */
+.activity:nth-child(1) { border-top-color: var(--gold); }
+.activity:nth-child(2) { border-top-color: var(--coral); }
+.activity:nth-child(3) { border-top-color: var(--cyan); }
+.section--navy .activity { border-top-width: 3px; }
+
+.btn--primary { background: var(--coral); }
+.btn--primary:hover { background: #f2765f; }
+.pullquote { border-left-color: var(--gold); }
+.checklist li::before { border-color: var(--gold); }
+.hero h1 .thin { color: var(--gold); }
+.hero__kicker { color: var(--gold); }
+
+/* --- Circular portraits throughout ---------------------------------------- */
+
+.person__photo,
+.person__photo--placeholder,
+.holder__photo,
+.holder__photo--placeholder { border-radius: 50%; }
+
+.person__photo { border: 3px solid var(--mist-deep); }
+.holder__photo { border: 3px solid var(--mist-deep); }
+
+/* --- Larger, clearer holder cards ----------------------------------------- */
+
+.holders { grid-template-columns: repeat(auto-fill, minmax(min(100%, 10.5rem), 1fr)); }
+.holder__photo { max-width: 168px; margin-bottom: 0.9rem; }
+.holder__year { font-size: 0.74rem; }
+.holder__name { font-size: 1.1rem; }
+.holder__aff { font-size: 0.84rem; }
+
+/* --- Professorship page: balance the two columns --------------------------
+   The portrait floats beside the text rather than stacking above it, so the
+   biography column no longer runs far longer than the one next to it. */
+
+@media (min-width: 900px) {
+  .portrait--float {
+    float: left;
+    width: 190px;
+    max-width: 190px;
+    margin: 0.35rem 1.5rem 0.9rem 0;
+  }
+}
+.portrait--float figcaption { margin-top: 0.6rem; }
+
+/* --- Working paper series -------------------------------------------------- */
+
+.wp-teaser {
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--violet);
+  border-radius: 4px;
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+}
+@media (min-width: 860px) { .wp-teaser { grid-template-columns: 1fr 1.15fr; align-items: center; } }
+.wp-teaser .eyebrow { color: var(--violet); }
+.wp-teaser h3 { font-size: clamp(1.2rem, 1.05rem + 0.7vw, 1.5rem); margin-bottom: 0.6rem; }
+.wp-teaser p { color: var(--slate); font-size: 0.96rem; }
+.wp-teaser__latest {
+  background: var(--mist);
+  border-radius: 4px;
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
+}
+.wp-teaser__num {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--violet);
+  display: block;
+  margin-bottom: 0.6rem;
+}
+.wp-teaser__title {
+  font-family: var(--display);
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--navy) !important;
+  line-height: 1.3;
+  margin-bottom: 0.4rem;
+}
+.wp-teaser__authors { font-size: 0.85rem; margin: 0; }
+
+.papers { list-style: none; margin: 0; padding: 0; }
+.paper {
+  display: grid;
+  gap: 0.5rem 2.5rem;
+  padding-block: clamp(2rem, 4vw, 2.75rem);
+  border-top: 1px solid var(--rule);
+}
+.paper:last-of-type { border-bottom: 1px solid var(--rule); }
+@media (min-width: 820px) { .paper { grid-template-columns: 10rem 1fr; } }
+.paper__meta { display: flex; flex-direction: column; gap: 0.3rem; }
+.paper__number {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: var(--violet);
+  font-weight: 500;
+}
+.paper__meta time { font-family: var(--mono); font-size: 0.72rem; color: var(--slate); }
+.paper__title {
+  font-family: var(--display);
+  font-size: clamp(1.2rem, 1.05rem + 0.8vw, 1.55rem);
+  color: var(--navy);
+  margin: 0 0 0.5rem;
+  line-height: 1.25;
+}
+.paper__authors { font-size: 0.92rem; color: var(--navy); font-weight: 500; margin-bottom: 0.9rem; }
+.paper__abstract { color: var(--slate); font-size: 0.95rem; }
+.tags--sm .tag { font-size: 0.68rem; padding: 0.3rem 0.65rem; }
+.paper__links { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
+
+.note {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: var(--mist);
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+.note p { color: var(--slate); max-width: none; }
+
+/* --- Professorship events archive ------------------------------------------ */
+
+.evyear { border-top: 1px solid var(--rule); padding-block: clamp(1.75rem, 3.5vw, 2.75rem); }
+.evyear:last-of-type { border-bottom: 1px solid var(--rule); }
+.evyear__head { display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+.evyear__year { font-family: var(--display); font-size: 1.8rem; font-weight: 700; color: var(--navy); }
+.evyear__holder {
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+}
+.evyear__role { font-size: 0.84rem; color: var(--slate); margin: 0.2rem 0 1.5rem; }
+
+.evlist { list-style: none; margin: 0; padding: 0; display: grid; gap: 2rem; }
+.evitem { display: grid; gap: 1.25rem; align-items: start; }
+@media (min-width: 820px) {
+  .evitem--poster { grid-template-columns: 1fr 190px; gap: 2.5rem; }
+}
+.evitem__meta {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--coral-deep);
+}
+.evitem__title {
+  font-family: var(--display);
+  font-size: clamp(1.1rem, 1rem + 0.5vw, 1.3rem);
+  font-weight: 600;
+  color: var(--navy);
+  margin: 0.3rem 0 0.5rem;
+  line-height: 1.3;
+}
+.evitem__detail { font-size: 0.94rem; color: var(--ink); margin: 0 0 0.85rem; }
+.evitem__line {
+  font-size: 0.86rem;
+  color: var(--slate);
+  margin: 0 0 0.45rem;
+  line-height: 1.55;
+}
+.evitem__label {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--violet);
+  margin-right: 0.4rem;
+}
+.evitem__link { font-size: 0.85rem; font-weight: 500; display: inline-block; margin-top: 0.4rem; }
+.evposter img {
+  border-radius: 4px;
+  border: 1px solid var(--rule);
+  box-shadow: 0 2px 12px rgba(0, 33, 71, 0.10);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.evposter a:hover img { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0, 33, 71, 0.16); }
+.evnote { margin-top: 2rem; font-size: 0.88rem; color: var(--slate); }
+
+/* ==========================================================================
+   Professorship page: larger posters and a warmer, more colourful treatment
+   ========================================================================== */
+
+/* --- Posters at a size you can actually read ------------------------------- */
+
+@media (min-width: 820px) {
+  .evitem--poster { grid-template-columns: 1fr 250px; gap: 2.75rem; }
+}
+@media (min-width: 1100px) {
+  .evitem--poster { grid-template-columns: 1fr 280px; }
+}
+.evposter { margin: 0; }
+.evposter img { width: 100%; }
+
+/* --- Colour in the events archive ------------------------------------------ */
+
+.evyear:nth-of-type(4n+1) .evyear__holder { color: var(--gold-deep); }
+.evyear:nth-of-type(4n+2) .evyear__holder { color: var(--coral-deep); }
+.evyear:nth-of-type(4n+3) .evyear__holder { color: #5c4382; }
+.evyear:nth-of-type(4n+4) .evyear__holder { color: #1f6a8c; }
+
+.evyear__year {
+  background: linear-gradient(120deg, var(--navy) 0%, #1d5a63 60%, var(--verdigris) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Type badge rather than plain text */
+.evitem__meta {
+  display: inline-block;
+  padding: 0.28rem 0.7rem;
+  border-radius: 100px;
+  background: #fdf3e0;
+  color: var(--gold-deep);
+  border: 1px solid #f2ddb3;
+}
+.evitem--lecture .evitem__meta { background: #fdeeeb; color: var(--coral-deep); border-color: #f6cdc5; }
+.evitem--panel .evitem__meta { background: #eef3fb; color: #1f4f8c; border-color: #cddcf0; }
+
+.evitem__body {
+  border-left: 3px solid var(--rule);
+  padding-left: clamp(1rem, 2vw, 1.5rem);
+}
+.evitem--panel .evitem__body { border-left-color: var(--cyan); }
+.evitem--lecture .evitem__body { border-left-color: var(--coral); }
+.evitem--visit .evitem__body { border-left-color: var(--gold); }
+
+.evitem__label { color: var(--violet); }
+.evitem--lecture .evitem__label { color: var(--coral-deep); }
+
+/* --- Interior page section rhythm ------------------------------------------ */
+
+#lectures-and-events { background: linear-gradient(180deg, #ffffff 0%, var(--mist) 100%); }
+
+.hero--compact .hero__kicker { color: var(--gold); }
+
+/* Roll of holders: warmer accents */
+.holder__year { color: var(--gold-deep); }
+.holder:nth-child(3n+2) .holder__year { color: var(--coral-deep); }
+.holder:nth-child(3n+3) .holder__year { color: #5c4382; }

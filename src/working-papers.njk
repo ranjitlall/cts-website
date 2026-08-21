@@ -1,0 +1,60 @@
+---
+layout: layouts/base.njk
+title: Working Papers
+permalink: /working-papers/index.html
+description: The CTS Working Paper Series circulates new research on the social, economic, and political consequences of emerging technologies.
+eleventyExcludeFromCollections: true
+---
+
+<section class="hero hero--compact">
+  <div class="wrap">
+    <span class="hero__kicker">Centre for Technology and Society</span>
+    <h1 style="max-width:16ch;">Working Paper Series</h1>
+    <p class="hero__lede">
+      New research on the social, economic, and political consequences of emerging
+      technologies, circulated for discussion and comment ahead of publication.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    {% if papers.length %}
+    <ol class="papers">
+      {% for p in papers %}
+      <li class="paper">
+        <div class="paper__meta">
+          <span class="paper__number">{{ p.number }}</span>
+          <time datetime="{{ p.date | isoDate }}">{{ p.dateLabel }}</time>
+        </div>
+        <div class="paper__body">
+          <h2 class="paper__title">{{ p.title }}</h2>
+          <p class="paper__authors">{{ p.authors | join(" · ") }}</p>
+          {% if p.abstract %}<p class="paper__abstract">{{ p.abstract }}</p>{% endif %}
+          {% if p.keywords.length %}
+          <div class="tags tags--sm">
+            {% for k in p.keywords %}<span class="tag">{{ k }}</span>{% endfor %}
+          </div>
+          {% endif %}
+          <div class="paper__links">
+            {% if p.pdf %}<a class="btn btn--primary" href="{{ p.pdf | url }}">Download PDF &darr;</a>{% endif %}
+            {% if p.preprint %}<a class="btn btn--outline" href="{{ p.preprint }}">{{ p.preprintLabel or "Preprint" }} &rarr;</a>{% endif %}
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+    {% else %}
+    <div class="empty-state"><p>The first papers in the series will appear here shortly.</p></div>
+    {% endif %}
+
+    <div class="note">
+      <p>
+        <strong>Submissions.</strong> The series is open to work by CTS members, affiliates,
+        and visitors. Papers are circulated for discussion and comment and have not been
+        peer reviewed; views expressed are those of the authors. Enquiries to
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>.
+      </p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,99 @@
+# ---------------------------------------------------------------------------
+# Sveltia CMS configuration
+#
+# This file defines what collaborators see when they log in at /admin.
+# Each "collection" below becomes a section in the sidebar; each "field"
+# becomes a labelled box in the editing form.
+#
+# TO FINISH SETUP: replace YOUR-GITHUB-USERNAME/YOUR-REPO-NAME below, and
+# set base_url to your deployed authenticator Worker (see README, step 5).
+# ---------------------------------------------------------------------------
+
+backend:
+  name: github
+  repo: YOUR-GITHUB-USERNAME/YOUR-REPO-NAME
+  branch: main
+  # Uncomment once your Cloudflare Worker authenticator is deployed:
+  # base_url: https://sveltia-cms-auth.YOUR-SUBDOMAIN.workers.dev
+
+# Where uploaded images are stored, and how they're referenced in pages
+media_folder: src/assets/img/uploads
+public_folder: /assets/img/uploads
+
+# Editors see a live preview of unsaved work
+publish_mode: simple
+
+collections:
+  # NEWS AND EVENTS ARE PARKED FOR NOW.
+  # To switch them back on: uncomment the two collections below, restore the
+  # matching collections in eleventy.config.js, recreate src/news.njk and
+  # src/events.njk, and add the nav links back into _includes/layouts/base.njk.
+
+#   # ---------------------------------------------------------------- NEWS ---
+#   - name: news
+#     label: News
+#     label_singular: News item
+#     folder: src/content/news
+#     create: true
+#     slug: "{{year}}-{{month}}-{{slug}}"
+#     summary: "{{title}}"
+#     sortable_fields: [date, title]
+#     fields:
+#       - { name: title, label: Title, widget: string }
+#       - { name: date, label: Date, widget: datetime, format: "YYYY-MM-DD", date_format: "DD MMMM YYYY", time_format: false }
+#       - name: summary
+#         label: Short summary
+#         widget: text
+#         hint: One or two sentences. This is what appears on the news list and the homepage.
+#       - { name: image, label: Image (optional), widget: image, required: false }
+#       - { name: imageAlt, label: Image description, widget: string, required: false, hint: "Describe the image for screen readers. Leave blank if the image is decorative." }
+#       - { name: link, label: External link (optional), widget: string, required: false, hint: "e.g. a link to the published paper or article." }
+#       - { name: linkText, label: Link button text, widget: string, required: false, default: "Read more" }
+#       - { name: body, label: Full text, widget: markdown }
+
+#   # -------------------------------------------------------------- EVENTS ---
+#   - name: events
+#     label: Events
+#     label_singular: Event
+#     folder: src/content/events
+#     create: true
+#     slug: "{{year}}-{{month}}-{{slug}}"
+#     summary: "{{title}}"
+#     sortable_fields: [date, title]
+#     fields:
+#       - { name: title, label: Title, widget: string }
+#       - { name: date, label: Date, widget: datetime, format: "YYYY-MM-DD", date_format: "DD MMMM YYYY", time_format: false }
+#       - name: eventType
+#         label: Type
+#         widget: select
+#         options: [Lecture, Workshop, Seminar, Public forum, Conference]
+#         default: Lecture
+#       - { name: time, label: Time, widget: string, required: false, hint: "e.g. 17:00 – 18:30" }
+#       - { name: location, label: Location, widget: string, required: false }
+#       - { name: speaker, label: Speaker(s), widget: string, required: false }
+#       - name: summary
+#         label: Short summary
+#         widget: text
+#         hint: One or two sentences shown on the events list.
+#       - { name: registerLink, label: Registration link, widget: string, required: false }
+#       - { name: image, label: Image (optional), widget: image, required: false }
+#       - { name: imageAlt, label: Image description, widget: string, required: false }
+#       - { name: body, label: Full description, widget: markdown }
+
+  # -------------------------------------------------------------- PEOPLE ---
+  - name: people
+    label: People
+    label_singular: Person
+    folder: src/content/people
+    create: true
+    slug: "{{slug}}"
+    summary: "{{name}} — {{position}}"
+    sortable_fields: [order, name]
+    fields:
+      - { name: name, label: Name, widget: string }
+      - { name: position, label: CTS position, widget: string, required: false, hint: "e.g. Visiting Professor, Research Affiliate, Senior Advisor. Shown on the first line. Leave blank if none." }
+      - { name: affiliation, label: Official position, widget: string, hint: "e.g. Professor of Economics, University of Oxford. Shown on the second line." }
+      - { name: photo, label: Photo, widget: image, required: false, hint: "Square images work best." }
+      - { name: link, label: Profile page URL, widget: string, required: false }
+      - { name: order, label: Display order, widget: number, default: 10, value_type: int, hint: "Lower numbers appear first." }
+      - { name: body, label: Biography (optional), widget: markdown, required: false }
