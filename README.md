@@ -162,9 +162,8 @@ tools/
 - [ ] Confirm with AIGI how the Centre should be described and credited, and
       that using the AIGI logo in the footer is approved
 - [ ] Replace the AIGI logo JPEG with a vector version if AIGI can supply one
-- [ ] Write real privacy and accessibility statements
-- [ ] Create a `social-card.png` (1200×630) for link previews
-- [ ] Add `favicon.svg` to `src/assets/img/`
+- [ ] Have the privacy notice checked by the University Information Compliance
+      Team, and the accessibility statement independently audited
 
 ---
 
