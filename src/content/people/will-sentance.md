@@ -1,9 +1,9 @@
 ---
 group: visiting
 name: Will Sentance
-position: "Distinguished Professor"
+position: "Research Fellow"
 affiliation: "CEO, Standard Matter · Founder, Codesmith"
 link: ""
 photo: "/assets/img/people/will-sentance.jpg"
-order: 1
+order: 2
 ---

@@ -843,7 +843,7 @@ strong { font-weight: 600; color: var(--navy); }
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  min-height: 2.6rem;
+  min-height: 3.1rem;
   flex-wrap: wrap;
 }
 .oxford-strip__brand {
@@ -1296,4 +1296,29 @@ strong { font-weight: 600; color: var(--navy); }
   margin-left: 0.4rem;
   white-space: nowrap;
   font-weight: 500;
+}
+
+/* --- Partner marks in the Oxford strip -------------------------------------- */
+
+.oxford-strip__partners { display: flex; align-items: center; gap: 0.85rem; }
+.oxford-strip__partner { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
+.oxford-strip__rule { width: 1px; height: 22px; background: rgba(255, 255, 255, 0.25); }
+
+/* Both partner marks are navy-on-white artwork, so each sits in its own white
+   tile rather than being reversed — reversing an institution's logo without
+   their approved variant is not ours to do. */
+.oxford-strip__partner--tile img,
+.oxford-strip__partner--aigi img {
+  height: 34px;
+  width: 34px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 3px;
+  padding: 2px;
+}
+.oxford-strip__partner img { transition: opacity 0.18s ease; }
+.oxford-strip__partner:hover img { opacity: 0.82; }
+
+@media (max-width: 620px) {
+  .oxford-strip__partners { display: none; }
 }

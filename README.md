@@ -142,6 +142,15 @@ tools/
 
 ## Still to do before launch
 
+- [ ] Ask the Oxford Martin School and AIGI for approved reversed (white)
+      versions of their logos. Both marks are navy-on-white, so each currently
+      sits in a white tile on the navy strip; a reversed variant would sit
+      directly on the navy and look cleaner. Do not recolour their artwork
+      without their approved variant.
+- [ ] Replace src/assets/img/logo-aigi.jpeg with a vector or transparent-PNG
+      version if AIGI can supply one; the JPEG is on a white ground and has to
+      sit in a tile.
+
 - [ ] Verify the Sanjaya Lall events archive (src/_data/lallevents.json) — dates
       and details were compiled from the Department of Economics website, Oxford
       Podcasts, event posters, and Wikipedia. 2022 is omitted — sources conflict
