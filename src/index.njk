@@ -185,6 +185,39 @@ eleventyExcludeFromCollections: true
   </div>
 </section>
 
+<!-- ========================= NEWS & COMMENTARY ========================= -->
+<section class="section" id="outputs">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">News &amp; commentary</span>
+      <h2>News from the Centre</h2>
+      <p>
+        Announcements, appointments, events, and writing for policy and public
+        audiences from across the Centre and its affiliates.
+      </p>
+    </div>
+
+    {% if outputs.length %}
+    <ul class="outputs reveal">
+      {% for o in outputs %}
+      <li class="output">
+        <div class="output__meta">
+          <span class="output__type">{{ o.type }}</span>
+          <time datetime="{{ o.date | isoDate }}">{{ o.dateLabel }}</time>
+        </div>
+        <div class="output__body">
+          <h3 class="output__title">{{ o.title }}</h3>
+          <p class="output__byline">{{ o.authors | join(" and ") }} &middot; <em>{{ o.outlet }}</em></p>
+          <p class="output__summary">{{ o.summary }}</p>
+          <a class="output__link" href="{{ o.url }}">{{ o.linkLabel or "Read the piece" }} &rarr;</a>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</section>
+
 <!-- ========================= PEOPLE ========================= -->
 <section class="section" id="people">
   <div class="wrap">
