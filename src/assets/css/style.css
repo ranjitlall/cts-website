@@ -777,9 +777,9 @@ strong { font-weight: 600; color: var(--navy); }
 
 .people-row {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: clamp(1.25rem, 2.2vw, 2rem);
-  max-width: 960px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(1.5rem, 2.5vw, 2.25rem);
+  max-width: 790px;
 }
 .people-row--secondary { margin-top: clamp(2rem, 4vw, 3rem); }
 
@@ -1282,3 +1282,18 @@ strong { font-weight: 600; color: var(--navy); }
 
 /* Anchors must clear both sticky bars */
 #the-chair, #holders, #lectures-and-events, #hosting { scroll-margin-top: 8.5rem; }
+
+.output__role {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  border: 1px solid #f0dcae;
+  background: #fdf6e7;
+  padding: 0.14rem 0.5rem;
+  border-radius: 100px;
+  margin-left: 0.4rem;
+  white-space: nowrap;
+  font-weight: 500;
+}

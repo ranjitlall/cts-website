@@ -2,12 +2,18 @@
   {
     "type": "Commentary",
     "title": "The Chain of Peace: Do Supply Chain Chokepoints Deter War?",
-    "authors": ["Phuong Pham", "Melle Scholten"],
+    "authors": [
+      "Phuong Pham",
+      "Melle Scholten"
+    ],
     "outlet": "War on the Rocks",
     "date": "2026-06-11",
     "dateLabel": "11 June 2026",
-    "summary": "Advanced semiconductors cannot be made by any one country. Design software is American, lithography machines Dutch, optics German, photoresists Japanese, fabrication Taiwanese — and remove any node and the chain breaks. Pham and Scholten argue that this structure, not Taiwan's foundries alone, is what deters conflict in the Taiwan Strait, because a chip fab seized by force produces nothing without the network behind it. The uncomfortable implication is that export controls and reshoring, each sensible in isolation, are steadily dismantling the interdependence that keeps the peace.",
+    "summary": "Advanced semiconductors cannot be made by any one country. Design software is American, lithography machines Dutch, optics German, photoresists Japanese, fabrication Taiwanese \u2014 and remove any node and the chain breaks. Pham and Scholten argue that this structure, not Taiwan's foundries alone, is what deters conflict in the Taiwan Strait, because a chip fab seized by force produces nothing without the network behind it. The uncomfortable implication is that export controls and reshoring, each sensible in isolation, are steadily dismantling the interdependence that keeps the peace.",
     "url": "https://warontherocks.com/the-chain-of-peace-do-supply-chain-chokepoints-deter-war/",
-    "linkLabel": "Read at War on the Rocks"
+    "linkLabel": "Read at War on the Rocks",
+    "authorNotes": {
+      "Phuong Pham": "CTS Doctoral Affiliate"
+    }
   }
 ]

@@ -207,7 +207,12 @@ eleventyExcludeFromCollections: true
         </div>
         <div class="output__body">
           <h3 class="output__title">{{ o.title }}</h3>
-          <p class="output__byline">{{ o.authors | join(" and ") }} &middot; <em>{{ o.outlet }}</em></p>
+          <p class="output__byline">
+            {%- for a in o.authors -%}
+              {{ a }}{% if o.authorNotes[a] %}<span class="output__role">{{ o.authorNotes[a] }}</span>{% endif %}
+              {%- if not loop.last %} and {% endif -%}
+            {%- endfor %} &middot; <em>{{ o.outlet }}</em>
+          </p>
           <p class="output__summary">{{ o.summary }}</p>
           <a class="output__link" href="{{ o.url }}">{{ o.linkLabel or "Read the piece" }} &rarr;</a>
         </div>
