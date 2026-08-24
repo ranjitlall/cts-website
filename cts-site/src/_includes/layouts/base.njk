@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% if title %}{{ title }} | {{ site.shortName }}{% else %}{{ site.name }}, {{ site.university }}{% endif %}</title>
+<meta name="description" content="{{ description or site.description }}">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<meta name="theme-color" content="#002147">
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.shortName }} | {{ site.university }}">
+<meta property="og:locale" content="{{ site.locale }}">
+<meta property="og:title" content="{% if title %}{{ title }} | {{ site.shortName }}{% else %}{{ site.name }}{% endif %}">
+<meta property="og:description" content="{{ description or site.description }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image" content="{{ site.url }}/assets/img/social-card.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="oxford-strip">
+  <div class="wrap oxford-strip__inner">
+    <a class="oxford-strip__brand" href="https://www.ox.ac.uk">
+      <img src="/assets/img/logo-oxford.png" alt="" width="120" height="120" aria-hidden="true">
+      <span>University of Oxford</span>
+    </a>
+    <a class="oxford-strip__parent" href="{{ site.parentUrl }}">Oxford Martin AI Governance Initiative</a>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="/" aria-label="{{ site.name }} — home">
+      <img class="brand__lockup" src="/assets/img/cts-lockup.svg" alt="{{ site.name }} (CTS)" width="1000" height="240">
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span class="visually-hidden">Menu</span>
+      <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true">
+        <path d="M0 1h20M0 7h20M0 13h20" stroke="currentColor" stroke-width="1.6"/>
+      </svg>
+    </button>
+
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <a href="/#about">About</a>
+      <a href="/#research">Research</a>
+      <a href="/#activities">Activities</a>
+      <a href="/#people">People</a>
+      <a href="/sanjaya-lall-professorship/">Visiting Professorship</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+{{ content | safe }}
+</main>
+
+<div class="parent-bar">
+  <div class="wrap parent-bar__inner">
+    <span class="parent-bar__label">A centre of the</span>
+    <a href="{{ site.parentUrl }}" class="parent-bar__logo">
+      <img src="/assets/img/logo-aigi.jpeg" alt="Oxford Martin AI Governance Initiative" width="200" height="200">
+    </a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <img class="footer-lockup" src="/assets/img/cts-lockup-white.svg" alt="{{ site.name }} (CTS)" width="1000" height="240">
+        <address>
+          {{ site.parent }}<br>
+          {{ site.address.line1 }}<br>
+          {{ site.address.line2 }}<br>
+          {{ site.address.line3 }}
+        </address>
+      </div>
+      <div>
+        <h4>Centre</h4>
+        <ul>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#research">Research</a></li>
+          <li><a href="/#activities">Activities</a></li>
+          <li><a href="/#people">People</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Engagement</h4>
+        <ul>
+          <li><a href="/working-papers/">Working Papers</a></li>
+          <li><a href="/sanjaya-lall-professorship/">Visiting Professorship</a></li>
+          <li><a href="/#support">Support the Centre</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Related</h4>
+        <ul>
+          <li><a href="https://aigi.ox.ac.uk/">Oxford Martin AIGI</a></li>
+          <li><a href="https://www.oxfordmartin.ox.ac.uk">Oxford Martin School</a></li>
+          <li><a href="https://www.ox.ac.uk">University of Oxford</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__base">
+      <span>&copy; {{ site.name }}, {{ site.university }}</span>
+      <span>
+        <a href="/privacy/">Privacy</a> &middot;
+        <a href="/accessibility/">Accessibility</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile navigation
+  (function () {
+    var toggle = document.querySelector('.nav-toggle');
+    var nav = document.getElementById('primary-nav');
+    if (!toggle || !nav) return;
+
+    var mq = window.matchMedia('(max-width: 900px)');
+    function sync() {
+      if (mq.matches) { nav.hidden = true; toggle.setAttribute('aria-expanded', 'false'); }
+      else { nav.hidden = false; }
+    }
+    sync();
+    mq.addEventListener('change', sync);
+
+    toggle.addEventListener('click', function () {
+      var open = nav.hidden;
+      nav.hidden = !open;
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+    nav.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A' && mq.matches) {
+        nav.hidden = true;
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+
+  // Gentle reveal on scroll
+  (function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var items = document.querySelectorAll('.reveal');
+    if (!items.length || !('IntersectionObserver' in window)) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    items.forEach(function (el) { io.observe(el); });
+  })();
+</script>
+
+</body>
+</html>

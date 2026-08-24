@@ -1,0 +1,20 @@
+---
+layout: layouts/base.njk
+---
+<article class="section">
+  <div class="wrap" style="max-width: 820px;">
+    <a class="back-link" href="/news/">&larr; All news</a>
+    <header class="post-header">
+      <span class="eyebrow">News &middot; <time datetime="{{ date | isoDate }}">{{ date | longDate }}</time></span>
+      <h1 style="font-size: clamp(1.9rem, 1.4rem + 2vw, 2.8rem);">{{ title }}</h1>
+      {% if summary %}<p style="font-size:1.1rem; color:var(--slate);">{{ summary }}</p>{% endif %}
+    </header>
+    {% if image %}<img src="{{ image }}" alt="{{ imageAlt or '' }}" style="border-radius:4px; margin-bottom:2.5rem;">{% endif %}
+    <div class="post-body">
+      {{ content | safe }}
+    </div>
+    {% if link %}
+    <p style="margin-top:2.5rem;"><a class="btn btn--outline" href="{{ link }}">{{ linkText or 'Read more' }} &rarr;</a></p>
+    {% endif %}
+  </div>
+</article>

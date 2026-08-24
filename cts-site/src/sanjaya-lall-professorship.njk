@@ -1,0 +1,202 @@
+---
+layout: layouts/base.njk
+title: The Sanjaya Lall Visiting Professorship
+permalink: /sanjaya-lall-professorship/index.html
+description: The Centre for Technology and Society hosts the Sanjaya Lall Visiting Professorship of Business and Development, one of the most prestigious visiting appointments in economics.
+eleventyExcludeFromCollections: true
+---
+
+<section class="hero hero--compact">
+  <div class="wrap hero__split">
+    <div>
+      <span class="hero__kicker">Hosted by the Centre for Technology and Society</span>
+      <h1 style="max-width:18ch;">The Sanjaya Lall Visiting Professorship</h1>
+      <p class="hero__lede">
+        One of the most prestigious visiting appointments in economics, held by Nobel
+        laureates and Clark Medallists, and awarded annually at Oxford since 2011.
+      </p>
+    </div>
+    <figure class="portrait portrait--hero">
+      <img src="/assets/img/sanjaya-lall.jpg" alt="Professor Sanjaya Lall" width="820" height="696">
+      <figcaption>Professor Sanjaya Lall (1940&ndash;2005)</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="grid grid--2">
+      <div class="reveal">
+        <span class="eyebrow">The appointment</span>
+        <h2 style="font-size:clamp(1.6rem,1.2rem+1.6vw,2.2rem);">A chair for scholars who change how a field thinks</h2>
+        <p>
+          The Sanjaya Lall Visiting Professorship of Business and Development was created
+          to honour the memory and academic legacy of Professor Sanjaya Lall (1940&ndash;2005),
+          and has run for <span class="hl">over a decade</span>. It is funded by the Sanjaya Lall Memorial Fund,
+          established in 2011, and administered by Oxford's Social Sciences Division.
+        </p>
+        <p>
+          Each year the University invites a world-leading academic in economics, business,
+          or development, broadly defined, to join the Oxford community for Trinity Term.
+          The appointment carries a <span class="hl">public lecture and a panel discussion</span> that regularly
+          draw audiences in the hundreds.
+        </p>
+        <p>
+          In the spirit of Sanjaya Lall, holders are expected to show an ability to <span class="hl">adapt
+          theory to novel research questions and methods</span>, alongside a flair for formulating
+          <span class="hl--coral">strategic policy responses</span> &mdash; a combination that maps closely onto the
+          Centre's own research agenda.
+        </p>
+      </div>
+
+      <div class="reveal">
+        <span class="eyebrow">Sanjaya Lall, 1940&ndash;2005</span>
+        <h2 style="font-size:clamp(1.6rem,1.2rem+1.6vw,2.2rem);">The economist behind the chair</h2>
+        <figure class="portrait portrait--float">
+          <img src="/assets/img/sanjaya-lall-2.jpg" alt="Professor Sanjaya Lall in a garden" width="597" height="900" loading="lazy">
+          <figcaption>Sanjaya Lall spent forty years at Oxford, latterly as Professor of Development Economics.</figcaption>
+        </figure>
+        <p>
+          Sanjaya Lall was one of the world's pre-eminent development economists. Over a
+          forty-year career at Oxford he conducted pioneering research on the impact of
+          <span class="hl">foreign direct investment</span>, the economics of multinational corporations, and the
+          emergence of <span class="hl">technological capability and industrial competitiveness</span> in the
+          developing world.
+        </p>
+        <p>
+          He was a founding editor of <em>Oxford Development Studies</em>, served as
+          Professor of Development Economics from 1999, and advised the World Bank, UNCTAD,
+          UNIDO, the OECD, and the European Commission. He argued, against the prevailing
+          view of his day, that <span class="hl--coral">technological capability is built deliberately</span> rather than
+          acquired automatically through open markets.
+        </p>
+        <p>
+          That argument &mdash; that the distribution of technological capability is a
+          matter of institutions and policy, not of nature &mdash; is the intellectual
+          thread connecting his work to the Centre's.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--mist">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Previous holders</span>
+      <h2>Those who have held the chair</h2>
+      <p>
+        The Professorship has brought some of the <span class="hl">most influential economists of the
+        past half-century</span> to Oxford.
+      </p>
+    </div>
+
+    <div class="holders reveal">
+      {% for h in holders %}
+      <article class="holder">
+        {% if h.photo %}
+        <img class="holder__photo" src="{{ h.photo }}" alt="Portrait of {{ h.name }}" width="300" height="300" loading="lazy">
+        {% else %}
+        <div class="holder__photo holder__photo--placeholder" aria-hidden="true"><span>{{ h.initials }}</span></div>
+        {% endif %}
+        <p class="holder__year">{{ h.year }}</p>
+        <p class="holder__name">{{ h.name }}</p>
+        <p class="holder__aff">{{ h.affiliation }}</p>
+        {% if h.credit %}<p class="holder__credit">{{ h.credit }}</p>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+
+    <p style="margin-top:2rem; font-size:0.9rem; color:var(--slate);">
+      <strong>Six holders</strong> have won the Nobel Memorial Prize in Economic Sciences or the John Bates
+      Clark Medal.
+    </p>
+  </div>
+</section>
+
+<section class="section" id="lectures-and-events">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Lectures &amp; events</span>
+      <h2>The Sanjaya Lall Lecture and panel events</h2>
+      <p>
+        Each Professorship brings a public lecture and a panel discussion, organised by
+        the Sanjaya Lall Memorial Fund, that regularly draw audiences in the hundreds.
+        <span class="hl">A selection from the archive</span>, most recent first.
+      </p>
+    </div>
+
+    {% for y in lallevents %}
+    <article class="evyear reveal">
+      <div class="evyear__head">
+        <span class="evyear__year">{{ y.year }}</span>
+        <span class="evyear__holder">{{ y.holder }}</span>
+      </div>
+      {% if y.holderRole %}<p class="evyear__role">{{ y.holderRole }}</p>{% endif %}
+
+      <ul class="evlist">
+        {% for e in y.items %}
+        <li class="evitem evitem--{{ e.type | lower }}{% if e.poster %} evitem--poster{% endif %}">
+          <div class="evitem__body">
+            <span class="evitem__meta">{{ e.type }} &middot; {{ e.date }}</span>
+            <h3 class="evitem__title">{{ e.title }}</h3>
+            {% if e.detail %}<p class="evitem__detail">{{ e.detail }}</p>{% endif %}
+            {% if e.people %}
+            <p class="evitem__line"><span class="evitem__label">Speakers</span> {{ e.people }}</p>
+            {% endif %}
+            {% if e.venue %}
+            <p class="evitem__line"><span class="evitem__label">Venue</span> {{ e.venue }}</p>
+            {% endif %}
+            {% if e.link %}<a class="evitem__link" href="{{ e.link }}">{{ e.linkLabel or "More" }} &rarr;</a>{% endif %}
+          </div>
+          {% if e.poster %}
+          <figure class="evposter">
+            <a href="{{ e.poster }}"><img src="{{ e.poster }}" alt="Poster: {{ e.title }}, {{ y.year }}" loading="lazy"></a>
+          </figure>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </article>
+    {% endfor %}
+
+    <p class="evnote">
+      Recordings of several events are available through
+      <a href="https://podcasts.ox.ac.uk">Oxford Podcasts</a>. If you have posters,
+      photographs, or recordings from other years, we would be glad to add them —
+      contact <a href="mailto:{{ site.email }}">{{ site.email }}</a>.
+    </p>
+  </div>
+</section>
+
+<section class="section section--navy">
+  <div class="wrap">
+    <div class="grid grid--2">
+      <div class="reveal">
+        <span class="eyebrow eyebrow--light">The Centre's role</span>
+        <h2>Hosting the Professorship</h2>
+        <p>
+          The Centre for Technology and Society hosts the Visiting Professorship, providing
+          the academic home for each year's holder and organising the lecture, panel, and
+          associated events.
+        </p>
+        <p>
+          The pairing is deliberate. The Professorship exists to bring scholars who work at
+          the frontier of economics and development to Oxford; the Centre exists to
+          understand how emerging technologies are redistributing economic opportunity and
+          political power. Both are supported by the Sanjaya Lall Memorial Fund.
+        </p>
+      </div>
+      <div class="reveal">
+        <blockquote class="pullquote">
+          Far from simply picking industrial winners, Lall argued, the East Asian economies
+          had deliberately created them &mdash; by building technological capability rather
+          than waiting for it to arrive.
+        </blockquote>
+        <p style="margin-top:2rem;">
+          <a class="btn btn--ghost" href="https://www.economics.ox.ac.uk/sanjaya-lall-visiting-professorship">Professorship at the Department of Economics &rarr;</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

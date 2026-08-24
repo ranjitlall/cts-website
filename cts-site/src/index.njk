@@ -1,0 +1,317 @@
+---
+layout: layouts/base.njk
+permalink: /index.html
+eleventyExcludeFromCollections: true
+---
+
+<!-- ========================= HERO ========================= -->
+<section class="hero">
+  <div class="wrap hero__inner">
+    <div>
+      <span class="hero__kicker">{{ site.parent }} &middot; {{ site.university }}</span>
+      <h1>Centre for Technology <span class="thin">and Society</span></h1>
+      <p class="hero__lede">
+        Emerging technologies are reshaping work and redistributing power faster than
+        our understanding of them can keep up. The CTS closes that gap with <span class="hl">rigorous,
+        evidence-first research</span>, helping to ensure that technological change benefits
+        society as a whole &mdash; rather than deepening the inequalities we already have.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#research">Our research</a>
+        <a class="btn btn--ghost" href="#about">About the Centre</a>
+      </div>
+    </div>
+    <div>
+      <img src="/assets/img/hero-dispersion.svg" alt="" width="560" height="480" aria-hidden="true">
+    </div>
+  </div>
+</section>
+
+<!-- ========================= ABOUT ========================= -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">About the Centre</span>
+      <h2>Understanding how emerging technologies change societies</h2>
+    </div>
+
+    <div class="grid grid--2 reveal">
+      <div>
+        <p>
+          The <strong>Centre for Technology and Society (CTS)</strong> aims to understand
+          how emerging technologies &mdash; from artificial intelligence and biotechnology
+          to blockchain and quantum computing &mdash; are <span class="hl">transforming societies</span> around
+          the world.
+        </p>
+        <p>
+          We seek to identify the social, economic, and political consequences
+          of new technologies, both within individual societies and globally: disparities
+          in access to and benefit from them, the potential for <span class="hl--coral">new forms of inequality</span>,
+          and the <span class="hl">governance mechanisms</span> that may mitigate or worsen these effects.
+        </p>
+      </div>
+      <div>
+        <p>
+          Our distinctive contribution is empirical. Debate about technology and society
+          is rich in speculation and thin on evidence. The CTS combines the
+          <strong>empirical social sciences with computational and data science</strong>
+          to establish how these technologies are actually reshaping economies and
+          societies &mdash; not how they might, in principle, do so.
+        </p>
+        <p>
+          The Centre sits within the <strong>Oxford Martin AI Governance Initiative
+          (AIGI)</strong> at the University of Oxford and is supported by the Sanjaya Lall
+          Memorial Fund. It also hosts the <a href="/sanjaya-lall-professorship/">Sanjaya
+          Lall Visiting Professorship of Business and Development</a>, one of the most
+          prestigious visiting appointments in economics.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= RESEARCH ========================= -->
+<section class="section section--mist" id="research">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Research</span>
+      <h2>Key research themes</h2>
+      <p>
+        Within a broad agenda, the Centre concentrates its effort where the <span class="hl">evidence
+        is thinnest and the stakes are highest</span>.
+      </p>
+    </div>
+
+    <div class="grid grid--2">
+      <article class="theme reveal">
+        <span class="theme__q">Primary interest &mdash; I</span>
+        <h3>The labour market implications of AI</h3>
+        <p>
+          How AI adoption is reshaping work, skills, wages, and job displacement — and how
+          firms, workers, and labour institutions are adapting to it.
+        </p>
+        <ul class="theme__questions">
+          <li>Which tasks and occupations are being automated, and which augmented?</li>
+          <li>Where do the productivity gains accrue?</li>
+          <li>Who bears the costs of adjustment?</li>
+        </ul>
+      </article>
+
+      <article class="theme reveal">
+        <span class="theme__q">Primary interest &mdash; II</span>
+        <h3>AI and the dispersion of power</h3>
+        <p>
+          How these technologies concentrate or distribute economic and political power
+          among firms, states, and citizens — and what that means for inequality,
+          accountability, and democratic life.
+        </p>
+        <ul class="theme__questions">
+          <li>Do they entrench the dominance of a few technology companies and well-resourced states?</li>
+          <li>Or do they open avenues for broader participation and contestation?</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="reveal wp-teaser">
+      <div>
+        <span class="eyebrow">Working Paper Series</span>
+        <h3>New research, circulated early</h3>
+        <p>
+          The CTS Working Paper Series puts our research into circulation ahead of
+          publication, so findings can inform debate while it is still live.
+        </p>
+      </div>
+      <div class="wp-teaser__latest">
+        {% set latest = papers | limit(1) %}
+        {% for p in latest %}
+        <span class="wp-teaser__num">{{ p.number }} &middot; {{ p.dateLabel }}</span>
+        <p class="wp-teaser__title">{{ p.title }}</p>
+        <p class="wp-teaser__authors">{{ p.authors | join(" · ") }}</p>
+        {% endfor %}
+        <p style="margin-top:1.25rem;"><a class="btn btn--outline" href="/working-papers/">Browse the series</a></p>
+      </div>
+    </div>
+
+    <div class="reveal" style="margin-top: clamp(2.5rem, 5vw, 3.5rem);">
+      <span class="eyebrow">Other themes of interest</span>
+      <div class="tags">
+        <span class="tag">Equitable access</span>
+        <span class="tag">Systemic bias</span>
+        <span class="tag">Privacy</span>
+        <span class="tag">Artificial intelligence</span>
+        <span class="tag">Biotechnology</span>
+        <span class="tag">Blockchain</span>
+        <span class="tag">Quantum computing</span>
+        <span class="tag">Governance mechanisms</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= ACTIVITIES ========================= -->
+<section class="section section--navy" id="activities">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow eyebrow--light">Activities</span>
+      <h2>What the Centre does</h2>
+    </div>
+
+    <div class="grid grid--3">
+      <div class="activity reveal">
+        <h3>Impactful research</h3>
+        <p>
+          Commissioning and running interdisciplinary projects on our core themes, hosting
+          visiting researchers, and creating opportunities for early-career scholars.
+          Outputs range from academic publications to policy reports and briefings written
+          for non-specialists.
+        </p>
+      </div>
+      <div class="activity reveal">
+        <h3>Policy and public engagement</h3>
+        <p>
+          Lectures, workshops, and public forums on questions of broad interest. The Centre
+          serves as a <span class="hl">non-partisan source of evidence and analysis</span> for policymakers, industry,
+          and civil society working to mitigate AI's challenges and realise its benefits.
+        </p>
+      </div>
+      <div class="activity reveal">
+        <h3>Supporting future leaders</h3>
+        <p>
+          Developing the next generation of technology governance leaders through mentoring
+          and research opportunities for scholars at every career stage.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= PEOPLE ========================= -->
+<section class="section" id="people">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">People</span>
+      <h2>Who we are</h2>
+    </div>
+
+    <div class="people-row reveal">
+      {% for person in collections.people | where("group", "core") %}
+      <article class="person">
+        {% if person.data.photo %}
+        <img class="person__photo" src="{{ person.data.photo }}" alt="Portrait of {{ person.data.name }}" width="400" height="400" loading="lazy">
+        {% else %}
+        <div class="person__photo person__photo--placeholder" aria-hidden="true"></div>
+        {% endif %}
+        <p class="person__name">
+          {% if person.data.link %}<a href="{{ person.data.link }}">{{ person.data.name }}</a>{% else %}{{ person.data.name }}{% endif %}
+        </p>
+        {% if person.data.position %}<p class="person__position">{{ person.data.position }}</p>{% endif %}
+        <p class="person__role">{{ person.data.affiliation }}</p>
+      </article>
+      {% endfor %}
+    </div>
+
+    <div class="people-row people-row--secondary reveal">
+      {% for person in collections.people | where("group", "visiting") %}
+      <article class="person">
+        {% if person.data.photo %}
+        <img class="person__photo" src="{{ person.data.photo }}" alt="Portrait of {{ person.data.name }}" width="400" height="400" loading="lazy">
+        {% else %}
+        <div class="person__photo person__photo--placeholder" aria-hidden="true"></div>
+        {% endif %}
+        <p class="person__name">
+          {% if person.data.link %}<a href="{{ person.data.link }}">{{ person.data.name }}</a>{% else %}{{ person.data.name }}{% endif %}
+        </p>
+        {% if person.data.position %}<p class="person__position">{{ person.data.position }}</p>{% endif %}
+        <p class="person__role">{{ person.data.affiliation }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ================== VISITING PROFESSORSHIP ================== -->
+<section class="section section--mist" id="professorship">
+  <div class="wrap">
+    <div class="callout reveal">
+      <div>
+        <span class="eyebrow eyebrow--light">Hosted by the Centre</span>
+        <h3>The Sanjaya Lall Visiting Professorship</h3>
+        <p>
+          Each year the Centre hosts the Sanjaya Lall Visiting Professorship of Business
+          and Development &mdash; one of the most prestigious visiting appointments in
+          economics, held by Nobel laureates and Clark Medallists since 2011.
+        </p>
+        <p style="margin-top:1.5rem;">
+          <a class="btn btn--primary" href="/sanjaya-lall-professorship/">About the Professorship</a>
+        </p>
+      </div>
+      <div class="callout__aside">
+        <figure class="portrait portrait--inset">
+          <img src="/assets/img/sanjaya-lall.jpg" alt="Professor Sanjaya Lall" width="820" height="696" loading="lazy">
+          <figcaption>Professor Sanjaya Lall (1940&ndash;2005)</figcaption>
+        </figure>
+        <p class="callout__names">
+          Robert Wade &middot; Dani Rodrik &middot; Paul Krugman &middot; Abhijit Banerjee &middot;
+          Avinash Dixit &middot; Kenneth Rogoff &middot; Esther Duflo &middot; Joseph Stiglitz &middot;
+          Raj Chetty &middot; Daron Acemoglu &middot; Rohini Pande &middot; Sendhil Mullainathan
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= SUPPORT ========================= -->
+<section class="section section--navy" id="support">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow eyebrow--light">Support the Centre</span>
+      <h2>Evidence takes investment</h2>
+    </div>
+
+    <div class="grid grid--2">
+      <div class="reveal">
+        <blockquote class="pullquote">
+          Debate about technology's social effects is abundant. Reliable evidence about
+          them is scarce — and building it is slower, harder, and less glamorous work.
+        </blockquote>
+        <p>
+          The Centre is supported by the Sanjaya Lall Memorial Fund, which also endows the
+          <a href="/sanjaya-lall-professorship/">Sanjaya Lall Visiting Professorship</a>. We welcome
+          conversations with individuals, foundations, and organisations who share our
+          commitment to rigorous, independent research.
+        </p>
+      </div>
+      <div class="reveal">
+        <p><strong>Areas of particular interest:</strong></p>
+        <ul class="checklist">
+          <li>Funding research projects on the labour market and power effects of AI</li>
+          <li>Endowing researcher posts and early-career fellowships</li>
+          <li>Sponsoring workshops and public forums open to the wider community</li>
+          <li>Supporting policy translation that connects findings to live debates</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= CONTACT ========================= -->
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Contact</span>
+      <h2>Get in touch</h2>
+      <p>
+        We welcome enquiries from researchers, journalists, policymakers, and prospective
+        collaborators and funders.
+      </p>
+    </div>
+
+    <div class="grid grid--3 reveal">
+      <div class="contact-card">
+        <p class="contact-card__name">Ranjit Lall</p>
+        <p class="contact-card__role">Director, CTS &middot; Professor of International Political Economy</p>
+        <a href="mailto:{{ site.email }}">{{ site.email }} &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
