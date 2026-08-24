@@ -1379,6 +1379,16 @@ strong { font-weight: 600; color: var(--navy); }
   .bookshelf .bookcover { width: 40%; }
 }
 
+/* A tall cover next to a short paragraph would otherwise hang past the end of
+   its section and over the next one. Text length alone only fixes that at one
+   window width, so any column holding covers also clears its own floats. */
+.wrap:has(> .bookcover)::after,
+.wrap:has(> .photowide)::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 /* A full-column photograph, for landscape images that would be wasted as a
    narrow float. Caption style follows .bookcover. */
 .photowide {
