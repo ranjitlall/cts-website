@@ -3,7 +3,6 @@ layout: layouts/page.njk
 title: Privacy
 permalink: /privacy/index.html
 description: How the Centre for Technology and Society website handles personal data.
-eleventyExcludeFromCollections: true
 ---
 
 ## What this site collects

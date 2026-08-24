@@ -2,6 +2,10 @@ export default function (eleventyConfig) {
   // Copy static assets straight through to the built site
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/admin");
+  // src/CNAME belongs to a custom domain and is deliberately absent while the
+  // site lives at ranjitlall.github.io/cts-website. When the Oxford hostname is
+  // granted, recreate src/CNAME containing just that hostname and this line
+  // ships it with the build. A missing file here is not an error.
   eleventyConfig.addPassthroughCopy("src/CNAME");
 
   // --- Collections -----------------------------------------------------

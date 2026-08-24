@@ -3,7 +3,6 @@ layout: layouts/page.njk
 title: Accessibility
 permalink: /accessibility/index.html
 description: Accessibility statement for the Centre for Technology and Society website.
-eleventyExcludeFromCollections: true
 ---
 
 We want this website to be usable by as many people as possible. That means you
