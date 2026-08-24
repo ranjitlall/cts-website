@@ -1379,6 +1379,43 @@ strong { font-weight: 600; color: var(--navy); }
   .bookshelf .bookcover { width: 40%; }
 }
 
+/* Two photographs side by side, set between paragraphs. Each column is a
+   fixed share of the width, so a caption can never widen its own figure and
+   shove its neighbour onto a second row. The images share a height, set per
+   row with --photo-h, and centre themselves in their column, which lets a
+   portrait pair and a landscape pair each be sized sensibly. */
+.photopair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+  align-items: end;
+  margin: 2.25rem 0;
+}
+.photopair figure { margin: 0; }
+.photopair img {
+  display: block;
+  height: var(--photo-h, 240px);
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 3px;
+  box-shadow: 0 12px 26px rgba(0, 33, 71, 0.14);
+}
+.photopair figcaption {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.04em;
+  color: var(--slate);
+  margin-top: 0.6rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+@media (max-width: 560px) {
+  .photopair { grid-template-columns: 1fr; gap: 1.75rem; }
+  .photopair img { height: auto; width: 100%; }
+}
+
 /* A tall cover next to a short paragraph would otherwise hang past the end of
    its section and over the next one. Text length alone only fixes that at one
    window width, so any column holding covers also clears its own floats. */
