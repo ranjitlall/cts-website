@@ -5,5 +5,5 @@ position: "Visiting Fellow"
 affiliation: "Compliance Principal, Amazon Web Services"
 link: ""
 photo: "/assets/img/people/rahul-prabhakar.jpg"
-order: 2
+order: 1
 ---

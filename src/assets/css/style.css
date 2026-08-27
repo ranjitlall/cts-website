@@ -798,7 +798,7 @@ strong { font-weight: 600; color: var(--navy); }
 }
 
 .people-row .person__photo { max-width: 150px; margin-bottom: 0.85rem; }
-.people-row .person__name { font-size: 1rem; }
+.people-row .person__name { font-size: 0.88rem; }
 .people-row .person__position { font-size: 0.64rem; }
 .people-row .person__role { font-size: 0.8rem; line-height: 1.4; }
 
