@@ -1,6 +1,6 @@
 ---
 group: core
-name: Tom Robinson
+name: Thomas Robinson
 position: "Faculty Affiliate"
 affiliation: "Assistant Professor in Methodology, London School of Economics"
 link: https://ts-robinson.com/
