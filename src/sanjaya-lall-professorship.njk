@@ -127,7 +127,7 @@ description: The Centre for Technology and Society hosts the Sanjaya Lall Visiti
         <div class="holder__photo holder__photo--placeholder" aria-hidden="true"><span>{{ h.initials }}</span></div>
         {% endif %}
         <p class="holder__year">{{ h.year }}</p>
-        <p class="holder__name">{{ h.name }}</p>
+        <p class="holder__name">{% if h.link %}<a href="{{ h.link }}">{{ h.name }}</a>{% else %}{{ h.name }}{% endif %}</p>
         <p class="holder__aff">{{ h.affiliation }}</p>
         {% if h.credit %}<p class="holder__credit">{{ h.credit }}</p>{% endif %}
       </article>

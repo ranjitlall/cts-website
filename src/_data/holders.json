@@ -5,7 +5,8 @@
     "affiliation": "London School of Economics",
     "initials": "RW",
     "photo": "/assets/img/holders/robert-wade.jpg",
-    "credit": ""
+    "credit": "",
+    "link": "https://www.lse.ac.uk/people/robert-wade"
   },
   {
     "year": 2013,
@@ -13,7 +14,8 @@
     "affiliation": "Harvard University",
     "initials": "DR",
     "photo": "/assets/img/holders/dani-rodrik.jpg",
-    "credit": ""
+    "credit": "",
+    "link": "https://www.hks.harvard.edu/faculty/dani-rodrik"
   },
   {
     "year": 2014,
@@ -21,7 +23,8 @@
     "affiliation": "Princeton University",
     "initials": "PK",
     "photo": "/assets/img/holders/paul-krugman.jpg",
-    "credit": ""
+    "credit": "",
+    "link": "https://www.gc.cuny.edu/people/paul-krugman"
   },
   {
     "year": 2015,
@@ -29,7 +32,8 @@
     "affiliation": "Massachusetts Institute of Technology",
     "initials": "AB",
     "photo": "/assets/img/holders/abhijit-banerjee.jpg",
-    "credit": ""
+    "credit": "",
+    "link": "https://economics.mit.edu/people/faculty/abhijit-banerjee"
   },
   {
     "year": 2016,
@@ -37,7 +41,8 @@
     "affiliation": "Princeton University",
     "initials": "AD",
     "photo": "/assets/img/holders/avinash-dixit.jpg",
-    "credit": ""
+    "credit": "",
+    "link": "https://dof.princeton.edu/people/avinash-kamalakar-dixit"
   },
   {
     "year": 2017,
@@ -45,7 +50,8 @@
     "affiliation": "Harvard University",
     "initials": "KR",
     "photo": "/assets/img/holders/kenneth-rogoff.jpg",
-    "credit": ""
+    "credit": "",
+    "link": "https://www.economics.harvard.edu/people/kenneth-rogoff"
   },
   {
     "year": 2018,
@@ -53,7 +59,8 @@
     "affiliation": "Massachusetts Institute of Technology",
     "initials": "ED",
     "photo": "/assets/img/holders/esther-duflo.jpg",
-    "credit": ""
+    "credit": "",
+    "link": "https://economics.mit.edu/people/faculty/esther-duflo"
   },
   {
     "year": 2023,
@@ -61,7 +68,8 @@
     "affiliation": "Columbia University",
     "initials": "JS",
     "photo": "/assets/img/holders/joseph-stiglitz.jpg",
-    "credit": ""
+    "credit": "",
+    "link": "https://business.columbia.edu/faculty/people/joseph-stiglitz"
   },
   {
     "year": 2023,
@@ -69,7 +77,8 @@
     "affiliation": "Harvard University",
     "initials": "RC",
     "photo": "/assets/img/holders/raj-chetty.jpg",
-    "credit": ""
+    "credit": "",
+    "link": "https://www.economics.harvard.edu/people/raj-chetty"
   },
   {
     "year": 2024,
@@ -77,7 +86,8 @@
     "affiliation": "Massachusetts Institute of Technology",
     "initials": "DA",
     "photo": "/assets/img/holders/daron-acemoglu.jpg",
-    "credit": ""
+    "credit": "",
+    "link": "https://economics.mit.edu/faculty/acemoglu"
   },
   {
     "year": 2025,
@@ -85,7 +95,8 @@
     "affiliation": "Yale University",
     "initials": "RP",
     "photo": "/assets/img/holders/rohini-pande.jpg",
-    "credit": ""
+    "credit": "",
+    "link": "https://economics.yale.edu/people/rohini-pande"
   },
   {
     "year": 2026,
@@ -93,6 +104,7 @@
     "affiliation": "Massachusetts Institute of Technology",
     "initials": "SM",
     "photo": "/assets/img/holders/sendhil-mullainathan.jpg",
-    "credit": ""
+    "credit": "",
+    "link": "https://www.eecs.mit.edu/people/sendhil-mullainathan/"
   }
 ]
