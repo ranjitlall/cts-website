@@ -84,7 +84,8 @@
   </div>
 </div>
 
-<footer class="site-footer">
+<footer class="site-footer fx">
+  <div class="fx__layer" aria-hidden="true"></div>
   <div class="wrap">
     <div class="site-footer__grid">
       <div>
@@ -173,6 +174,46 @@
     }, { rootMargin: '0px 0px -8% 0px' });
     items.forEach(function (el) { io.observe(el); });
   })();
+
+  // Navy-section network: reveal it in a soft circle around the pointer.
+  // Skipped entirely for touch (there is no hover) and for reduced motion.
+  (function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var sections = document.querySelectorAll('.fx');
+    if (!sections.length) return;
+    Array.prototype.forEach.call(sections, function (sec) {
+      var raf = null, px = 0, py = 0;
+      sec.addEventListener('pointermove', function (e) {
+        if (e.pointerType === 'touch') return;
+        var r = sec.getBoundingClientRect();
+        px = e.clientX - r.left; py = e.clientY - r.top;
+        if (raf) return;
+        raf = requestAnimationFrame(function () {
+          sec.style.setProperty('--mx', px + 'px');
+          sec.style.setProperty('--my', py + 'px');
+          raf = null;
+        });
+      });
+      sec.addEventListener('pointerenter', function (e) {
+        if (e.pointerType !== 'touch') sec.classList.add('is-live');
+      });
+      sec.addEventListener('pointerleave', function () { sec.classList.remove('is-live'); });
+    });
+  })();
+
+  // Light the gold highlights once, the first time each scrolls into view.
+  (function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var marks = document.querySelectorAll('.hl');
+    if (!marks.length || !('IntersectionObserver' in window)) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { entry.target.classList.add('is-lit'); io.unobserve(entry.target); }
+      });
+    }, { threshold: 0.9 });
+    Array.prototype.forEach.call(marks, function (el) { io.observe(el); });
+  })();
+
 </script>
 
 </body>
