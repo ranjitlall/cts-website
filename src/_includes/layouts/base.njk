@@ -208,7 +208,15 @@
     if (!marks.length || !('IntersectionObserver' in window)) return;
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        if (entry.isIntersecting) { entry.target.classList.add('is-lit'); io.unobserve(entry.target); }
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        io.unobserve(el);
+        // Drop the class once the sweep finishes, so the highlight returns to
+        // exactly its normal painted state rather than holding the final frame.
+        el.addEventListener('animationend', function () {
+          el.classList.remove('is-lit');
+        }, { once: true });
+        el.classList.add('is-lit');
       });
     }, { threshold: 0.9 });
     Array.prototype.forEach.call(marks, function (el) { io.observe(el); });
