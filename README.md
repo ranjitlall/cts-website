@@ -1,17 +1,19 @@
 # Centre for Technology and Society — website
 
 Static site built with [Eleventy](https://www.11ty.dev/), edited through
-[Sveltia CMS](https://sveltiacms.app/), hosted free on Cloudflare Pages.
+[Sveltia CMS](https://sveltiacms.app/), hosted free on GitHub Pages.
 
-Running cost: the domain only (~£10/year). Everything else is on free tiers.
+**Live at:** <https://ranjitlall.github.io/cts-website/>
+**Repository:** `ranjitlall/cts-website` (public)
+
+Running cost: nothing. Everything is on free tiers. An `ox.ac.uk` hostname, if
+granted, is added later without rebuilding anything — see LAUNCH.md.
 
 ---
 
 ## For collaborators: how to edit the site
 
-Go to **`https://techandsociety.org/admin`** and click *Sign in with GitHub*.
-
-You'll see three sections in the sidebar:
+Go to **`https://ranjitlall.github.io/cts-website/admin/`**.
 
 | Section | What it controls |
 |---|---|
@@ -22,64 +24,78 @@ switch them back on when there's enough happening to justify them.
 
 Fill in the form, click **Save**. The site rebuilds and your change is live in
 about a minute. You never touch HTML, and you can't break the layout — the
-fields are the only things that change.
+fields are the only things that change. Every save is recorded, so any edit can
+be undone.
 
-Every save is recorded, so any edit can be undone.
+**Signing in.** The one-click *Sign in with GitHub* button needs an
+authenticator Worker that isn't deployed yet, so for now sign in with **Sign in
+with Token** using a GitHub personal access token. To open it up to
+colleagues, follow "Adding one-click sign-in" below.
 
 ---
 
-## Setup
+## Deployment
 
-**To go live now on GitHub Pages, follow LAUNCH.md instead** — no domain
-purchase, no waiting. The Cloudflare instructions below remain valid if you
-prefer that route or want a private repository.
+Every push to `main` triggers `.github/workflows/deploy.yml`, which builds the
+site and publishes it to GitHub Pages. Nothing else needs doing.
 
-## Setup on Cloudflare Pages (one time, ~45 minutes)
+The build passes `--pathprefix="/cts-website/"` so that links resolve under the
+repository subpath. Every internal link in the templates runs through Eleventy's
+`url` filter, so the same source works unchanged at a domain root later.
 
-### 1. Put this repository on GitHub
+Repository → **Settings** → **Pages** is set to **Source: GitHub Actions**.
+
+## Working locally
 
 ```bash
-git init
-git add .
-git commit -m "Initial site"
-gh repo create cts-website --private --source=. --push
+npm install
+npm run serve     # http://localhost:8080, live reload
+npm run build     # writes to _site/
 ```
 
-### 2. Buy the domain
+`npm run serve` builds without the `/cts-website/` prefix, which is what you
+want locally.
 
-[Cloudflare Registrar](https://www.cloudflare.com/products/registrar/) sells at
-cost, around £10/year. [Porkbun](https://porkbun.com/) is a good alternative.
+## Where things live
 
-Edit `src/CNAME` and `src/_data/site.json` if you pick a different domain from
-`techandsociety.org`.
-
-### 3. Deploy on Cloudflare Pages
-
-1. Cloudflare dashboard → **Workers & Pages** → **Create** → **Pages** →
-   **Connect to Git**, and select this repository.
-2. Build settings:
-   - Build command: `npm run build`
-   - Output directory: `_site`
-3. Deploy. You'll get a `*.pages.dev` URL immediately.
-4. **Custom domains** → add your domain. DNS is automatic if the domain is
-   registered with Cloudflare.
-
-Every push to `main` now redeploys automatically.
-
-### 4. Point the CMS at your repository
-
-In `src/admin/config.yml`, replace:
-
-```yaml
-repo: YOUR-GITHUB-USERNAME/YOUR-REPO-NAME
+```
+src/
+  index.njk                        Homepage — all the one-page sections
+  working-papers.njk               Working Paper Series listing
+  sanjaya-lall-professorship.njk   Visiting Professorship page
+  privacy.md                       Privacy notice
+  accessibility.md                 Accessibility statement
+  sitemap.njk                      Generates /sitemap.xml
+  robots.txt
+  _includes/layouts/               Page templates
+  _data/
+    site.json                      Site name, URL, address, contact email
+    papers.json                    Working Paper Series entries
+    outputs.json                   News & commentary items
+    holders.json                   Visiting Professorship holders
+    lallevents.json                Professorship events archive, by year
+  content/
+    people/                        One Markdown file per person
+  assets/
+    css/style.css                  All styling; design tokens at the top
+    img/                           Logos, portraits, posters, uploads/
+    papers/                        Working paper PDFs
+  admin/
+    index.html                     Loads the CMS
+    config.yml                     Defines the editing forms
+tools/
+  make_cover.py                    Generates the branded WP cover page
+  fonts/                           Bundled fonts for the cover
 ```
 
-You can now sign in at `/admin` using **Sign in with Token** and a GitHub
-personal access token. That's enough for you alone. For collaborators, do step 5.
+There is no `src/CNAME` while the site is on `github.io`. When a custom domain
+is granted, recreate it — LAUNCH.md, section 6, has the steps.
 
-### 5. Add one-click GitHub sign-in (needed for collaborators)
+---
 
-This removes the need for anyone to generate tokens.
+## Adding one-click sign-in for collaborators
+
+This removes the need for anyone to generate a token.
 
 1. Deploy the authenticator:
    <https://github.com/sveltia/sveltia-cms-auth> — it has a one-click
@@ -91,80 +107,78 @@ This removes the need for anyone to generate tokens.
 3. In the Cloudflare Worker's **Settings → Variables**, add:
    - `GITHUB_CLIENT_ID`
    - `GITHUB_CLIENT_SECRET` (as a secret)
-   - `ALLOWED_DOMAINS` — set to `techandsociety.org` so nobody else's site can
+   - `ALLOWED_DOMAINS` — set to `ranjitlall.github.io` so nobody else's site can
      use your authenticator.
 4. In `src/admin/config.yml`, uncomment and set:
    ```yaml
    base_url: https://sveltia-cms-auth.YOUR-SUBDOMAIN.workers.dev
    ```
+5. Repository → **Settings → Collaborators → Add people**, with **Write**
+   access. They then log in at `/admin/` with their GitHub account.
 
-### 6. Add your collaborators
+## Alternative host: Cloudflare Pages
 
-GitHub repository → **Settings → Collaborators → Add people**. Give them
-**Write** access. They log in at `/admin` with their GitHub account.
+Not in use, but the site builds there unchanged, and Cloudflare serves private
+repositories on the free tier if the repo ever needs to stop being public.
+Connect the repository under **Workers & Pages → Create → Pages**, with build
+command `npm run build` and output directory `_site`, and drop the
+`--pathprefix` from the build if serving at a domain root.
 
 ---
 
-## Working locally
+## Still to do
 
-```bash
-npm install
-npm run serve     # http://localhost:8080, live reload
-npm run build     # writes to _site/
-```
+**Permissions and sign-off**
 
-## Where things live
-
-```
-src/
-  index.njk                        Homepage — all the one-page sections
-  working-papers.njk               Working Paper Series listing
-  sanjaya-lall-professorship.njk   Visiting Professorship page
-  privacy.md              Placeholder — needs real wording
-  accessibility.md        Placeholder — needs real wording
-  _includes/layouts/      Page templates
-  _data/site.json         Site name, URL, address, contact email
-  content/
-    people/               One Markdown file per person
-  _data/
-    papers.json           Working Paper Series entries
-    holders.json          Visiting Professorship holders
-  assets/papers/          Working paper PDFs
-tools/
-  make_cover.py           Generates the branded WP cover page
-  assets/
-    css/style.css         All styling; design tokens at the top
-    img/                  Logo, hero illustration, uploads/
-  admin/
-    index.html            Loads the CMS
-    config.yml            Defines the editing forms
-```
-
-## Still to do before launch
-
-- [ ] Verify the Sanjaya Lall events archive (src/_data/lallevents.json) — dates
-      and details were compiled from the Department of Economics website, Oxford
-      Podcasts, event posters, and Wikipedia. 2022 is omitted — sources conflict
-      on whether Stiglitz held the chair in 2022 or 2023, and the poster evidence
-      points to 2023. The 2014 Krugman podcast link points to a keyword listing
-      rather than the episode page.
-- [ ] Confirm rights to republish the event posters (2013, 2014, 2018, 2023, 2024)
-
-- [ ] Add Tom Robinson's CTS role and title (currently affiliation only)
-- [ ] Decide whether Walter Mattli joins the People section, and with what role
-- [ ] Confirm reproduction rights for the Sanjaya Lall portrait before launch
-- [ ] Confirm reproduction permission for the eleven holder portraits before
-      the site goes public, and record any required photographer credit in the
-      `credit` field in src/_data/holders.json (it renders under each card).
-- [ ] Add a portrait photo for each person (square images work best)
-- [ ] Verify the Visiting Professorship years — Wikipedia and the Department of
-      Economics disagree on whether Stiglitz held it in 2022 or 2023
+- [ ] Confirm reproduction rights for the event posters (2013, 2014, 2018,
+      2023, 2024) and the twelve holder portraits before wide publicity, and
+      record any required photographer credit in the `credit` field in
+      `src/_data/holders.json` (it renders under each card).
+- [ ] Confirm reproduction rights for the Sanjaya Lall portrait.
+- [ ] Confirm rights to reproduce the twelve book-cover images on the Sanjaya
+      Lall page (`src/assets/img/books/`) — publishers usually permit covers in
+      this biographical/review context, but it has not been confirmed.
+- [ ] Have the privacy notice checked by the University's Information
+      Compliance Team. The accessibility statement is a self-assessment, not an
+      independent audit.
 - [ ] Confirm with AIGI how the Centre should be described and credited, and
-      that using the AIGI logo in the footer is approved
-- [ ] Replace the AIGI logo JPEG with a vector version if AIGI can supply one
-- [ ] Write real privacy and accessibility statements
-- [ ] Create a `social-card.png` (1200×630) for link previews
-- [ ] Add `favicon.svg` to `src/assets/img/`
+      that using the AIGI logo in the top strip is approved.
+
+**Branding**
+
+- [ ] Ask the Oxford Martin School and AIGI for approved reversed (white)
+      versions of their logos. Both marks are navy-on-white, so each currently
+      sits in a white tile on the navy strip. Do not recolour their artwork
+      without their approved variant.
+- [ ] Replace `src/assets/img/logo-aigi.jpeg` with a vector or
+      transparent-PNG version if AIGI can supply one.
+- [ ] The Martin School may want programmes branded "Oxford Martin …", which
+      would affect the logo and the working paper covers.
+
+**Content**
+
+- [ ] Verify the Sanjaya Lall events archive (`src/_data/lallevents.json`) —
+      dates and details were compiled from the Department of Economics website,
+      Oxford Podcasts, event posters, and Wikipedia.
+- [ ] Resolve the Stiglitz year. `holders.json` records him as the 2022 holder
+      while `lallevents.json` places his lectures in 2023 alongside Raj Chetty,
+      so the two currently disagree. Sources conflict; the poster evidence
+      points to 2023. 2022 has no events entry either way.
+- [ ] The 2014 Krugman podcast link points to a keyword listing rather than the
+      episode page.
+- [ ] Confirm Tom Robinson's CTS position — currently listed as Faculty
+      Affiliate, chosen to match the harmonised set.
+- [ ] Jean-Paul Carvalho was removed from the People section in August 2026.
+      His portrait remains at `src/assets/img/people/jean-paul-carvalho.jpg`
+      in case he is reinstated; delete it if not.
+- [ ] Add portrait photos for anyone still missing one (square images work
+      best; they render as circles).
+
+**Domain**
+
+- [ ] `cts.aigi.ox.ac.uk` — needs backing from AIGI or the Oxford Martin School,
+      then a request to `domains@it.ox.ac.uk` including an exception for hosting
+      outside the University network. LAUNCH.md has the wording.
 
 ---
 
@@ -175,16 +189,16 @@ tools/
 1. Generate the branded cover and merge it onto the paper:
    ```bash
    cd tools
-   cp wp-2026-01.json wp-2026-02.json     # edit: number, title, authors, date, abstract
-   python3 make_cover.py --config wp-2026-02.json \
+   cp wp-2026-01.json wp-2026-03.json     # edit: number, title, authors, date, abstract
+   python3 make_cover.py --config wp-2026-03.json \
                          --paper ~/Downloads/my-paper.pdf \
-                         --out ../src/assets/papers/CTS-WP-2026-02.pdf
+                         --out ../src/assets/papers/CTS-WP-2026-03.pdf
    ```
    Omit `--paper` to produce the cover on its own.
    Requires `pip install reportlab pypdf`.
 
 2. Add an entry to `src/_data/papers.json`, setting `pdf` to
-   `/assets/papers/CTS-WP-2026-02.pdf`.
+   `/assets/papers/CTS-WP-2026-03.pdf`.
 
 3. Commit. The paper appears on `/working-papers/` and the newest one is
    featured in the Research section of the homepage.
@@ -195,11 +209,9 @@ tools/
 
 ### A note on file size
 
-PDFs live in the Git repository and are served by Cloudflare Pages. A 90-page
-text PDF is typically 2–8 MB, which is fine. Keep an eye on two limits:
-GitHub warns above 50 MB per file, and Cloudflare Pages caps a single
-deployment at 25 MB per file. If a paper exceeds that — usually because of
-high-resolution figures — either compress it:
+PDFs live in the Git repository. A 90-page text PDF is typically 2–8 MB, which
+is fine. GitHub warns above 50 MB per file. If a paper exceeds that — usually
+because of high-resolution figures — either compress it:
 ```bash
 gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.5 -dPDFSETTINGS=/ebook \
    -dNOPAUSE -dQUIET -dBATCH -sOutputFile=small.pdf big.pdf

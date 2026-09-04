@@ -170,12 +170,12 @@ strong { font-weight: 600; color: var(--navy); }
 .brand svg { height: 40px; width: auto; }
 .brand__divider { width: 1px; height: 32px; background: var(--rule); }
 
-.nav { display: flex; align-items: center; gap: 1.75rem; }
+.nav { display: flex; align-items: center; gap: 1.55rem; }
 .nav a {
   font-family: var(--display);
-  font-size: 1.02rem;
-  font-weight: 500;
-  letter-spacing: 0.005em;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: -0.008em;
   color: var(--navy);
   text-decoration: none;
   padding-block: 0.35rem;
@@ -753,6 +753,8 @@ strong { font-weight: 600; color: var(--navy); }
   color: var(--verdigris);
   margin: 0 0 0.2rem;
 }
+.holder__name a { color: inherit; text-decoration: none; }
+.holder__name a:hover { color: var(--verdigris); }
 .holder__name {
   font-family: var(--display);
   font-size: 0.98rem;
@@ -772,19 +774,23 @@ strong { font-weight: 600; color: var(--navy); }
 
 /* --- People in two explicit rows -------------------------------------------
    Row one is the Centre's standing membership; row two is visiting. Both use
-   the same four-up rhythm so the second row aligns under the first rather
-   than stretching to fill the width. */
+   the same five-up rhythm so the second row aligns under the first rather
+   than stretching to fill the width. The max-width keeps each column at the
+   same size whatever the row holds; it steps down with the column count. */
 
 .people-row {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: clamp(1.5rem, 2.5vw, 2.25rem);
-  max-width: 780px;
+  max-width: 990px;
 }
 .people-row--secondary { margin-top: clamp(2rem, 4vw, 3rem); }
 
-@media (max-width: 1000px) {
-  .people-row { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 600px; }
+@media (max-width: 1080px) {
+  .people-row { grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: 790px; }
+}
+@media (max-width: 860px) {
+  .people-row { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 620px; }
 }
 @media (max-width: 620px) {
   .people-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -794,7 +800,7 @@ strong { font-weight: 600; color: var(--navy); }
 }
 
 .people-row .person__photo { max-width: 150px; margin-bottom: 0.85rem; }
-.people-row .person__name { font-size: 1rem; }
+.people-row .person__name { font-size: 0.88rem; }
 .people-row .person__position { font-size: 0.64rem; }
 .people-row .person__role { font-size: 0.8rem; line-height: 1.4; }
 
@@ -814,6 +820,9 @@ strong { font-weight: 600; color: var(--navy); }
 .portrait--hero { max-width: 300px; margin: 0; }
 .portrait--hero img { border-radius: 4px; }
 .portrait--hero figcaption { color: #9fc4ba; }
+/* For tall portrait-format images, which at 300px wide stand far higher than
+   the hero text beside them. Narrower, so the two columns finish level. */
+.portrait--hero-narrow { max-width: 210px; }
 
 /* ==========================================================================
    COLOUR EXPANSION
@@ -843,7 +852,7 @@ strong { font-weight: 600; color: var(--navy); }
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  min-height: 2.6rem;
+  min-height: 3.1rem;
   flex-wrap: wrap;
 }
 .oxford-strip__brand {
@@ -1160,3 +1169,388 @@ strong { font-weight: 600; color: var(--navy); }
 .holder__year { color: var(--gold-deep); }
 .holder:nth-child(3n+2) .holder__year { color: var(--coral-deep); }
 .holder:nth-child(3n+3) .holder__year { color: #5c4382; }
+
+
+/* --- Recording links in the events archive --------------------------------- */
+
+.evitem__links { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.25rem; margin-top: 0.7rem; }
+.evitem__watch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #fff;
+  background: var(--coral);
+  padding: 0.4rem 0.85rem;
+  border-radius: 100px;
+  text-decoration: none;
+}
+.evitem__watch:hover { background: #f2765f; color: #fff; }
+.evitem__watch svg { flex-shrink: 0; }
+.evitem__link { margin-top: 0; }
+
+.hero__art { width: 100%; max-width: 340px; margin-inline: auto; }
+@media (max-width: 859px) { .hero__art { display: none; } }
+
+/* --- News and commentary ---------------------------------------------------- */
+
+.outputs { list-style: none; margin: 0; padding: 0; }
+.output {
+  display: grid;
+  gap: 0.5rem 2.5rem;
+  padding-block: clamp(1.75rem, 3.5vw, 2.5rem);
+  border-top: 1px solid var(--rule);
+}
+.output:last-of-type { border-bottom: 1px solid var(--rule); }
+@media (min-width: 820px) { .output { grid-template-columns: 10rem 1fr; } }
+.output__meta { display: flex; flex-direction: column; gap: 0.4rem; align-items: flex-start; }
+.output__type {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #1f6a8c;
+  border: 1px solid #b9dcea;
+  background: #eef6fa;
+  padding: 0.26rem 0.65rem;
+  border-radius: 100px;
+}
+.output__meta time { font-family: var(--mono); font-size: 0.72rem; color: var(--slate); }
+.output__title {
+  font-family: var(--display);
+  font-size: clamp(1.15rem, 1rem + 0.7vw, 1.45rem);
+  font-weight: 600;
+  color: var(--navy);
+  margin: 0 0 0.4rem;
+  line-height: 1.25;
+}
+.output__byline { font-size: 0.88rem; color: var(--navy); font-weight: 500; margin-bottom: 0.7rem; }
+.output__summary { font-size: 0.95rem; color: var(--slate); }
+.output__link { font-size: 0.88rem; font-weight: 500; display: inline-block; margin-top: 0.8rem; }
+
+/* --- In-page section navigation --------------------------------------------
+   Sits below the sticky site header, so its own `top` offset must clear it. */
+
+.sectionnav {
+  position: sticky;
+  top: 4.5rem;
+  z-index: 90;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--rule);
+}
+.sectionnav__inner {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  min-height: 3.4rem;
+  flex-wrap: wrap;
+}
+.sectionnav__label {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--slate);
+  flex-shrink: 0;
+}
+.sectionnav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+.sectionnav a {
+  font-family: var(--display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--gold-deep);
+  text-decoration: none;
+  padding: 0.32rem 0.8rem;
+  border: 1px solid #f0dcae;
+  background: #fdf6e7;
+  border-radius: 100px;
+  white-space: nowrap;
+  transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+.sectionnav a:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--navy);
+}
+
+@media (max-width: 900px) {
+  .sectionnav { top: 0; }
+  .sectionnav__label { display: none; }
+  .sectionnav__inner { overflow-x: auto; flex-wrap: nowrap; }
+  .sectionnav ul { flex-wrap: nowrap; }
+}
+
+/* Anchors must clear both sticky bars */
+#the-chair, #holders, #lectures-and-events, #hosting { scroll-margin-top: 8.5rem; }
+
+.output__role {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  border: 1px solid #f0dcae;
+  background: #fdf6e7;
+  padding: 0.14rem 0.5rem;
+  border-radius: 100px;
+  margin-left: 0.4rem;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+/* --- Partner marks in the Oxford strip -------------------------------------- */
+
+.oxford-strip__partners { display: flex; align-items: center; gap: 0.85rem; }
+.oxford-strip__partner { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
+.oxford-strip__rule { width: 1px; height: 22px; background: rgba(255, 255, 255, 0.25); }
+
+/* Both partner marks are navy-on-white artwork, so each sits in its own white
+   tile rather than being reversed — reversing an institution's logo without
+   their approved variant is not ours to do. */
+.oxford-strip__partner--tile img,
+.oxford-strip__partner--aigi img {
+  height: 34px;
+  width: 34px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 3px;
+  padding: 2px;
+}
+.oxford-strip__partner img { transition: opacity 0.18s ease; }
+.oxford-strip__partner:hover img { opacity: 0.82; }
+
+@media (max-width: 620px) {
+  .oxford-strip__partners { display: none; }
+}
+
+/* --- Book covers (Sanjaya Lall page) --------------------------------------
+   Floated single covers sit inside running text; a .bookshelf groups several
+   covers into one row. Caption style follows .portrait figcaption. */
+
+.bookcover {
+  float: right;
+  width: min(180px, 42%);
+  margin: 0.35rem 0 1.1rem 1.75rem;
+}
+.bookcover--left {
+  float: left;
+  margin: 0.35rem 1.75rem 1.1rem 0;
+}
+.bookcover img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  box-shadow: 0 12px 26px rgba(0, 33, 71, 0.14);
+}
+.bookcover figcaption {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.04em;
+  color: var(--slate);
+  margin-top: 0.55rem;
+  line-height: 1.5;
+}
+
+.bookshelf {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+  margin: 2.25rem 0 1.5rem;
+}
+.bookshelf .bookcover {
+  float: none;
+  width: 150px;
+  margin: 0;
+}
+
+@media (max-width: 540px) {
+  .bookcover { width: 46%; margin-left: 1.1rem; }
+  .bookcover--left { margin-left: 0; margin-right: 1.1rem; }
+  .bookshelf .bookcover { width: 40%; }
+}
+
+/* Two photographs side by side, set between paragraphs. Each column is a
+   fixed share of the width, so a caption can never widen its own figure and
+   shove its neighbour onto a second row. The images share a height, set per
+   row with --photo-h, and centre themselves in their column, which lets a
+   portrait pair and a landscape pair each be sized sensibly. */
+.photopair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+  align-items: end;
+  margin: 2.25rem 0;
+}
+.photopair figure { margin: 0; }
+.photopair img {
+  display: block;
+  height: var(--photo-h, 240px);
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 3px;
+  box-shadow: 0 12px 26px rgba(0, 33, 71, 0.14);
+}
+.photopair figcaption {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.04em;
+  color: var(--slate);
+  margin-top: 0.6rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+@media (max-width: 560px) {
+  .photopair { grid-template-columns: 1fr; gap: 1.75rem; }
+  .photopair img { height: auto; width: 100%; }
+}
+
+/* A tall cover next to a short paragraph would otherwise hang past the end of
+   its section and over the next one. Text length alone only fixes that at one
+   window width, so any column holding covers also clears its own floats. */
+.wrap:has(> .bookcover)::after,
+.wrap:has(> .photowide)::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* A full-column photograph, for landscape images that would be wasted as a
+   narrow float. Caption style follows .bookcover. */
+.photowide {
+  margin: 2.25rem 0 1.75rem;
+}
+.photowide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 14px 30px rgba(0, 33, 71, 0.16);
+}
+.photowide figcaption {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.04em;
+  color: var(--slate);
+  margin-top: 0.7rem;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   Navy-section network: a torchlight reveal of the logo's node-and-edge
+   motif, plus a one-time light-up on .hl highlights.
+   The SVG is referenced relatively from this stylesheet, so it resolves
+   under both the /cts-website/ subpath and a custom domain at the root.
+   ========================================================================== */
+
+.fx { position: relative; overflow: hidden; }
+.fx > *:not(.fx__layer) { position: relative; z-index: 2; }
+
+.fx__layer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: url("../img/fx-network.svg") center / cover no-repeat;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  -webkit-mask-image: radial-gradient(240px circle at var(--mx, 50%) var(--my, 50%), #000 0%, rgba(0,0,0,0.45) 50%, transparent 74%);
+          mask-image: radial-gradient(240px circle at var(--mx, 50%) var(--my, 50%), #000 0%, rgba(0,0,0,0.45) 50%, transparent 74%);
+}
+.fx.is-live .fx__layer { opacity: 1; }
+
+/* One-time sweep of light across gold highlights, on first view.
+   The gradient is only attached while animating, so an un-lit .hl is
+   untouched and keeps its plain colour. */
+.hl.is-lit {
+  /* The glyphs must be transparent for the clipped gradient to show through;
+     the gradient therefore runs currentColor -> white -> currentColor so the
+     text keeps its own colour at both ends. currentColor picks up the gold on
+     light sections and the lighter gold on navy automatically. */
+  background-image: linear-gradient(90deg, currentColor 0%, #ffffff 45%, currentColor 90%);
+  background-size: 220% 100%;
+  /* repeat-x, not no-repeat: the glyphs are transparent while animating, so any
+     area not covered by the gradient would render as invisible text. Both ends
+     of the gradient are currentColor, so it tiles seamlessly. */
+  background-repeat: repeat-x;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: hl-sweep 1.5s cubic-bezier(0.25, 0.6, 0.3, 1) forwards;
+}
+@keyframes hl-sweep {
+  from { background-position: -140% 0; }
+  to   { background-position:  140% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fx__layer {
+    opacity: 0.18 !important;
+    transition: none !important;
+    -webkit-mask-image: none !important;
+            mask-image: none !important;
+  }
+  /* Reduced motion: no sweep at all. The text fill must be restored, or
+     transparent glyphs with no background would render as invisible text. */
+  .hl.is-lit {
+    animation: none !important;
+    background-image: none !important;
+    -webkit-text-fill-color: currentColor !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Hero: three dots travelling slowly around the edges of the triangle.
+   The SVG is inlined into the page (src/_includes/partials/hero-dispersion.svg)
+   so that these rules, and the reduced-motion block, actually reach it.
+   -------------------------------------------------------------------------- */
+
+.hero-dispersion { display: block; width: 100%; height: auto; }
+
+.orb {
+  offset-path: path("M280 9.2 L496.5 384.2 L63.5 384.2 Z");
+  offset-rotate: 0deg;
+  offset-distance: 0%;
+  opacity: 0.95;
+  animation: cts-orbit 26s linear infinite;
+}
+/* Six dots spaced evenly around the 26s circuit. */
+.orb--2 { animation-delay:  -4.33s; }
+.orb--3 { animation-delay:  -8.67s; }
+.orb--4 { animation-delay: -13.00s; }
+.orb--5 { animation-delay: -17.33s; }
+.orb--6 { animation-delay: -21.67s; }
+/* Colour is folded into the same keyframes as the motion, so a dot's hue is a
+   function of where it is on the triangle rather than of its own timer. The
+   stops follow the illustration's own field: gold at the left vertex, teal at
+   the right, pink at the top. The triangle is equilateral, so each edge is
+   exactly a third of the circuit. */
+@keyframes cts-orbit {
+  0%   { offset-distance:   0%; fill: #D14E86; }  /* top vertex, pink   */
+  11%  { offset-distance:  11%; fill: #7B5EA7; }  /* purple             */
+  22%  { offset-distance:  22%; fill: #2F7FC4; }  /* blue               */
+  33%  { offset-distance:  33%; fill: #1E9C8A; }  /* right vertex, teal */
+  50%  { offset-distance:  50%; fill: #63BF72; }  /* green              */
+  67%  { offset-distance:  67%; fill: #F5B72E; }  /* left vertex, gold  */
+  78%  { offset-distance:  78%; fill: #F2853C; }  /* orange             */
+  89%  { offset-distance:  89%; fill: #E8523C; }  /* coral              */
+  100% { offset-distance: 100%; fill: #D14E86; }  /* back to pink       */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orb { animation: none; opacity: 0; }
+}
+

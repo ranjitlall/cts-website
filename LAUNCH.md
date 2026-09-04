@@ -29,30 +29,22 @@ readable. If you'd rather keep it private until launch, either use Cloudflare
 Pages instead — which serves private repos on the free tier — or keep the repo
 private now and make it public on the day you launch.
 
-## 2. Adjust two settings for the subpath
+## 2. One setting to adjust
 
-A project site lives at `/cts-website/`, not at the domain root, so Eleventy
-needs to know that. In `eleventy.config.js`, add a path prefix to the returned
-config:
+The subpath is handled automatically — the build workflow passes
+`--pathprefix` using the repository name, and every internal link in the
+templates runs through Eleventy's `url` filter, so paths resolve correctly
+whether the site sits at `/cts-website/` or at a domain root. You do **not**
+need to edit `eleventy.config.js`.
 
-```js
-  return {
-    pathPrefix: "/cts-website/",
-    dir: { ... }
-  };
-```
-
-and in `src/_data/site.json` set:
+Just set the site URL in `src/_data/site.json`:
 
 ```json
 "url": "https://YOUR-USERNAME.github.io/cts-website"
 ```
 
 Delete `src/CNAME` for now — it belongs to a custom domain, not to github.io.
-Keep a copy; you'll want it back at step 6.
-
-> When the Oxford domain arrives, both of these revert: `pathPrefix` goes away
-> and `url` becomes the real address.
+GitHub recreates it for you when you set a custom domain later.
 
 ## 3. Add the build workflow
 
@@ -134,7 +126,9 @@ as a CNAME target. Then on your side:
 
 1. Repository → Settings → Pages → **Custom domain** → enter the hostname.
    This recreates the `CNAME` file automatically.
-2. Remove `pathPrefix` from `eleventy.config.js`.
+2. In `.github/workflows/deploy.yml`, change the build line to plain
+   `npx @11ty/eleventy` (no `--pathprefix`), since a custom domain serves
+   from the root.
 3. Set `url` in `src/_data/site.json` to `https://cts.ox.ac.uk`.
 4. Tick **Enforce HTTPS** once the certificate is issued (a few minutes).
 

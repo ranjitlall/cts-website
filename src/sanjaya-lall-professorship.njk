@@ -3,7 +3,6 @@ layout: layouts/base.njk
 title: The Sanjaya Lall Visiting Professorship
 permalink: /sanjaya-lall-professorship/index.html
 description: The Centre for Technology and Society hosts the Sanjaya Lall Visiting Professorship of Business and Development, one of the most prestigious visiting appointments in economics.
-eleventyExcludeFromCollections: true
 ---
 
 <section class="hero hero--compact">
@@ -17,13 +16,26 @@ eleventyExcludeFromCollections: true
       </p>
     </div>
     <figure class="portrait portrait--hero">
-      <img src="/assets/img/sanjaya-lall.jpg" alt="Professor Sanjaya Lall" width="820" height="696">
+      <img src="{{ "/assets/img/sanjaya-lall.jpg" | url }}" alt="Professor Sanjaya Lall" width="820" height="696">
       <figcaption>Professor Sanjaya Lall (1940&ndash;2005)</figcaption>
     </figure>
   </div>
 </section>
 
-<section class="section">
+
+<nav class="sectionnav" aria-label="On this page">
+  <div class="wrap sectionnav__inner">
+    <span class="sectionnav__label">On this page</span>
+    <ul>
+      <li><a href="#the-chair">The appointment</a></li>
+      <li><a href="#holders">Previous holders</a></li>
+      <li><a href="#lectures-and-events">Lectures &amp; events</a></li>
+      <li><a href="#hosting">The Centre's role</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="section" id="the-chair">
   <div class="wrap">
     <div class="grid grid--2">
       <div class="reveal">
@@ -47,13 +59,25 @@ eleventyExcludeFromCollections: true
           <span class="hl--coral">strategic policy responses</span> &mdash; a combination that maps closely onto the
           Centre's own research agenda.
         </p>
+        <p>
+          The subjects have tracked whatever was most urgent in the world economy at the
+          time, and lately that has meant <span class="hl">technology</span>. In 2026
+          Sendhil Mullainathan argued
+          that economists are unusually well equipped to say what large language models
+          can and cannot do, and joined Sir Nigel Shadbolt and Google DeepMind's Raia
+          Hadsell on what algorithmic systems are doing to science itself. In 2024 Daron
+          Acemoglu challenged the &lsquo;productivity bandwagon&rsquo;
+          &mdash; the assumption that technological advance brings shared prosperity of
+          its own accord &mdash; and debated the future of work with Sir Christopher
+          Pissarides and Helen Margetts.
+        </p>
       </div>
 
       <div class="reveal">
         <span class="eyebrow">Sanjaya Lall, 1940&ndash;2005</span>
         <h2 style="font-size:clamp(1.6rem,1.2rem+1.6vw,2.2rem);">The economist behind the chair</h2>
         <figure class="portrait portrait--float">
-          <img src="/assets/img/sanjaya-lall-2.jpg" alt="Professor Sanjaya Lall in a garden" width="597" height="900" loading="lazy">
+          <img src="{{ "/assets/img/sanjaya-lall-2.jpg" | url }}" alt="Professor Sanjaya Lall in a garden" width="597" height="900" loading="lazy">
           <figcaption>Sanjaya Lall spent forty years at Oxford, latterly as Professor of Development Economics.</figcaption>
         </figure>
         <p>
@@ -75,12 +99,15 @@ eleventyExcludeFromCollections: true
           matter of institutions and policy, not of nature &mdash; is the intellectual
           thread connecting his work to the Centre's.
         </p>
+        <p style="margin-top:1.75rem;">
+          <a class="btn btn--outline" href="{{ "/sanjaya-lall/" | url }}">Find out more about his life and work &rarr;</a>
+        </p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section--mist">
+<section class="section section--mist" id="holders">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Previous holders</span>
@@ -95,12 +122,12 @@ eleventyExcludeFromCollections: true
       {% for h in holders %}
       <article class="holder">
         {% if h.photo %}
-        <img class="holder__photo" src="{{ h.photo }}" alt="Portrait of {{ h.name }}" width="300" height="300" loading="lazy">
+        <img class="holder__photo" src="{{ h.photo | url }}" alt="Portrait of {{ h.name }}" width="300" height="300" loading="lazy">
         {% else %}
         <div class="holder__photo holder__photo--placeholder" aria-hidden="true"><span>{{ h.initials }}</span></div>
         {% endif %}
         <p class="holder__year">{{ h.year }}</p>
-        <p class="holder__name">{{ h.name }}</p>
+        <p class="holder__name">{% if h.link %}<a href="{{ h.link }}">{{ h.name }}</a>{% else %}{{ h.name }}{% endif %}</p>
         <p class="holder__aff">{{ h.affiliation }}</p>
         {% if h.credit %}<p class="holder__credit">{{ h.credit }}</p>{% endif %}
       </article>
@@ -118,7 +145,7 @@ eleventyExcludeFromCollections: true
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Lectures &amp; events</span>
-      <h2>The Sanjaya Lall Lecture and panel events</h2>
+      <h2>University lectures and panel events</h2>
       <p>
         Each Professorship brings a public lecture and a panel discussion, organised by
         the Sanjaya Lall Memorial Fund, that regularly draw audiences in the hundreds.
@@ -147,11 +174,19 @@ eleventyExcludeFromCollections: true
             {% if e.venue %}
             <p class="evitem__line"><span class="evitem__label">Venue</span> {{ e.venue }}</p>
             {% endif %}
-            {% if e.link %}<a class="evitem__link" href="{{ e.link }}">{{ e.linkLabel or "More" }} &rarr;</a>{% endif %}
+            <div class="evitem__links">
+              {% if e.video %}
+              <a class="evitem__watch" href="{{ e.video }}">
+                <svg width="13" height="13" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 1.8v12.4L14 8z" fill="currentColor"/></svg>
+                {{ e.videoLabel or "Watch the recording" }}
+              </a>
+              {% endif %}
+              {% if e.link %}<a class="evitem__link" href="{{ e.link }}">{{ e.linkLabel or "More" }} &rarr;</a>{% endif %}
+            </div>
           </div>
           {% if e.poster %}
           <figure class="evposter">
-            <a href="{{ e.poster }}"><img src="{{ e.poster }}" alt="Poster: {{ e.title }}, {{ y.year }}" loading="lazy"></a>
+            <a href="{{ e.poster | url }}"><img src="{{ e.poster | url }}" alt="Poster: {{ e.title }}, {{ y.year }}" loading="lazy"></a>
           </figure>
           {% endif %}
         </li>
@@ -169,7 +204,8 @@ eleventyExcludeFromCollections: true
   </div>
 </section>
 
-<section class="section section--navy">
+<section class="section section--navy fx" id="hosting">
+  <div class="fx__layer" aria-hidden="true"></div>
   <div class="wrap">
     <div class="grid grid--2">
       <div class="reveal">

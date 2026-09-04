@@ -23,7 +23,12 @@ jobs:
         with:
           node-version: 20
       - run: npm ci
-      - run: npx @11ty/eleventy
+
+      # Build under the repository name as a subpath, e.g. /cts-website/.
+      # When a custom domain (cts.ox.ac.uk) is set in Settings → Pages, GitHub
+      # serves from the root instead — change this line to: npx @11ty/eleventy
+      - run: npx @11ty/eleventy --pathprefix="/${{ github.event.repository.name }}/"
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
