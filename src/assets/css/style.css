@@ -1554,3 +1554,33 @@ strong { font-weight: 600; color: var(--navy); }
   .orb { animation: none; opacity: 0; }
 }
 
+
+/* Slow rotation of the hero triangle. The orbiting dots carry the same
+   transform so they stay locked to its edges.
+
+   The rotation is written as translate -> rotate -> translate back rather than
+   using transform-origin, which did not resolve to the centroid here and left
+   the triangle orbiting instead of spinning in place.
+
+   The viewBox was extended vertically (0 -32 560 564) so the triangle can turn
+   at full size: its circumradius is 250 units and the original 560x480 box left
+   only 220.8 below the centroid, which clipped the lower vertex.
+
+   The opacity is restated because this animation replaces the SVG's own
+   ctsTri fade-in, which is what set it. */
+.hero-dispersion .tri,
+.hero-dispersion .orbs {
+  animation: cts-spin 150s linear infinite;
+}
+.hero-dispersion .tri { opacity: 0.45; }
+
+@keyframes cts-spin {
+  from { transform: translate(280px, 259.2px) rotate(0deg)   translate(-280px, -259.2px); }
+  to   { transform: translate(280px, 259.2px) rotate(360deg) translate(-280px, -259.2px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* No spin, and no scale either: the triangle sits still at full size. */
+  .hero-dispersion .tri,
+  .hero-dispersion .orbs { animation: none; transform: none; }
+}

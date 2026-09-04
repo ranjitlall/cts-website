@@ -1,4 +1,4 @@
-<svg class="hero-dispersion" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 480" role="img" aria-label="Illustration: a dense cluster of coloured points on the left dispersing into a sparse field on the right, set within an outlined triangle">
+<svg class="hero-dispersion" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 -32 560 564" role="img" aria-label="Illustration: a dense cluster of coloured points on the left dispersing into a sparse field on the right, set within an outlined triangle">
   <defs>
     <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
       <feGaussianBlur stdDeviation="3.2" result="b"/>
