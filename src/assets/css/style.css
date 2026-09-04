@@ -1584,3 +1584,85 @@ strong { font-weight: 600; color: var(--navy); }
   .hero-dispersion .tri,
   .hero-dispersion .orbs { animation: none; transform: none; }
 }
+
+/* Press coverage listed under an event entry. */
+.evitem__news { margin-top: 0.45rem; }
+.evitem__news a { color: var(--verdigris); text-decoration: none; border-bottom: 1px solid rgba(46,125,110,0.35); }
+.evitem__news a:hover { border-bottom-color: var(--verdigris); }
+.evitem__news em {
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 0.72rem;
+  color: var(--slate);
+  letter-spacing: 0.03em;
+  margin-left: 0.45rem;
+}
+
+/* Sources and further reading, at the foot of the Sanjaya Lall page. */
+.sources {
+  margin-top: 2.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0,33,71,0.12);
+}
+.sources h3 {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin: 0 0 0.9rem;
+}
+.sources ul { list-style: none; margin: 0; padding: 0; }
+.sources li { margin-bottom: 0.55rem; line-height: 1.45; }
+.sources li a { color: var(--navy); text-decoration: none; border-bottom: 1px solid rgba(46,125,110,0.4); }
+.sources li a:hover { color: var(--verdigris); }
+.sources li span {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--slate);
+}
+
+/* --------------------------------------------------------------------------
+   Professorship and Sanjaya Lall heroes: a network panel in the logo palette
+   filling the right-hand side, full height, bleeding off the right edge.
+   Purely decorative, so it is aria-hidden and never carries meaning.
+   -------------------------------------------------------------------------- */
+
+.hero--motif { position: relative; }
+.hero--motif > .wrap { position: relative; z-index: 2; }
+
+.hero__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(56%, 980px);
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.6;
+  /* Fade out toward the text so the headline always sits on clean navy. */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 34%, #000 100%);
+          mask-image: linear-gradient(to right, transparent 0%, #000 34%, #000 100%);
+}
+.hero__bg .motif { display: block; width: 100%; height: 100%; }
+
+.portrait-wrap { position: relative; }
+.portrait-wrap .portrait--hero { position: relative; z-index: 2; }
+
+/* Pulses travelling along the network's edges. */
+.motif__flow line {
+  stroke-width: 1.6;
+  stroke-dasharray: 3.5 70;
+  opacity: 0.85;
+  animation: motif-flow 5s linear infinite;
+}
+@keyframes motif-flow { to { stroke-dashoffset: -74; } }
+
+@media (max-width: 859px) {
+  .hero__bg { width: 100%; opacity: 0.32; -webkit-mask-image: none; mask-image: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motif__flow { display: none; }
+}

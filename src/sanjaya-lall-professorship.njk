@@ -5,7 +5,8 @@ permalink: /sanjaya-lall-professorship/index.html
 description: The Centre for Technology and Society hosts the Sanjaya Lall Visiting Professorship of Business and Development, one of the most prestigious visiting appointments in economics.
 ---
 
-<section class="hero hero--compact">
+<section class="hero hero--compact hero--motif">
+  <div class="hero__bg" aria-hidden="true">{% include "partials/hero-motif.svg" %}</div>
   <div class="wrap hero__split">
     <div>
       <span class="hero__kicker">Hosted by the Centre for Technology and Society</span>
@@ -15,10 +16,12 @@ description: The Centre for Technology and Society hosts the Sanjaya Lall Visiti
         laureates and Clark Medallists, and awarded annually at Oxford since 2011.
       </p>
     </div>
-    <figure class="portrait portrait--hero">
+    <div class="portrait-wrap">
+      <figure class="portrait portrait--hero">
       <img src="{{ "/assets/img/sanjaya-lall.jpg" | url }}" alt="Professor Sanjaya Lall" width="820" height="696">
       <figcaption>Professor Sanjaya Lall (1940&ndash;2005)</figcaption>
     </figure>
+    </div>
   </div>
 </section>
 
@@ -183,6 +186,12 @@ description: The Centre for Technology and Society hosts the Sanjaya Lall Visiti
               {% endif %}
               {% if e.link %}<a class="evitem__link" href="{{ e.link }}">{{ e.linkLabel or "More" }} &rarr;</a>{% endif %}
             </div>
+            {% if e.news %}
+            <p class="evitem__line evitem__news">
+              <span class="evitem__label">In the press</span>
+              {% for n in e.news %}<a href="{{ n.url }}">{{ n.title }}</a><em>{{ n.outlet }}</em>{% if not loop.last %} &middot; {% endif %}{% endfor %}
+            </p>
+            {% endif %}
           </div>
           {% if e.poster %}
           <figure class="evposter">

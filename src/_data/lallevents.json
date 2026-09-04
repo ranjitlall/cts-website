@@ -10,7 +10,7 @@
         "title": "Science in the Age of Algorithms",
         "detail": "A public panel welcoming Professor Mullainathan as Sanjaya Lall Visiting Professor of Business and Development, on what algorithmic systems are doing to the practice of science itself.",
         "people": "Sir Nigel Shadbolt (Principal of Jesus College and Professor of Computer Science, Oxford), Sendhil Mullainathan (MIT), and Dr Raia Hadsell (VP of Research, Google DeepMind). Chaired by Professor Johannes Abeler, Head of the Department of Economics.",
-        "venue": "Andrew Wiles Building, Mathematical Institute \u00b7 5.00pm, followed by a drinks reception",
+        "venue": "Andrew Wiles Building, Mathematical Institute · 5.00pm, followed by a drinks reception",
         "poster": "/assets/img/events/poster-2026-algorithms.jpg",
         "link": "https://www.economics.ox.ac.uk/sanjaya-lall-visiting-professorship-panel-discussion-2026",
         "linkLabel": "Event details",
@@ -23,7 +23,7 @@
         "title": "The Sanjaya Lall Lecture 2026",
         "detail": "What large language models can and cannot do is usually treated as a question for computer scientists. Mullainathan argues that economists are uniquely equipped to answer it.",
         "people": "Sendhil Mullainathan (MIT)",
-        "venue": "Lecture Theatre, Manor Road Building \u00b7 5.00\u20136.30pm, followed by a drinks reception",
+        "venue": "Lecture Theatre, Manor Road Building · 5.00–6.30pm, followed by a drinks reception",
         "poster": "",
         "link": "https://www.economics.ox.ac.uk/sanjaya-lall-lecture-2026-with-sendhil-mullainathan",
         "linkLabel": "Event details"
@@ -41,7 +41,7 @@
         "title": "The Sanjaya Lall Lecture 2025",
         "detail": "Delivered during Professor Pande's Trinity Term visit. Her research examines how institutions shape economic, political, and environmental inequality in low- and middle-income countries.",
         "people": "Rohini Pande (Yale University), an alumna of the Oxford PPE programme",
-        "venue": "University of Oxford \u00b7 Hosted by the Department of Economics",
+        "venue": "University of Oxford · Hosted by the Department of Economics",
         "poster": "",
         "link": "https://www.economics.ox.ac.uk/sanjaya-lall-visiting-professorship-2025",
         "linkLabel": "Event details",
@@ -59,9 +59,9 @@
         "type": "Panel",
         "date": "2 May 2024",
         "title": "The Future of Work in the Age of AI",
-        "detail": "A public panel on what artificial intelligence means for employment, wages, and the organisation of work \u2014 the question closest to the CTS research agenda.",
+        "detail": "A public panel on what artificial intelligence means for employment, wages, and the organisation of work — the question closest to the CTS research agenda.",
         "people": "Sir Christopher Pissarides (Regius Professor of Economics, LSE, and Nobel laureate), Daron Acemoglu (MIT), and Helen Margetts (Professor of Internet and Society, Oxford). Q&A chaired by Professor Sir John Vickers.",
-        "venue": "Nelson Mandela Lecture Theatre, Sa\u00efd Business School \u00b7 5.00pm, followed by a reception. Co-sponsored by Sa\u00efd Business School and St John's College",
+        "venue": "Nelson Mandela Lecture Theatre, Saïd Business School · 5.00pm, followed by a reception. Co-sponsored by Saïd Business School and St John's College",
         "poster": "/assets/img/events/poster-2024-acemoglu.jpg",
         "link": "",
         "linkLabel": "",
@@ -72,9 +72,9 @@
         "type": "Lecture",
         "date": "May 2024",
         "title": "The Sanjaya Lall Memorial Lecture 2024",
-        "detail": "Drawing on Power and Progress, Acemoglu challenged the idea that technological advance leads naturally to greater prosperity \u2014 what he calls the 'productivity bandwagon' \u2014 arguing that who benefits depends on institutions and choices rather than on technology itself.",
+        "detail": "Drawing on Power and Progress, Acemoglu challenged the idea that technological advance leads naturally to greater prosperity — what he calls the 'productivity bandwagon' — arguing that who benefits depends on institutions and choices rather than on technology itself.",
         "people": "Daron Acemoglu (Institute Professor, MIT)",
-        "venue": "University of Oxford \u00b7 Hosted by the Sa\u00efd Business School",
+        "venue": "University of Oxford · Hosted by the Saïd Business School",
         "poster": "",
         "link": "https://www.sbs.ox.ac.uk/events/sanjaya-lall-visiting-professor-professor-daron-acemoglu",
         "linkLabel": "Event details",
@@ -86,7 +86,7 @@
   {
     "year": 2023,
     "holder": "Joseph Stiglitz and Raj Chetty",
-    "holderRole": "Columbia University \u00b7 Harvard University",
+    "holderRole": "Columbia University · Harvard University",
     "items": [
       {
         "type": "Panel",
@@ -94,7 +94,7 @@
         "title": "Green Industrial Policy: Saving the World without a Trade War",
         "detail": "A public panel welcoming Professor Stiglitz as Sanjaya Lall Distinguished Visiting Fellow, on whether decarbonisation and open trade can be reconciled.",
         "people": "Joseph Stiglitz (Columbia), Professor Lord Nicholas Stern, the Hon. Ed Miliband MP, and Michael Liebreich.",
-        "venue": "Andrew Wiles Building, Mathematical Institute \u00b7 5.00pm, discussion and Q&A followed by a reception. Co-sponsored by the Department of Economics",
+        "venue": "Andrew Wiles Building, Mathematical Institute · 5.00pm, discussion and Q&A followed by a reception. Co-sponsored by the Department of Economics",
         "poster": "/assets/img/events/poster-2023-green-industrial.jpg",
         "link": "",
         "linkLabel": ""
@@ -105,7 +105,7 @@
         "title": "Freedom and Liberty: Perspectives from 21st Century Economics",
         "detail": "The Sanjaya Lall Memorial Fund Lecture 2023, revisiting the concept of freedom through the lens of contemporary economics.",
         "people": "Joseph Stiglitz (Columbia University), recipient of the 2001 Nobel Memorial Prize in Economic Sciences",
-        "venue": "Mathematical Institute \u00b7 5.30\u20137.00pm. Hosted by the Department of Economics",
+        "venue": "Mathematical Institute · 5.30–7.00pm. Hosted by the Department of Economics",
         "poster": "/assets/img/events/poster-2023-lectures.jpg",
         "link": "https://www.economics.ox.ac.uk/article/sanjaya-lall-visiting-professorship",
         "linkLabel": "Event details",
@@ -118,7 +118,7 @@
         "title": "Creating Equality of Opportunity: New Insights from Big Data",
         "detail": "On what administrative and social-network data reveal about why children's chances of upward mobility vary so sharply across neighbourhoods.",
         "people": "Raj Chetty (William A. Ackman Professor of Economics, Harvard, and Director of Opportunity Insights), with Joseph Stiglitz as discussant",
-        "venue": "Manor Road Lecture Theatre \u00b7 5.30\u20137.00pm. Hosted by the Department of Economics",
+        "venue": "Manor Road Lecture Theatre · 5.30–7.00pm. Hosted by the Department of Economics",
         "poster": "",
         "link": "",
         "linkLabel": "",
@@ -131,10 +131,17 @@
         "title": "Inequality and Social Mobility in the 21st Century: New Challenges and Opportunities",
         "detail": "A public panel welcoming Professor Chetty as Sanjaya Lall Visiting Professor of Business and Development.",
         "people": "Joseph Stiglitz (Columbia), Raj Chetty (Harvard), and Anneliese Dodds MP.",
-        "venue": "Andrew Wiles Building \u00b7 5.00\u20137.00pm, discussion and Q&A followed by a reception. Co-sponsored by Green Templeton College and the Department of Economics",
+        "venue": "Andrew Wiles Building · 5.00–7.00pm, discussion and Q&A followed by a reception. Co-sponsored by Green Templeton College and the Department of Economics",
         "poster": "/assets/img/events/poster-2023-inequality.jpg",
         "link": "",
-        "linkLabel": ""
+        "linkLabel": "",
+        "news": [
+          {
+            "title": "Anneliese Dodds joins economists on social mobility panel",
+            "outlet": "The Oxford Student, 31 May 2023",
+            "url": "https://www.oxfordstudent.com/2023/05/31/anneliese-dodds-social-mobility-panel/"
+          }
+        ]
       }
     ]
   },
@@ -149,7 +156,7 @@
         "title": "What Will It Take to Educate the World?",
         "detail": "Duflo drew on research into school learning techniques in rural India that bridges economics with psychology and cognitive science; the panellists responded from their own experience of large-scale policy interventions.",
         "people": "Sir Richard Peto (Professor of Medical Statistics and Epidemiology, Oxford), Esther Duflo (MIT), and Dr Rachel Glennerster (Chief Economist, UK Department for International Development).",
-        "venue": "Andrew Wiles Building, Mathematical Institute \u00b7 5.30\u20137.30pm. Co-sponsored by Green Templeton College and the Department of Economics",
+        "venue": "Andrew Wiles Building, Mathematical Institute · 5.30–7.30pm. Co-sponsored by Green Templeton College and the Department of Economics",
         "poster": "/assets/img/events/poster-2018-duflo.jpg",
         "link": "https://podcasts.ox.ac.uk/what-will-it-take-educate-world-sanjaya-lall-visiting-professor-distinguished-panel-lecture-2018?video=1",
         "linkLabel": "Watch on Oxford Podcasts (1h 47m)"
@@ -167,7 +174,7 @@
         "title": "Trumponomics",
         "detail": "A public panel welcoming Professor Rogoff as Sanjaya Lall Visiting Professor, assessing the economic programme of the first Trump administration a few months into its term.",
         "people": "Martin Wolf CBE (Associate Editor and Chief Economics Commentator, Financial Times), Kenneth Rogoff (Professor of Economics and Public Policy, Harvard), and Professor John Muellbauer (Nuffield College, Oxford).",
-        "venue": "Andrew Wiles Building, Mathematical Institute \u00b7 5.00\u20137.00pm, followed by a reception. Co-sponsored by Green Templeton College and the Department of Economics",
+        "venue": "Andrew Wiles Building, Mathematical Institute · 5.00–7.00pm, followed by a reception. Co-sponsored by Green Templeton College and the Department of Economics",
         "poster": "/assets/img/events/poster-2017-rogoff.jpg",
         "link": "https://podcasts.ox.ac.uk/trumponomics?video=1",
         "linkLabel": "Watch on Oxford Podcasts (1h 46m)"
@@ -183,9 +190,9 @@
         "type": "Panel",
         "date": "10 May 2016",
         "title": "Emerging Market Multinationals in the 21st Century",
-        "detail": "A public panel welcoming Professor Dixit as Sanjaya Lall Visiting Professor, on the rise of firms from developing economies as global multinationals \u2014 a subject at the centre of Sanjaya Lall's own research.",
+        "detail": "A public panel welcoming Professor Dixit as Sanjaya Lall Visiting Professor, on the rise of firms from developing economies as global multinationals — a subject at the centre of Sanjaya Lall's own research.",
         "people": "Professor Tim Besley (School Professor of Economics and Political Science, LSE), Avinash Dixit (Princeton), and Professor Robert Wade (Professor of Political Economy and Development, LSE, and the first holder of the Professorship). Chaired by Professor Beata Javorcik, All Souls College.",
-        "venue": "Andrew Wiles Building, Mathematical Institute \u00b7 5.00\u20137.00pm, followed by a reception. Co-sponsored by Green Templeton College and the Department of Economics",
+        "venue": "Andrew Wiles Building, Mathematical Institute · 5.00–7.00pm, followed by a reception. Co-sponsored by Green Templeton College and the Department of Economics",
         "poster": "/assets/img/events/poster-2016-dixit.jpg",
         "link": "https://podcasts.ox.ac.uk/keywords/foreign-direct-investment",
         "linkLabel": "Listen on Oxford Podcasts"
@@ -203,7 +210,7 @@
         "title": "Information, Voting and the Quality of Governance",
         "detail": "On what voters know, how that shapes electoral accountability, and what it implies for the quality of government in developing democracies.",
         "people": "Professor Roger Myerson (Glen A. Lloyd Professor of Economics, Chicago, and Nobel laureate), Abhijit Banerjee (MIT, co-founder and director of the Poverty Action Lab), and Professor Vincent Crawford (Drummond Professor of Political Economy, All Souls, Oxford). Chaired by Sir John Vickers, Warden of All Souls College.",
-        "venue": "Andrew Wiles Building, Mathematical Institute \u00b7 5.30\u20137.30pm. Co-sponsored by Green Templeton College and the Department of Economics",
+        "venue": "Andrew Wiles Building, Mathematical Institute · 5.30–7.30pm. Co-sponsored by Green Templeton College and the Department of Economics",
         "poster": "/assets/img/events/poster-2015-banerjee.jpg",
         "link": "https://podcasts.ox.ac.uk/sanjaya-lall-lecture-2015?video=1",
         "linkLabel": "Watch on Oxford Podcasts (1h 11m)"
@@ -214,12 +221,19 @@
         "title": "Economic Possibilities for the New Government",
         "detail": "A panel organised by the Sanjaya Lall Memorial Fund, held a week after the 2015 general election, on the economic choices facing the incoming government. Krugman returned to Oxford the year after holding the Visiting Professorship.",
         "people": "Paul Krugman (Princeton University), Professor Sir David Hendry (University of Oxford), and Martin Wolf CBE (Chief Economics Commentator, Financial Times). Chaired by Professor Anthony Venables CBE.",
-        "venue": "Sa\u00efd Business School, University of Oxford \u00b7 Organised by the Sanjaya Lall Memorial Fund and hosted by Oxford Sa\u00efd as part of its Distinguished Speaker Series",
+        "venue": "Saïd Business School, University of Oxford · Organised by the Sanjaya Lall Memorial Fund and hosted by Oxford Saïd as part of its Distinguished Speaker Series",
         "poster": "",
         "link": "",
         "linkLabel": "",
         "video": "https://www.youtube.com/watch?v=bVU0LpZrLlk",
-        "videoLabel": "Watch the recording"
+        "videoLabel": "Watch the recording",
+        "news": [
+          {
+            "title": "Professor Paul Krugman: the economic possibilities for the new government",
+            "outlet": "Saïd Business School — full transcript",
+            "url": "https://oxfordsbs.medium.com/professor-paul-krugman-the-economic-possibilities-for-the-new-government-251e314363d0"
+          }
+        ]
       }
     ]
   },
@@ -234,7 +248,7 @@
         "title": "Do We Face Secular Stagnation?",
         "detail": "Krugman led a discussion on whether the world economy faced permanently depressed growth five years after the credit crunch.",
         "people": "The Rt Hon Lord Adair Turner (former Chairman, Financial Services Authority), Paul Krugman (Princeton, Nobel laureate), and The Rt Hon Lord Robert Skidelsky (Professor Emeritus of Political Economy, Warwick).",
-        "venue": "Andrew Wiles Building, Mathematical Institute \u00b7 5.00pm. Co-sponsored by Green Templeton College and the Department of Economics",
+        "venue": "Andrew Wiles Building, Mathematical Institute · 5.00pm. Co-sponsored by Green Templeton College and the Department of Economics",
         "poster": "/assets/img/events/poster-2014-krugman.jpg",
         "link": "https://podcasts.ox.ac.uk/keywords/secular-stagnation",
         "linkLabel": "Listen on Oxford Podcasts"
@@ -245,7 +259,7 @@
         "title": "Stagnation: The New Normal",
         "detail": "A further public lecture during Krugman's Trinity Term visit.",
         "people": "Paul Krugman (Princeton University)",
-        "venue": "Gulbenkian Lecture Theatre, St Cross Building \u00b7 5.00pm. Organised by the Department of Economics with the Oxford Department of International Development",
+        "venue": "Gulbenkian Lecture Theatre, St Cross Building · 5.00pm. Organised by the Department of Economics with the Oxford Department of International Development",
         "poster": "",
         "link": "",
         "linkLabel": ""
@@ -263,7 +277,7 @@
         "title": "Is There Economic Convergence in the Post-Global Crisis Era?",
         "detail": "On whether developing economies were still catching up with rich ones after the financial crisis, and what industrial policy could do about it.",
         "people": "Professor Dani Rodrik (Harvard), The Rt Hon Vince Cable MP (then Secretary of State for Business, Innovation and Skills), and Sir Tony Atkinson (Professor of Political Economy, LSE). Chaired by Andrew Dilnot CBE, Warden of Nuffield College.",
-        "venue": "Nelson Mandela Theatre, Sa\u00efd Business School \u00b7 4.00pm. Co-sponsored by the Department of Politics and International Relations and the Department of Economics",
+        "venue": "Nelson Mandela Theatre, Saïd Business School · 4.00pm. Co-sponsored by the Department of Politics and International Relations and the Department of Economics",
         "poster": "/assets/img/events/poster-2013-rodrik.jpg",
         "link": "",
         "linkLabel": ""
@@ -281,10 +295,17 @@
         "title": "How Will Developing Countries Shape the Future Global Economy, and What Challenges Will They Face?",
         "detail": "The Distinguished Panel Discussion marking the inauguration of the Visiting Professorship, opened by the Chancellor of the University.",
         "people": "Amartya Sen (Professor of Economics and Philosophy, Harvard, and Nobel laureate), Robert Wade (LSE), the first Sanjaya Lall Visiting Professor, and Martin Wolf CBE (Chief Economics Commentator, Financial Times). Opened by Lord Patten, Chancellor of the University.",
-        "venue": "Sa\u00efd Business School \u00b7 4.00pm, Friday 3 June 2011",
+        "venue": "Saïd Business School · 4.00pm, Friday 3 June 2011",
         "poster": "/assets/img/events/poster-2011-inaugural.jpg",
         "link": "",
-        "linkLabel": ""
+        "linkLabel": "",
+        "news": [
+          {
+            "title": "West could learn from India, says Amartya Sen",
+            "outlet": "The Hindu",
+            "url": "https://www.thehindu.com/news/international/west-could-learn-from-india-says-amartya-sen/article2076823.ece"
+          }
+        ]
       }
     ]
   }
