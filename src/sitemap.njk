@@ -2,17 +2,9 @@
 permalink: /sitemap.xml
 eleventyExcludeFromCollections: true
 ---
-{#-
-  Lists every real page on the site. The `if item.url` test skips the People
-  files in src/content/people/, which are data for the homepage grid rather
-  than pages of their own, so they have no address to list.
-  New pages are picked up automatically — nothing to edit here.
--#}
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{%- for item in collections.all %}
-{%- if item.url %}
-  <url><loc>{{ site.url }}{{ item.url }}</loc></url>
-{%- endif %}
+{%- for page in collections.all %}
+  <url><loc>{{ site.url }}{{ page.url }}</loc></url>
 {%- endfor %}
 </urlset>

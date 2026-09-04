@@ -1,9 +1,9 @@
 ---
 group: core
-name: Thomas Robinson
-position: "Faculty Affiliate"
-affiliation: "Assistant Professor in Methodology, London School of Economics"
-link: https://ts-robinson.com/
+name: Tom Robinson
+position: "Research Affiliate"
+affiliation: "Assistant Professor of Methodology, London School of Economics"
+link: ""
 photo: "/assets/img/people/tom-robinson.jpg"
-order: 5
+order: 4
 ---

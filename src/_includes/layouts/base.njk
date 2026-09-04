@@ -18,11 +18,11 @@
 <meta property="og:image" content="{{ site.url }}/assets/img/social-card.png">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" href="{{ "/assets/img/favicon.svg" | url }}" type="image/svg+xml">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ "/assets/css/style.css" | url }}">
+<link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
 
@@ -31,26 +31,17 @@
 <div class="oxford-strip">
   <div class="wrap oxford-strip__inner">
     <a class="oxford-strip__brand" href="https://www.ox.ac.uk">
-      <img src="{{ "/assets/img/logo-oxford.png" | url }}" alt="" width="120" height="120" aria-hidden="true">
+      <img src="/assets/img/logo-oxford.png" alt="" width="120" height="120" aria-hidden="true">
       <span>University of Oxford</span>
     </a>
-    <div class="oxford-strip__partners">
-      <a href="{{ site.parentUrl }}" class="oxford-strip__partner oxford-strip__partner--aigi"
-         title="Oxford Martin AI Governance Initiative">
-        <img src="{{ "/assets/img/logo-aigi.jpeg" | url }}" alt="Oxford Martin AI Governance Initiative" width="400" height="400">
-      </a>
-      <span class="oxford-strip__rule" aria-hidden="true"></span>
-      <a href="https://www.oxfordmartin.ox.ac.uk" class="oxford-strip__partner oxford-strip__partner--tile">
-        <img src="{{ "/assets/img/logo-martin.png" | url }}" alt="Oxford Martin School" width="256" height="256">
-      </a>
-    </div>
+    <a class="oxford-strip__parent" href="{{ site.parentUrl }}">Oxford Martin AI Governance Initiative</a>
   </div>
 </div>
 
 <header class="site-header">
   <div class="wrap site-header__inner">
-    <a class="brand" href="{{ "/" | url }}" aria-label="{{ site.name }} — home">
-      <img class="brand__lockup" src="{{ "/assets/img/cts-lockup.svg" | url }}" alt="{{ site.name }} (CTS)" width="1000" height="240">
+    <a class="brand" href="/" aria-label="{{ site.name }} — home">
+      <img class="brand__lockup" src="/assets/img/cts-lockup.svg" alt="{{ site.name }} (CTS)" width="1000" height="240">
     </a>
 
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
@@ -61,12 +52,12 @@
     </button>
 
     <nav class="nav" id="primary-nav" aria-label="Primary">
-      <a href="{{ "/#about" | url }}">About</a>
-      <a href="{{ "/#research" | url }}">Research</a>
-      <a href="{{ "/#activities" | url }}">Activities</a>
-      <a href="{{ "/#people" | url }}">People</a>
-      <a href="{{ "/sanjaya-lall-professorship/" | url }}">Visiting Professorship</a>
-      <a href="{{ "/#contact" | url }}">Contact</a>
+      <a href="/#about">About</a>
+      <a href="/#research">Research</a>
+      <a href="/#activities">Activities</a>
+      <a href="/#people">People</a>
+      <a href="/sanjaya-lall-professorship/">Visiting Professorship</a>
+      <a href="/#contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -79,17 +70,16 @@
   <div class="wrap parent-bar__inner">
     <span class="parent-bar__label">A centre of the</span>
     <a href="{{ site.parentUrl }}" class="parent-bar__logo">
-      <img src="{{ "/assets/img/logo-aigi.jpeg" | url }}" alt="Oxford Martin AI Governance Initiative" width="200" height="200">
+      <img src="/assets/img/logo-aigi.jpeg" alt="Oxford Martin AI Governance Initiative" width="200" height="200">
     </a>
   </div>
 </div>
 
-<footer class="site-footer fx">
-  <div class="fx__layer" aria-hidden="true"></div>
+<footer class="site-footer">
   <div class="wrap">
     <div class="site-footer__grid">
       <div>
-        <img class="footer-lockup" src="{{ "/assets/img/cts-lockup-white.svg" | url }}" alt="{{ site.name }} (CTS)" width="1000" height="240">
+        <img class="footer-lockup" src="/assets/img/cts-lockup-white.svg" alt="{{ site.name }} (CTS)" width="1000" height="240">
         <address>
           {{ site.parent }}<br>
           {{ site.address.line1 }}<br>
@@ -100,19 +90,19 @@
       <div>
         <h4>Centre</h4>
         <ul>
-          <li><a href="{{ "/#about" | url }}">About</a></li>
-          <li><a href="{{ "/#research" | url }}">Research</a></li>
-          <li><a href="{{ "/#activities" | url }}">Activities</a></li>
-          <li><a href="{{ "/#people" | url }}">People</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#research">Research</a></li>
+          <li><a href="/#activities">Activities</a></li>
+          <li><a href="/#people">People</a></li>
         </ul>
       </div>
       <div>
         <h4>Engagement</h4>
         <ul>
-          <li><a href="{{ "/working-papers/" | url }}">Working Papers</a></li>
-          <li><a href="{{ "/sanjaya-lall-professorship/" | url }}">Visiting Professorship</a></li>
-          <li><a href="{{ "/#support" | url }}">Support the Centre</a></li>
-          <li><a href="{{ "/#contact" | url }}">Contact</a></li>
+          <li><a href="/working-papers/">Working Papers</a></li>
+          <li><a href="/sanjaya-lall-professorship/">Visiting Professorship</a></li>
+          <li><a href="/#support">Support the Centre</a></li>
+          <li><a href="/#contact">Contact</a></li>
         </ul>
       </div>
       <div>
@@ -127,8 +117,8 @@
     <div class="site-footer__base">
       <span>&copy; {{ site.name }}, {{ site.university }}</span>
       <span>
-        <a href="{{ "/privacy/" | url }}">Privacy</a> &middot;
-        <a href="{{ "/accessibility/" | url }}">Accessibility</a>
+        <a href="/privacy/">Privacy</a> &middot;
+        <a href="/accessibility/">Accessibility</a>
       </span>
     </div>
   </div>
@@ -174,54 +164,6 @@
     }, { rootMargin: '0px 0px -8% 0px' });
     items.forEach(function (el) { io.observe(el); });
   })();
-
-  // Navy-section network: reveal it in a soft circle around the pointer.
-  // Skipped entirely for touch (there is no hover) and for reduced motion.
-  (function () {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    var sections = document.querySelectorAll('.fx');
-    if (!sections.length) return;
-    Array.prototype.forEach.call(sections, function (sec) {
-      var raf = null, px = 0, py = 0;
-      sec.addEventListener('pointermove', function (e) {
-        if (e.pointerType === 'touch') return;
-        var r = sec.getBoundingClientRect();
-        px = e.clientX - r.left; py = e.clientY - r.top;
-        if (raf) return;
-        raf = requestAnimationFrame(function () {
-          sec.style.setProperty('--mx', px + 'px');
-          sec.style.setProperty('--my', py + 'px');
-          raf = null;
-        });
-      });
-      sec.addEventListener('pointerenter', function (e) {
-        if (e.pointerType !== 'touch') sec.classList.add('is-live');
-      });
-      sec.addEventListener('pointerleave', function () { sec.classList.remove('is-live'); });
-    });
-  })();
-
-  // Light the gold highlights once, the first time each scrolls into view.
-  (function () {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    var marks = document.querySelectorAll('.hl');
-    if (!marks.length || !('IntersectionObserver' in window)) return;
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        var el = entry.target;
-        io.unobserve(el);
-        // Drop the class once the sweep finishes, so the highlight returns to
-        // exactly its normal painted state rather than holding the final frame.
-        el.addEventListener('animationend', function () {
-          el.classList.remove('is-lit');
-        }, { once: true });
-        el.classList.add('is-lit');
-      });
-    }, { threshold: 0.9 });
-    Array.prototype.forEach.call(marks, function (el) { io.observe(el); });
-  })();
-
 </script>
 
 </body>

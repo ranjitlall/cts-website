@@ -1,25 +1,5 @@
 [
   {
-    "number": "WP 2026-02",
-    "title": "Tariffs, Geoeconomics and Political Cleavages: Evidence from American High-Tech Firms",
-    "authors": [
-      "Phuong Pham",
-      "Randall Stone"
-    ],
-    "date": "2026-08-15",
-    "dateLabel": "August 2026",
-    "abstract": "Standard trade theories predicted that capital-intensive firms deeply integrated into global production networks would strongly oppose the Trump administration's announcement of sweeping global tariffs on the \"Liberation Day\" of April 2nd 2025. Why have American high-technology firms responded with puzzling heterogeneity? We argue that firms that play central roles in US geoeconomic influence strategies receive state compensation through subsidies, contracts, and exemptions, and in exchange exhibit rhetorical forbearance toward tariff policy. We test this argument using a new firm-quarter panel of 486 earnings call transcripts from 65 leading U.S. technology and defense firms (2024Q1\u20132026Q1), with firm-level measures of tariff negativity and upstreamness generated through a two-step GPT-5.4 pipeline. Incorporating these measures into a difference-in-differences design that leverages Liberation Day as an exogenous shock, we find strong evidence for our theory: hardware firms respond more negatively than digital firms, and more upstream hardware firms respond less negatively than their downstream counterparts. We find consistent results using lobbying disclosure data.",
-    "keywords": [
-      "Tariffs",
-      "Geoeconomics",
-      "Trade policy",
-      "High-tech firms"
-    ],
-    "pdf": "/assets/papers/CTS-WP-2026-02.pdf",
-    "preprint": "",
-    "preprintLabel": ""
-  },
-  {
     "number": "WP 2026-01",
     "title": "The Political Economy of Artificial Intelligence: Evidence from Western Europe",
     "authors": [

@@ -1,9 +1,9 @@
 ---
 group: core
 name: Aarushi Kalra
-position: "Faculty Affiliate"
+position: "Research Affiliate"
 affiliation: "Associate Professor of Economics, University of Oxford"
-link: https://aarushirita.github.io/
+link: ""
 photo: "/assets/img/people/aarushi-kalra.jpg"
-order: 4
+order: 2
 ---

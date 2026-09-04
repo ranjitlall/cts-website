@@ -13,9 +13,7 @@
         "venue": "Andrew Wiles Building, Mathematical Institute \u00b7 5.00pm, followed by a drinks reception",
         "poster": "/assets/img/events/poster-2026-algorithms.jpg",
         "link": "https://www.economics.ox.ac.uk/sanjaya-lall-visiting-professorship-panel-discussion-2026",
-        "linkLabel": "Event details",
-        "video": "https://youtu.be/HyyGRXmBSYE",
-        "videoLabel": "Watch the recording"
+        "linkLabel": "Event details"
       },
       {
         "type": "Lecture",
@@ -44,9 +42,7 @@
         "venue": "University of Oxford \u00b7 Hosted by the Department of Economics",
         "poster": "",
         "link": "https://www.economics.ox.ac.uk/sanjaya-lall-visiting-professorship-2025",
-        "linkLabel": "Event details",
-        "video": "https://www.youtube.com/watch?v=G8rfaZQp6ww",
-        "videoLabel": "Watch the recording"
+        "linkLabel": "Event details"
       }
     ]
   },
@@ -64,22 +60,7 @@
         "venue": "Nelson Mandela Lecture Theatre, Sa\u00efd Business School \u00b7 5.00pm, followed by a reception. Co-sponsored by Sa\u00efd Business School and St John's College",
         "poster": "/assets/img/events/poster-2024-acemoglu.jpg",
         "link": "",
-        "linkLabel": "",
-        "video": "https://www.youtube.com/watch?v=LFLHraTx8zo",
-        "videoLabel": "Watch the recording"
-      },
-      {
-        "type": "Lecture",
-        "date": "May 2024",
-        "title": "The Sanjaya Lall Memorial Lecture 2024",
-        "detail": "Drawing on Power and Progress, Acemoglu challenged the idea that technological advance leads naturally to greater prosperity \u2014 what he calls the 'productivity bandwagon' \u2014 arguing that who benefits depends on institutions and choices rather than on technology itself.",
-        "people": "Daron Acemoglu (Institute Professor, MIT)",
-        "venue": "University of Oxford \u00b7 Hosted by the Sa\u00efd Business School",
-        "poster": "",
-        "link": "https://www.sbs.ox.ac.uk/events/sanjaya-lall-visiting-professor-professor-daron-acemoglu",
-        "linkLabel": "Event details",
-        "video": "https://www.youtube.com/watch?v=tkIhHbc2IAE",
-        "videoLabel": "Watch the recording"
+        "linkLabel": ""
       }
     ]
   },
@@ -108,9 +89,7 @@
         "venue": "Mathematical Institute \u00b7 5.30\u20137.00pm. Hosted by the Department of Economics",
         "poster": "/assets/img/events/poster-2023-lectures.jpg",
         "link": "https://www.economics.ox.ac.uk/article/sanjaya-lall-visiting-professorship",
-        "linkLabel": "Event details",
-        "video": "https://www.youtube.com/watch?v=EiMXAdskfrM",
-        "videoLabel": "Watch the recording"
+        "linkLabel": "Event details"
       },
       {
         "type": "Lecture",
@@ -121,9 +100,7 @@
         "venue": "Manor Road Lecture Theatre \u00b7 5.30\u20137.00pm. Hosted by the Department of Economics",
         "poster": "",
         "link": "",
-        "linkLabel": "",
-        "video": "https://www.youtube.com/watch?v=5N0L5RFqhsY",
-        "videoLabel": "Watch the recording"
+        "linkLabel": ""
       },
       {
         "type": "Panel",
@@ -207,19 +184,6 @@
         "poster": "/assets/img/events/poster-2015-banerjee.jpg",
         "link": "https://podcasts.ox.ac.uk/sanjaya-lall-lecture-2015?video=1",
         "linkLabel": "Watch on Oxford Podcasts (1h 11m)"
-      },
-      {
-        "type": "Panel",
-        "date": "14 May 2015",
-        "title": "Economic Possibilities for the New Government",
-        "detail": "A panel organised by the Sanjaya Lall Memorial Fund, held a week after the 2015 general election, on the economic choices facing the incoming government. Krugman returned to Oxford the year after holding the Visiting Professorship.",
-        "people": "Paul Krugman (Princeton University), Professor Sir David Hendry (University of Oxford), and Martin Wolf CBE (Chief Economics Commentator, Financial Times). Chaired by Professor Anthony Venables CBE.",
-        "venue": "Sa\u00efd Business School, University of Oxford \u00b7 Organised by the Sanjaya Lall Memorial Fund and hosted by Oxford Sa\u00efd as part of its Distinguished Speaker Series",
-        "poster": "",
-        "link": "",
-        "linkLabel": "",
-        "video": "https://www.youtube.com/watch?v=bVU0LpZrLlk",
-        "videoLabel": "Watch the recording"
       }
     ]
   },
@@ -278,11 +242,11 @@
       {
         "type": "Panel",
         "date": "3 June 2011",
-        "title": "How Will Developing Countries Shape the Future Global Economy, and What Challenges Will They Face?",
-        "detail": "The Distinguished Panel Discussion marking the inauguration of the Visiting Professorship, opened by the Chancellor of the University.",
-        "people": "Amartya Sen (Professor of Economics and Philosophy, Harvard, and Nobel laureate), Robert Wade (LSE), the first Sanjaya Lall Visiting Professor, and Martin Wolf CBE (Chief Economics Commentator, Financial Times). Opened by Lord Patten, Chancellor of the University.",
-        "venue": "Sa\u00efd Business School \u00b7 4.00pm, Friday 3 June 2011",
-        "poster": "/assets/img/events/poster-2011-inaugural.jpg",
+        "title": "Launch of the Sanjaya Lall Visiting Professorship",
+        "detail": "The inaugural event, opened by the Chancellor of the University. The panellists began by recalling Sanjaya Lall both as a friend and as a pioneering development economist.",
+        "people": "Amartya Sen (Nobel laureate), Martin Wolf (Financial Times), and Robert Wade (LSE), the first holder of the Chair. Opened by Lord Patten, Chancellor of the University. Other speakers included Colin Mayer, Dean of the Sa\u00efd Business School, and Frances Stewart of Queen Elizabeth House.",
+        "venue": "University of Oxford \u00b7 Associated with the Social Sciences Division and Green Templeton College",
+        "poster": "",
         "link": "",
         "linkLabel": ""
       }

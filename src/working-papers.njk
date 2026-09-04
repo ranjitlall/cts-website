@@ -3,19 +3,17 @@ layout: layouts/base.njk
 title: Working Papers
 permalink: /working-papers/index.html
 description: The CTS Working Paper Series circulates new research on the social, economic, and political consequences of emerging technologies.
+eleventyExcludeFromCollections: true
 ---
 
 <section class="hero hero--compact">
-  <div class="wrap hero__split">
-    <div>
-      <span class="hero__kicker">Centre for Technology and Society</span>
-      <h1 style="max-width:16ch;">Working Paper Series</h1>
-      <p class="hero__lede">
-        New research on the social, economic, and political consequences of emerging
-        technologies, circulated for discussion and comment ahead of publication.
-      </p>
-    </div>
-    <img class="hero__art" src="{{ "/assets/img/hero-papers.svg" | url }}" alt="" width="520" height="420" aria-hidden="true">
+  <div class="wrap">
+    <span class="hero__kicker">Centre for Technology and Society</span>
+    <h1 style="max-width:16ch;">Working Paper Series</h1>
+    <p class="hero__lede">
+      New research on the social, economic, and political consequences of emerging
+      technologies, circulated for discussion and comment ahead of publication.
+    </p>
   </div>
 </section>
 
@@ -39,7 +37,7 @@ description: The CTS Working Paper Series circulates new research on the social,
           </div>
           {% endif %}
           <div class="paper__links">
-            {% if p.pdf %}<a class="btn btn--primary" href="{{ p.pdf | url }}">Download PDF &darr;</a>{% endif %}
+            {% if p.pdf %}<a class="btn btn--primary" href="{{ p.pdf }}">Download PDF &darr;</a>{% endif %}
             {% if p.preprint %}<a class="btn btn--outline" href="{{ p.preprint }}">{{ p.preprintLabel or "Preprint" }} &rarr;</a>{% endif %}
           </div>
         </div>

@@ -1,9 +1,9 @@
 ---
 group: visiting
 name: Conor Black
-position: "Research Fellow"
+position: "Visiting Professor"
 affiliation: "Architect and Design Computation Specialist, HOK"
-link: https://www.conorcarsonblack.com
+link: ""
 photo: "/assets/img/people/conor-black.jpg"
-order: 3
+order: 2
 ---

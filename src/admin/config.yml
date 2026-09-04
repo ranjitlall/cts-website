@@ -11,7 +11,7 @@
 
 backend:
   name: github
-  repo: ranjitlall/cts-website
+  repo: YOUR-GITHUB-USERNAME/YOUR-REPO-NAME
   branch: main
   # Uncomment once your Cloudflare Worker authenticator is deployed:
   # base_url: https://sveltia-cms-auth.YOUR-SUBDOMAIN.workers.dev
@@ -91,14 +91,6 @@ collections:
     sortable_fields: [order, name]
     fields:
       - { name: name, label: Name, widget: string }
-      - name: group
-        label: Which row
-        widget: select
-        default: core
-        hint: "The People section has two rows. This decides which one this person appears in. A person with no row set will not appear at all."
-        options:
-          - { label: "First row", value: core }
-          - { label: "Second row", value: visiting }
       - { name: position, label: CTS position, widget: string, required: false, hint: "e.g. Visiting Professor, Research Affiliate, Senior Advisor. Shown on the first line. Leave blank if none." }
       - { name: affiliation, label: Official position, widget: string, hint: "e.g. Professor of Economics, University of Oxford. Shown on the second line." }
       - { name: photo, label: Photo, widget: image, required: false, hint: "Square images work best." }

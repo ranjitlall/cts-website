@@ -3,7 +3,7 @@ layout: layouts/base.njk
 ---
 <article class="section">
   <div class="wrap" style="max-width: 820px;">
-    <a class="back-link" href="{{ "/events/" | url }}">&larr; All events</a>
+    <a class="back-link" href="/events/">&larr; All events</a>
     <header class="post-header">
       <span class="eyebrow">{{ eventType or 'Event' }} &middot; <time datetime="{{ date | isoDate }}">{{ date | longDate }}</time></span>
       <h1 style="font-size: clamp(1.9rem, 1.4rem + 2vw, 2.8rem);">{{ title }}</h1>
@@ -14,7 +14,7 @@ layout: layouts/base.njk
         {% if speaker %}<div><strong>Speaker:</strong> {{ speaker }}</div>{% endif %}
       </dl>
     </header>
-    {% if image %}<img src="{{ image | url }}" alt="{{ imageAlt or '' }}" style="border-radius:4px; margin-bottom:2.5rem;">{% endif %}
+    {% if image %}<img src="{{ image }}" alt="{{ imageAlt or '' }}" style="border-radius:4px; margin-bottom:2.5rem;">{% endif %}
     <div class="post-body">
       {{ content | safe }}
     </div>
