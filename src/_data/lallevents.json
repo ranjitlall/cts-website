@@ -250,8 +250,15 @@
         "people": "The Rt Hon Lord Adair Turner (former Chairman, Financial Services Authority), Paul Krugman (Princeton, Nobel laureate), and The Rt Hon Lord Robert Skidelsky (Professor Emeritus of Political Economy, Warwick).",
         "venue": "Andrew Wiles Building, Mathematical Institute · 5.00pm. Co-sponsored by Green Templeton College and the Department of Economics",
         "poster": "/assets/img/events/poster-2014-krugman.jpg",
-        "link": "https://podcasts.ox.ac.uk/keywords/secular-stagnation",
-        "linkLabel": "Listen on Oxford Podcasts"
+        "link": "https://podcasts.ox.ac.uk/do-we-face-secular-stagnation-panel-discussion",
+        "linkLabel": "Watch on Oxford Podcasts (1h 12m)",
+        "news": [
+          {
+            "title": "Do we face secular stagnation?",
+            "outlet": "IPPR Progressive Review, 4 November 2014 — edited transcript of Krugman's remarks",
+            "url": "https://www.ippr.org/articles/do-we-face-secular-stagnation"
+          }
+        ]
       },
       {
         "type": "Lecture",

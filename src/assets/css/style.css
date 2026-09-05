@@ -1666,3 +1666,18 @@ strong { font-weight: 600; color: var(--navy); }
 @media (prefers-reduced-motion: reduce) {
   .motif__flow { display: none; }
 }
+
+/* Selected works block, above Sources on the Sanjaya Lall page. */
+.sources h4 {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--verdigris);
+  margin: 1.4rem 0 0.6rem;
+}
+.sources h4:first-of-type { margin-top: 0.4rem; }
+.sources__note { font-size: 0.92rem; color: var(--slate); margin: 0 0 0.6rem; max-width: 60ch; }
+.sources--works li > em { color: var(--navy); font-style: italic; }
+.sources--works li span em { font-style: italic; }
