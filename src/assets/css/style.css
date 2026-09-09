@@ -1681,3 +1681,15 @@ strong { font-weight: 600; color: var(--navy); }
 .sources__note { font-size: 0.92rem; color: var(--slate); margin: 0 0 0.6rem; max-width: 60ch; }
 .sources--works li > em { color: var(--navy); font-style: italic; }
 .sources--works li span em { font-style: italic; }
+
+/* Three research themes, side by side. Narrower columns than the two-up
+   layout, so the copy in each card is kept correspondingly tighter. */
+.themes-3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); }
+
+/* Three-up columns are narrower than the old two-up ones, so the type in the
+   theme cards steps down a little to keep the boxes from running long. */
+@media (min-width: 860px) {
+  .themes-3 .theme h3 { font-size: 1.12rem; }
+  .themes-3 .theme p { font-size: 0.92rem; }
+  .themes-3 .theme__questions li { font-size: 0.88rem; }
+}
