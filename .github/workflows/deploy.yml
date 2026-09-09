@@ -24,10 +24,14 @@ jobs:
           node-version: 20
       - run: npm ci
 
-      # Build under the repository name as a subpath, e.g. /cts-website/.
-      # When a custom domain (cts.ox.ac.uk) is set in Settings → Pages, GitHub
-      # serves from the root instead — change this line to: npx @11ty/eleventy
-      - run: npx @11ty/eleventy --pathprefix="/${{ github.event.repository.name }}/"
+      # The site is served from the custom domain www.cts-oxford.org, so it
+      # builds at the root with no pathprefix. src/CNAME carries the domain
+      # into the build artifact, which is what keeps GitHub Pages' custom
+      # domain setting from being dropped on a later deploy.
+      # To go back to ranjitlall.github.io/cts-website/, restore:
+      #   npx @11ty/eleventy --pathprefix="/${{ github.event.repository.name }}/"
+      # and delete src/CNAME.
+      - run: npx @11ty/eleventy
 
       - uses: actions/upload-pages-artifact@v3
         with:
