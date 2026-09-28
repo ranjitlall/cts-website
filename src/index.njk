@@ -233,7 +233,7 @@ permalink: /index.html
             {%- for a in o.authors -%}
               {{ a }}{% if o.authorNotes[a] %}<span class="output__role">{{ o.authorNotes[a] }}</span>{% endif %}
               {%- if not loop.last %} and {% endif -%}
-            {%- endfor %} &middot; <em>{{ o.outlet }}</em>
+            {%- endfor %} &middot;&nbsp;<em>{{ o.outlet }}</em>
           </p>
           <p class="output__summary">{{ o.summary }}</p>
           <a class="output__link" href="{{ o.url }}">{{ o.linkLabel or "Read the piece" }} &rarr;</a>
