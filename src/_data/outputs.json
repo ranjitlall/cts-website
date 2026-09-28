@@ -1,7 +1,7 @@
 [
   {
     "type": "Paper",
-    "title": "PAIR-CI: Calibrated Conditional Independence Testing for Causal Discovery with Incomplete Data",
+    "title": "Finding causal relationships in incomplete data",
     "authors": [
       "Thomas Robinson",
       "Ranjit Lall"
@@ -9,7 +9,7 @@
     "outlet": "NeurIPS\u00a02026",
     "date": "2026-09-27",
     "dateLabel": "27 September 2026",
-    "summary": "The paper introduces a machine learning method for uncovering causal relationships in data with missing values \u2014 a pervasive problem in the surveys, firm records, and cross-national datasets that social scientists rely on. Where existing approaches can mistake gaps in the data for genuine causal links, the new method keeps such false discoveries rare. It will appear at NeurIPS 2026, the premier venue for research in artificial intelligence and machine learning.",
+    "summary": "In \u201cPAIR-CI: Calibrated Conditional Independence Testing for Causal Discovery with Incomplete Data\u201d, Robinson and Lall introduce a machine learning method for uncovering causal relationships in data with missing values \u2014 a pervasive problem in the surveys, firm records, and cross-national datasets that social scientists rely on. Where existing approaches can mistake gaps in the data for genuine causal links, the new method keeps such false discoveries rare. The paper will appear at NeurIPS 2026, the premier venue for research in artificial intelligence and machine learning.",
     "url": "https://arxiv.org/abs/2605.04838",
     "linkLabel": "Read the preprint on arXiv",
     "authorNotes": {
