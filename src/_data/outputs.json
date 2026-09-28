@@ -9,7 +9,7 @@
     "outlet": "NeurIPS\u00a02026",
     "date": "2026-09-27",
     "dateLabel": "27 September 2026",
-    "summary": "The paper introduces a calibrated method for testing conditional independence \u2014 a building block of causal discovery \u2014 when data are incomplete. It will appear at NeurIPS 2026, the premier venue for research in artificial intelligence and machine learning.",
+    "summary": "The paper introduces a machine learning method for uncovering causal relationships in data with missing values \u2014 a pervasive problem in the surveys, firm records, and cross-national datasets that social scientists rely on. Where existing approaches can mistake gaps in the data for genuine causal links, the new method keeps such false discoveries rare. It will appear at NeurIPS 2026, the premier venue for research in artificial intelligence and machine learning.",
     "url": "https://arxiv.org/abs/2605.04838",
     "linkLabel": "Read the preprint on arXiv",
     "authorNotes": {
