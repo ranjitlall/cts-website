@@ -235,7 +235,7 @@ permalink: /index.html
               {%- if not loop.last %} and {% endif -%}
             {%- endfor %} &middot;&nbsp;<em>{{ o.outlet }}</em>
           </p>
-          <p class="output__summary">{{ o.summary }}</p>
+          <p class="output__summary">{{ o.summary | safe }}</p>
           <a class="output__link" href="{{ o.url }}">{{ o.linkLabel or "Read the piece" }} &rarr;</a>
         </div>
       </li>
