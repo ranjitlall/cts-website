@@ -785,6 +785,7 @@ strong { font-weight: 600; color: var(--navy); }
   max-width: 990px;
 }
 .people-row--secondary { margin-top: clamp(2rem, 4vw, 3rem); }
+.people-invite { margin-top: clamp(2rem, 4vw, 2.75rem); font-size: 0.88rem; font-weight: 500; }
 
 @media (max-width: 1080px) {
   .people-row { grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: 790px; }
