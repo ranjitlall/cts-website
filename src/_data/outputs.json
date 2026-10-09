@@ -1,5 +1,21 @@
 [
   {
+    "type": "Commentary",
+    "title": "What can physical AI actually do on the factory floor?",
+    "authors": [
+      "Will Sentance"
+    ],
+    "outlet": "LinkedIn",
+    "date": "2026-10-08",
+    "dateLabel": "8 October 2026",
+    "summary": "After visiting a new deployment and <a href=\"https://www.imts.com\">IMTS</a> in Chicago \u2014 the largest manufacturing technology show in North America \u2014 Professor Sentance asks what physical AI can really do in a factory. A century of process engineering has been about removing variation, he argues, so AI\u2019s great strength \u2014 adapting to the unfamiliar \u2014 adds little to today\u2019s linear production lines. The real opportunity lies in the adaptive, non-linear processes that manufacturers abandoned because they were too unpredictable to manage or too dangerous for people.",
+    "url": "https://lnkd.in/p/g_FGiTHv",
+    "linkLabel": "Read the post on LinkedIn",
+    "authorNotes": {
+      "Will Sentance": "CTS Visiting Professor"
+    }
+  },
+  {
     "type": "Paper",
     "title": "Finding causal relationships in incomplete data",
     "authors": [
