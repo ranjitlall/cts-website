@@ -1197,6 +1197,7 @@ strong { font-weight: 600; color: var(--navy); }
 /* --- News and commentary ---------------------------------------------------- */
 
 .outputs { list-style: none; margin: 0; padding: 0; }
+.outputs-more { margin-top: clamp(1.5rem, 3vw, 2.25rem); font-size: 0.92rem; font-weight: 500; }
 .output {
   display: grid;
   gap: 0.5rem 2.5rem;

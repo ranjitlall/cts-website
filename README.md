@@ -3,7 +3,7 @@
 Static site built with [Eleventy](https://www.11ty.dev/), edited through
 [Sveltia CMS](https://sveltiacms.app/), hosted free on GitHub Pages.
 
-**Live at:** <https://ranjitlall.github.io/cts-website/>
+**Live at:** <https://www.cts-oxford.org/>
 **Repository:** `ranjitlall/cts-website` (public)
 
 Running cost: nothing. Everything is on free tiers. An `ox.ac.uk` hostname, if
@@ -13,7 +13,7 @@ granted, is added later without rebuilding anything — see LAUNCH.md.
 
 ## For collaborators: how to edit the site
 
-Go to **`https://ranjitlall.github.io/cts-website/admin/`**.
+Go to **`https://www.cts-oxford.org/admin/`**.
 
 | Section | What it controls |
 |---|---|

@@ -1,5 +1,39 @@
 [
   {
+    "type": "Working paper",
+    "title": "Does worker retraining protect against automation?",
+    "authors": [
+      "Julian Jacobs",
+      "Jordan Canedy"
+    ],
+    "outlet": "CTS Working Paper 2026-03",
+    "date": "2026-10-15",
+    "dateLabel": "15 October 2026",
+    "summary": "As AI raises fresh concerns about job displacement, retraining is often proposed as the answer. In <em>Did US Worker Retraining Reduce Participant Automation Exposure?</em>, Jacobs and Canedy test that idea using over 23 million records from the Workforce Innovation and Opportunity Act, the main public funder of retraining in the United States. They find that participants rarely move into jobs less exposed to automation, and most return to their previous field. Where outcomes improve, it is mainly because wages recover, not because people change occupation. Employer-led apprenticeships do best.",
+    "url": "/assets/papers/CTS-WP-2026-03.pdf",
+    "linkLabel": "Read the working paper",
+    "authorNotes": {
+      "Julian Jacobs": "CTS Doctoral Affiliate"
+    }
+  },
+  {
+    "type": "Essay",
+    "title": "Economic policy for AGI",
+    "authors": [
+      "Julian Jacobs",
+      "Alex Imas"
+    ],
+    "outlet": "DeepMind Institute",
+    "date": "2026-09-16",
+    "dateLabel": "16 September 2026",
+    "summary": "In one of the inaugural essays of the newly launched <a href=\"https://institute.deepmind.com/\">DeepMind Institute</a> \u2014 a platform started by researchers at Google and Google DeepMind to publish and debate ideas about a world with AGI \u2014 Jacobs and Imas assess eleven policies for managing the economic disruption AGI could bring. Rather than a single prescription, they propose \u201cleast-regret\u201d responses tied to clear empirical triggers: expanded unemployment insurance, tax credits, and employer-led retraining for mild disruption; a negative income tax if displacement deepens; and universal basic capital as a backstop should labour and capital income decouple.",
+    "url": "https://institute.deepmind.com/essays/economic-policy-for-agi/",
+    "linkLabel": "Read the essay",
+    "authorNotes": {
+      "Julian Jacobs": "CTS Doctoral Affiliate"
+    }
+  },
+  {
     "type": "Commentary",
     "title": "What can physical AI actually do on the factory floor?",
     "authors": [

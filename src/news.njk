@@ -1,0 +1,29 @@
+---
+layout: layouts/base.njk
+title: News and Commentary
+permalink: /news/index.html
+description: Announcements, appointments, events, and writing for policy and public audiences from across the Centre for Technology and Society and its affiliates.
+---
+
+<section class="hero hero--compact hero--motif">
+  <div class="hero__bg" aria-hidden="true">{% include "partials/hero-motif.svg" %}</div>
+  <div class="wrap">
+    <span class="hero__kicker">Centre for Technology and Society</span>
+    <h1 style="max-width:20ch;">News and commentary</h1>
+    <p class="hero__lede">
+      Announcements, appointments, events, and writing for policy and public
+      audiences from across the Centre and its affiliates.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    {% set hlevel = "h2" %}
+    <ul class="outputs">
+      {% for o in outputs | sort(true, false, "date") %}
+      {% include "partials/output-item.njk" %}
+      {% endfor %}
+    </ul>
+  </div>
+</section>

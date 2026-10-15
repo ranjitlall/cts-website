@@ -34,7 +34,7 @@ the site, so you create the path by putting the file there.
    That string is what goes in the `pdf` field. It is already filled in for
    WP 2026-01 — you only need to place the file.
 
-3. **Commit and push.** Cloudflare rebuilds and the download button goes live.
+3. **Commit and push.** GitHub Pages rebuilds and the download button goes live.
 
 ## First time only
 

@@ -1,0 +1,20 @@
+{#- One news & commentary item. Used on the homepage (h3) and the /news/ page (h2).
+    Set `hlevel` before including; defaults to h3. -#}
+{%- set hl = hlevel or "h3" -%}
+<li class="output">
+  <div class="output__meta">
+    <span class="output__type">{{ o.type }}</span>
+    <time datetime="{{ o.date | isoDate }}">{{ o.dateLabel }}</time>
+  </div>
+  <div class="output__body">
+    <{{ hl }} class="output__title">{{ o.title }}</{{ hl }}>
+    <p class="output__byline">
+      {%- for a in o.authors -%}
+        {{ a }}{% if o.authorNotes[a] %}<span class="output__role">{{ o.authorNotes[a] }}</span>{% endif %}
+        {%- if not loop.last %} and {% endif -%}
+      {%- endfor %} &middot;&nbsp;<em>{{ o.outlet }}</em>
+    </p>
+    <p class="output__summary">{{ o.summary | safe }}</p>
+    <a class="output__link" href="{{ o.url }}">{{ o.linkLabel or "Read the piece" }} &rarr;</a>
+  </div>
+</li>

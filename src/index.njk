@@ -220,27 +220,16 @@ permalink: /index.html
     </div>
 
     {% if outputs.length %}
+    {#- Newest first, by date. The homepage shows the three most recent; the rest are on /news/. -#}
+    {%- set newsSorted = outputs | sort(true, false, "date") %}
     <ul class="outputs reveal">
-      {% for o in outputs %}
-      <li class="output">
-        <div class="output__meta">
-          <span class="output__type">{{ o.type }}</span>
-          <time datetime="{{ o.date | isoDate }}">{{ o.dateLabel }}</time>
-        </div>
-        <div class="output__body">
-          <h3 class="output__title">{{ o.title }}</h3>
-          <p class="output__byline">
-            {%- for a in o.authors -%}
-              {{ a }}{% if o.authorNotes[a] %}<span class="output__role">{{ o.authorNotes[a] }}</span>{% endif %}
-              {%- if not loop.last %} and {% endif -%}
-            {%- endfor %} &middot;&nbsp;<em>{{ o.outlet }}</em>
-          </p>
-          <p class="output__summary">{{ o.summary | safe }}</p>
-          <a class="output__link" href="{{ o.url }}">{{ o.linkLabel or "Read the piece" }} &rarr;</a>
-        </div>
-      </li>
-      {% endfor %}
+      {% for o in newsSorted %}{% if loop.index <= 3 %}
+      {% include "partials/output-item.njk" %}
+      {% endif %}{% endfor %}
     </ul>
+    {% if outputs.length > 3 %}
+    <p class="outputs-more reveal"><a href="{{ "/news/" | url }}">All news and commentary &rarr;</a></p>
+    {% endif %}
     {% endif %}
   </div>
 </section>

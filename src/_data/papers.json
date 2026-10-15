@@ -1,5 +1,23 @@
 [
   {
+    "number": "WP 2026-03",
+    "title": "Did US Worker Retraining Reduce Participant Automation Exposure?",
+    "authors": [
+      "Julian Jacobs",
+      "Jordan Canedy"
+    ],
+    "date": "2026-10-15",
+    "dateLabel": "October 2026",
+    "abstract": "We evaluate whether the U.S. Workforce Innovation and Opportunity Act (WIOA) supports worker resilience to automation. Analyzing over 23 million participation records (2017\u20132023), we introduce the \u201cRetrainability Index\u201d to measure wage recovery and Routine Task Intensity shifts. WIOA rarely transitions workers into less automation-exposed roles; most return to prior fields. Positive outcomes reflect wage catch-up rather than occupational shifts, moderated by prior skills and local economies. Employer-led apprenticeships achieve the highest success. Current U.S. programming supports baseline wage recovery for vulnerable workers but cannot drive large-scale, cross-industry labor transitions.",
+    "keywords": [
+      "worker retraining",
+      "automation",
+      "active labour market policy",
+      "artificial intelligence"
+    ],
+    "pdf": "/assets/papers/CTS-WP-2026-03.pdf"
+  },
+  {
     "number": "WP 2026-02",
     "title": "Tariffs, Geoeconomics and Political Cleavages: Evidence from American High-Tech Firms",
     "authors": [

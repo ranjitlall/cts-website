@@ -1,0 +1,22 @@
+{
+  "number": "WP 2026-03",
+  "title": "Did US Worker Retraining Reduce Participant Automation Exposure?",
+  "authors": [
+    "Julian Jacobs",
+    "Jordan Canedy"
+  ],
+  "affiliations": {
+    "Julian Jacobs": "University of Oxford and Google DeepMind",
+    "Jordan Canedy": "Forecasting Research Institute"
+  },
+  "date": "October 2026",
+  "abstract": "We evaluate whether the U.S. Workforce Innovation and Opportunity Act (WIOA) supports worker resilience to automation. Analyzing over 23 million participation records (2017–2023), we introduce the “Retrainability Index” to measure wage recovery and Routine Task Intensity shifts. WIOA rarely transitions workers into less automation-exposed roles; most return to prior fields. Positive outcomes reflect wage catch-up rather than occupational shifts, moderated by prior skills and local economies. Employer-led apprenticeships achieve the highest success. Current U.S. programming supports baseline wage recovery for vulnerable workers but cannot drive large-scale, cross-industry labor transitions.",
+  "keywords": [
+    "worker retraining",
+    "automation",
+    "active labour market policy",
+    "artificial intelligence"
+  ],
+  "url": "cts-oxford.org",
+  "series_note": "Working papers are circulated for discussion and comment; they have not been peer reviewed. Views expressed are those of the authors."
+}
