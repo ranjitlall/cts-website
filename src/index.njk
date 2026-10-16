@@ -97,6 +97,17 @@ permalink: /index.html
           <li>Does unequal access to frontier AI — between citizens, and between rich and developing economies — become unequal influence over public decisions?</li>
           <li>Or can institutional design — oversight, transparency, and cooperation across borders — keep influence widely shared?</li>
         </ul>
+        {%- set themePapers = papers | withTheme("power") %}
+        {%- if themePapers.length %}
+        <div class="theme__papers">
+          <span class="theme__papers-label">From the Working Paper Series</span>
+          <ul>
+            {%- for p in themePapers %}
+            <li><a href="{{ "/working-papers/" | url }}#{{ p.number | slugify }}">{{ p.title }}</a><span>{{ p.authors | join(" · ") }} &middot; <span class="nowrap">{{ p.number }}</span></span></li>
+            {%- endfor %}
+          </ul>
+        </div>
+        {%- endif %}
       </article>
 
       <article class="theme reveal">
@@ -113,6 +124,17 @@ permalink: /index.html
           <li>Where do the productivity gains accrue: to firms, to capital, or to workers themselves?</li>
           <li>Who bears the costs of adjustment, and do they fall hardest on women and younger workers?</li>
         </ul>
+        {%- set themePapers = papers | withTheme("labour") %}
+        {%- if themePapers.length %}
+        <div class="theme__papers">
+          <span class="theme__papers-label">From the Working Paper Series</span>
+          <ul>
+            {%- for p in themePapers %}
+            <li><a href="{{ "/working-papers/" | url }}#{{ p.number | slugify }}">{{ p.title }}</a><span>{{ p.authors | join(" · ") }} &middot; <span class="nowrap">{{ p.number }}</span></span></li>
+            {%- endfor %}
+          </ul>
+        </div>
+        {%- endif %}
       </article>
 
       <article class="theme reveal">
@@ -130,6 +152,17 @@ permalink: /index.html
           <li>How do reshoring, nearshoring, and ally-shoring differ in cost, resilience, and political durability?</li>
           <li>Where does emerging robotics make domestic production viable, and where do technological limits still bind?</li>
         </ul>
+        {%- set themePapers = papers | withTheme("supply-chains") %}
+        {%- if themePapers.length %}
+        <div class="theme__papers">
+          <span class="theme__papers-label">From the Working Paper Series</span>
+          <ul>
+            {%- for p in themePapers %}
+            <li><a href="{{ "/working-papers/" | url }}#{{ p.number | slugify }}">{{ p.title }}</a><span>{{ p.authors | join(" · ") }} &middot; <span class="nowrap">{{ p.number }}</span></span></li>
+            {%- endfor %}
+          </ul>
+        </div>
+        {%- endif %}
       </article>
     </div>
 
@@ -143,11 +176,13 @@ permalink: /index.html
         </p>
       </div>
       <div class="wp-teaser__latest">
-        {% set latest = papers | limit(1) %}
-        {% for p in latest %}
-        <span class="wp-teaser__num">{{ p.number }} &middot; {{ p.dateLabel }}</span>
-        <p class="wp-teaser__title">{{ p.title }}</p>
-        <p class="wp-teaser__authors">{{ p.authors | join(" · ") }}</p>
+        {#- The two most recent papers. -#}
+        {% for p in papers | limit(2) %}
+        <div class="wp-teaser__item">
+          <span class="wp-teaser__num">{{ p.number }} &middot; {{ p.dateLabel }}</span>
+          <p class="wp-teaser__title"><a href="{{ "/working-papers/" | url }}#{{ p.number | slugify }}">{{ p.title }}</a></p>
+          <p class="wp-teaser__authors">{{ p.authors | join(" · ") }}</p>
+        </div>
         {% endfor %}
         <p style="margin-top:1.25rem;"><a class="btn btn--outline" href="{{ "/working-papers/" | url }}">Browse the series</a></p>
       </div>

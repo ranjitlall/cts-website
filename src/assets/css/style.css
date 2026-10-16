@@ -1008,6 +1008,50 @@ strong { font-weight: 600; color: var(--navy); }
   margin-bottom: 0.4rem;
 }
 .wp-teaser__authors { font-size: 0.85rem; margin: 0; }
+.wp-teaser__item + .wp-teaser__item {
+  margin-top: 1.1rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid rgba(0,33,71,0.1);
+}
+.wp-teaser__title a { color: inherit; text-decoration: none; }
+.wp-teaser__title a:hover { color: var(--violet); }
+
+/* Working papers listed at the foot of each research theme card. */
+/* The card becomes a column so the papers block sits at the foot of every
+   card, level across the row however long each card's text runs. */
+.theme { display: flex; flex-direction: column; }
+/* Flex items don't collapse margins, so drop the paragraph's bottom margin to
+   keep the questions exactly where they sat before (the list's own top margin
+   was the larger of the two and won). */
+.theme > p { margin-bottom: 0; }
+.theme:has(.theme__papers) .theme__questions { margin-bottom: 1.5rem; }
+.theme__papers {
+  margin-top: auto;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--rule);
+}
+.theme__papers-label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--violet);
+  margin-bottom: 0.6rem;
+}
+.theme__papers ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.7rem; }
+.theme__papers li { line-height: 1.35; }
+.theme__papers a {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--navy);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(92,67,130,0.3);
+}
+.theme__papers a:hover { color: var(--violet); border-bottom-color: var(--violet); }
+.theme__papers .nowrap { white-space: nowrap; }
+.theme__papers li > span { display: block; margin-top: 0.25rem; font-size: 0.78rem; color: var(--slate); }
 
 .papers { list-style: none; margin: 0; padding: 0; }
 .paper {

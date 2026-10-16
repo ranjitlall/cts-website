@@ -24,7 +24,7 @@ description: The CTS Working Paper Series circulates new research on the social,
     {% if papers.length %}
     <ol class="papers">
       {% for p in papers %}
-      <li class="paper">
+      <li class="paper" id="{{ p.number | slugify }}">
         <div class="paper__meta">
           <span class="paper__number">{{ p.number }}</span>
           <time datetime="{{ p.date | isoDate }}">{{ p.dateLabel }}</time>

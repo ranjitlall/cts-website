@@ -15,6 +15,9 @@
       "active labour market policy",
       "artificial intelligence"
     ],
+    "themes": [
+      "labour"
+    ],
     "pdf": "/assets/papers/CTS-WP-2026-03.pdf"
   },
   {
@@ -32,6 +35,9 @@
       "Geoeconomics",
       "Trade policy",
       "High-tech firms"
+    ],
+    "themes": [
+      "supply-chains"
     ],
     "pdf": "/assets/papers/CTS-WP-2026-02.pdf",
     "preprint": "",
@@ -51,6 +57,9 @@
       "Political economy",
       "Labour markets",
       "Western Europe"
+    ],
+    "themes": [
+      "power"
     ],
     "pdf": "/assets/papers/CTS-WP-2026-01.pdf",
     "preprint": "https://osf.io/preprints/socarxiv/vmgdj_v1",

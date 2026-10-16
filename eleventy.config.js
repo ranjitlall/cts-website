@@ -53,6 +53,11 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addFilter("limit", (array, n) => array.slice(0, n));
 
+  // Working papers tagged with a research theme ("power", "labour", "supply-chains")
+  eleventyConfig.addFilter("withTheme", (papers, theme) =>
+    (papers || []).filter((p) => (p.themes || []).includes(theme))
+  );
+
   // Select collection items whose front-matter field equals a value
   eleventyConfig.addFilter("where", (array, key, value) =>
     array.filter((item) => item.data[key] === value)
