@@ -774,15 +774,22 @@ strong { font-weight: 600; color: var(--navy); }
 
 /* --- People in two explicit rows -------------------------------------------
    Row one is the Centre's standing membership; row two is visiting. Both use
-   the same five-up rhythm so the second row aligns under the first rather
+   the same column rhythm so the second row aligns under the first rather
    than stretching to fill the width. The max-width keeps each column at the
-   same size whatever the row holds; it steps down with the column count. */
+   same size whatever the row holds; it steps down with the column count.
+   Six-up on wide screens (1180px+), with a tighter column gap so each card
+   stays ~167px wide: one-line names and affiliations of three lines or
+   fewer (measured). Below 1180px the cards would get too narrow, so it falls
+   back to five-up. */
 
 .people-row {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: clamp(1.5rem, 2.5vw, 2.25rem);
   max-width: 990px;
+}
+@media (min-width: 1180px) {
+  .people-row { grid-template-columns: repeat(6, minmax(0, 1fr)); column-gap: 1rem; max-width: none; }
 }
 .people-row--secondary { margin-top: clamp(2rem, 4vw, 3rem); }
 .people-invite { margin-top: clamp(2rem, 4vw, 2.75rem); font-size: 0.88rem; font-weight: 500; }
