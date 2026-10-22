@@ -1,5 +1,21 @@
 [
   {
+    "type": "Commentary",
+    "title": "Could physical AI create better manufacturing jobs?",
+    "authors": [
+      "Will Sentance"
+    ],
+    "outlet": "LinkedIn",
+    "date": "2026-10-21",
+    "dateLabel": "21 October 2026",
+    "summary": "In a follow-up to his post on adaptive manufacturing, Professor Sentance asks what physical AI could mean for the people who work in factories. Manufacturers face around 500,000 unfilled openings for jobs few people want. Rather than shrinking the workforce, he argues, technologies that make production more accessible \u2014 from 3D printing to intelligent machines \u2014 could do for manufacturing what cheap film and digital video did for filmmaking: expand demand and create more attractive jobs.",
+    "url": "https://lnkd.in/p/eyakjzvJ",
+    "linkLabel": "Read the post on LinkedIn",
+    "authorNotes": {
+      "Will Sentance": "CTS Visiting Professor"
+    }
+  },
+  {
     "type": "Working paper",
     "title": "Does worker retraining protect against automation?",
     "authors": [
@@ -47,7 +63,8 @@
     "linkLabel": "Read the post on LinkedIn",
     "authorNotes": {
       "Will Sentance": "CTS Visiting Professor"
-    }
+    },
+    "homepage": false
   },
   {
     "type": "Paper",

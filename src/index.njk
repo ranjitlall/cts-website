@@ -255,10 +255,12 @@ permalink: /index.html
     </div>
 
     {% if outputs.length %}
-    {#- Newest first, by date. The homepage shows the three most recent; the rest are on /news/. -#}
+    {#- Newest first, by date. The homepage shows the three most recent, skipping any item marked "homepage": false; everything is on /news/. -#}
     {%- set newsSorted = outputs | sort(true, false, "date") %}
+    {%- set newsHome = [] %}
+    {%- for o in newsSorted %}{% if o.homepage !== false %}{% set _ = newsHome.push(o) %}{% endif %}{% endfor %}
     <ul class="outputs reveal">
-      {% for o in newsSorted %}{% if loop.index <= 3 %}
+      {% for o in newsHome %}{% if loop.index <= 3 %}
       {% include "partials/output-item.njk" %}
       {% endif %}{% endfor %}
     </ul>
