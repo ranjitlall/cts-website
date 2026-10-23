@@ -1,5 +1,5 @@
 ---
-group: core
+group: faculty
 name: Ranjit Lall
 position: "Director"
 affiliation: "Professor of International Political Economy, University of Oxford"

@@ -1,5 +1,5 @@
 ---
-group: visiting
+group: fellows
 name: S. Yash Kalash
 position: "Senior Fellow"
 affiliation: "Director, Brunswick Group · Senior Fellow, CIGI"

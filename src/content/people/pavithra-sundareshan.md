@@ -1,5 +1,5 @@
 ---
-group: visiting
+group: fellows
 name: Pavithra Y Sundareshan
 position: "Senior Fellow"
 affiliation: "Founder & Managing Director, Vindhya e-Infomedia"

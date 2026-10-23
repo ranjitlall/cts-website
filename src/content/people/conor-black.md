@@ -1,5 +1,5 @@
 ---
-group: visiting
+group: fellows
 name: Conor Black
 position: "Research Fellow"
 affiliation: "Architect and Design Computation Specialist, HOK"

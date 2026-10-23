@@ -1,5 +1,5 @@
 ---
-group: core
+group: faculty
 name: Aarushi Kalra
 position: "Faculty Affiliate"
 affiliation: "Associate Professor of Economics, University of Oxford"

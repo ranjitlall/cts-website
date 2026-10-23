@@ -1,5 +1,5 @@
 ---
-group: visiting
+group: fellows
 name: Rahul Prabhakar
 position: "Visiting Professor"
 affiliation: "Compliance Principal, Amazon Web Services"

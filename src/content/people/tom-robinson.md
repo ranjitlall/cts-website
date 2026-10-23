@@ -1,5 +1,5 @@
 ---
-group: core
+group: faculty
 name: Thomas Robinson
 position: "Faculty Affiliate"
 affiliation: "Assistant Professor in Methodology, London School of Economics"

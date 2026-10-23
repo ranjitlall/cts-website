@@ -1,5 +1,5 @@
 ---
-group: core
+group: faculty
 name: Julián D. Cortés
 position: "Faculty Affiliate"
 affiliation: "Professor of Economics and Business, Universidad del Rosario"

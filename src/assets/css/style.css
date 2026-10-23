@@ -772,15 +772,11 @@ strong { font-weight: 600; color: var(--navy); }
   line-height: 1.4;
 }
 
-/* --- People in two explicit rows -------------------------------------------
-   Row one is the Centre's standing membership; row two is visiting. Both use
-   the same column rhythm so the second row aligns under the first rather
+/* --- People: groups of cards on /people/ ------------------------------------
+   Each group (Faculty Affiliates, ...) is its own set of cards, five-up. All
+   use the same column rhythm so each group aligns under the one above rather
    than stretching to fill the width. The max-width keeps each column at the
-   same size whatever the row holds; it steps down with the column count.
-   Six-up on wide screens (1180px+), with a tighter column gap so each card
-   stays ~167px wide: one-line names and affiliations of three lines or
-   fewer (measured). Below 1180px the cards would get too narrow, so it falls
-   back to five-up. */
+   same size whatever the row holds; it steps down with the column count. */
 
 .people-row {
   display: grid;
@@ -788,10 +784,52 @@ strong { font-weight: 600; color: var(--navy); }
   gap: clamp(1.5rem, 2.5vw, 2.25rem);
   max-width: 990px;
 }
-@media (min-width: 1180px) {
-  .people-row { grid-template-columns: repeat(6, minmax(0, 1fr)); column-gap: 1rem; max-width: none; }
+.people-group + .people-group { margin-top: clamp(2.75rem, 5vw, 3.75rem); }
+.people-group__title {
+  font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.55rem);
+  margin: 0 0 clamp(1.25rem, 2.5vw, 1.75rem);
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--mist-deep);
 }
-.people-row--secondary { margin-top: clamp(2rem, 4vw, 3rem); }
+/* A card linked from the homepage strip: leave room for the sticky header. */
+.people-row .person { scroll-margin-top: 7rem; }
+
+/* --- People on the homepage: a strip of small portraits ---------------------
+   Everyone appears, in group order; each face links to that person's card on
+   /people/. Wraps onto further lines as the Centre grows. */
+.people-strip {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; gap: 0.6rem;
+  /* --cols is set in index.njk so the faces fall into three even rows. */
+  grid-template-columns: repeat(var(--cols, 7), 68px);
+}
+.people-strip a { display: block; border-radius: 50%; }
+.people-strip img, .people-strip__blank { display: block; }
+.people-strip img,
+.people-strip__blank {
+  width: 68px; height: 68px; border-radius: 50%;
+  border: 2px solid var(--mist-deep); object-fit: cover;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.people-strip__blank {
+  display: block; background: var(--mist); font-size: 0; overflow: hidden;
+}
+.people-strip a:hover img,
+.people-strip a:focus-visible img { transform: translateY(-2px); border-color: var(--verdigris); }
+@media (prefers-reduced-motion: reduce) {
+  .people-strip img { transition: none; }
+  .people-strip a:hover img, .people-strip a:focus-visible img { transform: none; }
+}
+@media (max-width: 620px) {
+  /* Too narrow for three rows: let the faces wrap instead. */
+  .people-strip { display: flex; flex-wrap: wrap; }
+  .people-strip img, .people-strip__blank { width: 56px; height: 56px; }
+}
+.people-more {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.75rem;
+  margin-top: clamp(1.75rem, 3.5vw, 2.5rem);
+}
+.people-more__invite { font-size: 0.88rem; font-weight: 500; }
 .people-invite { margin-top: clamp(2rem, 4vw, 2.75rem); font-size: 0.88rem; font-weight: 500; }
 
 @media (max-width: 1080px) {

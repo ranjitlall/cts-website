@@ -1,5 +1,5 @@
 ---
-group: visiting
+group: fellows
 name: Fatih Aydin
 position: "Fellow"
 affiliation: "Founder, ARA · Practitioner Associate, University of Oxford"

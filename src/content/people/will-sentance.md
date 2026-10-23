@@ -1,5 +1,5 @@
 ---
-group: visiting
+group: fellows
 name: Will Sentance
 position: "Visiting Professor"
 affiliation: "CEO, Standard Matter · Founder, Codesmith"

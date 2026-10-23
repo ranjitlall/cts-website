@@ -1,0 +1,13 @@
+{#- One person's card. Used on /people/. `person` is an item from collections.people. -#}
+<article class="person" id="{{ person.page.fileSlug }}">
+  {% if person.data.photo %}
+  <img class="person__photo" src="{{ person.data.photo | url }}" alt="Portrait of {{ person.data.name }}" width="400" height="400" loading="lazy">
+  {% else %}
+  <div class="person__photo person__photo--placeholder" aria-hidden="true"></div>
+  {% endif %}
+  <p class="person__name">
+    {% if person.data.link %}<a href="{{ person.data.link }}">{{ person.data.name }}</a>{% else %}{{ person.data.name }}{% endif %}
+  </p>
+  {% if person.data.position %}<p class="person__position">{{ person.data.position }}</p>{% endif %}
+  <p class="person__role">{{ person.data.affiliation }}</p>
+</article>

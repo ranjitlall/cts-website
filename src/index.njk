@@ -277,43 +277,28 @@ permalink: /index.html
     <div class="section-head reveal">
       <span class="eyebrow">People</span>
       <h2>Who we are</h2>
+      <p>
+        The Centre brings together {{ collections.people.length }} researchers and practitioners:
+        faculty affiliates at Oxford and other universities, visiting professors and fellows
+        from research, industry and policy, and doctoral affiliates.
+      </p>
     </div>
 
-    <div class="people-row reveal">
-      {% for person in collections.people | where("group", "core") %}
-      <article class="person">
-        {% if person.data.photo %}
-        <img class="person__photo" src="{{ person.data.photo | url }}" alt="Portrait of {{ person.data.name }}" width="400" height="400" loading="lazy">
-        {% else %}
-        <div class="person__photo person__photo--placeholder" aria-hidden="true"></div>
-        {% endif %}
-        <p class="person__name">
-          {% if person.data.link %}<a href="{{ person.data.link }}">{{ person.data.name }}</a>{% else %}{{ person.data.name }}{% endif %}
-        </p>
-        {% if person.data.position %}<p class="person__position">{{ person.data.position }}</p>{% endif %}
-        <p class="person__role">{{ person.data.affiliation }}</p>
-      </article>
-      {% endfor %}
-    </div>
-
-    <div class="people-row people-row--secondary reveal">
-      {% for person in collections.people | where("group", "visiting") %}
-      <article class="person">
-        {% if person.data.photo %}
-        <img class="person__photo" src="{{ person.data.photo | url }}" alt="Portrait of {{ person.data.name }}" width="400" height="400" loading="lazy">
-        {% else %}
-        <div class="person__photo person__photo--placeholder" aria-hidden="true"></div>
-        {% endif %}
-        <p class="person__name">
-          {% if person.data.link %}<a href="{{ person.data.link }}">{{ person.data.name }}</a>{% else %}{{ person.data.name }}{% endif %}
-        </p>
-        {% if person.data.position %}<p class="person__position">{{ person.data.position }}</p>{% endif %}
-        <p class="person__role">{{ person.data.affiliation }}</p>
-      </article>
-      {% endfor %}
-    </div>
-
-    <p class="people-invite reveal"><a href="#contact">Interested in becoming a CTS affiliate? Get in touch &rarr;</a></p>
+    {#- The full list, in groups, is on /people/. The homepage shows everyone as a strip of small portraits. -#}
+    {%- set peopleOrder = ["faculty", "fellows", "doctoral"] %}
+    {#- Columns for three even rows (20 people: 7, 7, 6). -#}
+    {%- set stripCols = (collections.people.length / 3) | round(0, "ceil") %}
+    <ul class="people-strip reveal" style="--cols: {{ stripCols }}">
+      {% for g in peopleOrder %}{% for person in collections.people | where("group", g) %}
+      <li><a href="{{ "/people/" | url }}#{{ person.page.fileSlug }}" title="{{ person.data.name }}">
+        {% if person.data.photo %}<img src="{{ person.data.photo | url }}" alt="{{ person.data.name }}" width="400" height="400" loading="lazy">{% else %}<span class="people-strip__blank">{{ person.data.name }}</span>{% endif %}
+      </a></li>
+      {% endfor %}{% endfor %}
+    </ul>
+    <p class="people-more reveal">
+      <a class="btn btn--outline" href="{{ "/people/" | url }}">Meet our people &rarr;</a>
+      <a class="people-more__invite" href="#contact">Interested in becoming a CTS affiliate? Get in touch &rarr;</a>
+    </p>
   </div>
 </section>
 

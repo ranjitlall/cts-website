@@ -1,0 +1,42 @@
+---
+layout: layouts/base.njk
+title: People
+permalink: /people/index.html
+description: The researchers and practitioners of the Centre for Technology and Society at the University of Oxford — faculty affiliates, visiting professors and fellows, and doctoral affiliates.
+---
+{#- Groups come from each person's `group` field, in this order. Within a group, `order` sets position. -#}
+{%- set groups = [
+  { key: "faculty",  title: "Director and Faculty Affiliates" },
+  { key: "fellows",  title: "Visiting Professors and Fellows" },
+  { key: "doctoral", title: "Doctoral Affiliates" }
+] %}
+
+<section class="hero hero--compact hero--motif">
+  <div class="hero__bg" aria-hidden="true">{% include "partials/hero-motif.svg" %}</div>
+  <div class="wrap">
+    <span class="hero__kicker">Centre for Technology and Society</span>
+    <h1 style="max-width:20ch;">People</h1>
+    <p class="hero__lede">
+      Researchers and practitioners working on the political economy of
+      technology &mdash; at Oxford, at other universities, and in industry and policy.
+    </p>
+  </div>
+</section>
+
+<section class="section" id="people">
+  <div class="wrap">
+    {% for g in groups %}
+    {%- set members = collections.people | where("group", g.key) %}
+    {% if members.length %}
+    <div class="people-group">
+      <h2 class="people-group__title">{{ g.title }}</h2>
+      <div class="people-row">
+        {% for person in members %}{% include "partials/person-card.njk" %}{% endfor %}
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+
+    <p class="people-invite"><a href="{{ "/#contact" | url }}">Interested in becoming a CTS affiliate? Get in touch &rarr;</a></p>
+  </div>
+</section>

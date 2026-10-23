@@ -1,5 +1,5 @@
 ---
-group: core
+group: faculty
 name: Robert Trager
 position: "Faculty Affiliate"
 affiliation: "Co-Director, Oxford Martin AI Governance Initiative, University of Oxford"

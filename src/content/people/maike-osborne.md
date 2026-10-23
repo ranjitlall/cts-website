@@ -1,5 +1,5 @@
 ---
-group: core
+group: faculty
 name: Maike Osborne
 position: "Faculty Affiliate"
 affiliation: "Co-Director, Oxford Martin AI Governance Initiative, University of Oxford"

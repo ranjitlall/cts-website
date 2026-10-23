@@ -1,9 +1,9 @@
 ---
-group: visiting
+group: doctoral
 name: Julian Jacobs
 position: "Doctoral Affiliate"
 affiliation: "Research Scientist, Google DeepMind · DPhil candidate, University of Oxford"
 link: https://www.juliandjacobs.com/
 photo: "/assets/img/people/julian-jacobs.jpg"
-order: 11
+order: 2
 ---

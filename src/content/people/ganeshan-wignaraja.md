@@ -1,5 +1,5 @@
 ---
-group: visiting
+group: fellows
 name: Ganeshan Wignaraja
 position: "Senior Fellow"
 affiliation: "Visiting Senior Fellow, ODI Global"
