@@ -1,9 +1,9 @@
 ---
 group: fellows
-name: Pavithra Y Sundareshan
+name: Pavithra Y. Sundareshan
 position: "Senior Fellow"
 affiliation: "Founder & Managing Director, Vindhya e-Infomedia"
 link: https://www.vindhyainfo.com/
 photo: "/assets/img/people/pavithra-sundareshan.jpg"
-order: 5
+order: 6
 ---
