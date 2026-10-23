@@ -6,9 +6,9 @@ description: The researchers and practitioners of the Centre for Technology and 
 ---
 {#- Groups come from each person's `group` field, in this order. Within a group, `order` sets position. -#}
 {%- set groups = [
-  { key: "faculty",  title: "Director and Faculty Affiliates" },
-  { key: "fellows",  title: "Visiting Professors and Fellows" },
-  { key: "doctoral", title: "Doctoral Affiliates" }
+  { key: "faculty",  title: "Director and Faculty Affiliates", nav: "Director &amp; Faculty Affiliates" },
+  { key: "fellows",  title: "Visiting Professors and Fellows", nav: "Visiting Professors &amp; Fellows" },
+  { key: "doctoral", title: "Doctoral Affiliates",             nav: "Doctoral Affiliates" }
 ] %}
 
 <section class="hero hero--compact hero--motif">
@@ -23,12 +23,23 @@ description: The researchers and practitioners of the Centre for Technology and 
   </div>
 </section>
 
+<nav class="sectionnav" aria-label="On this page">
+  <div class="wrap sectionnav__inner">
+    <span class="sectionnav__label">On this page</span>
+    <ul>
+      {% for g in groups %}{% if (collections.people | where("group", g.key)).length %}
+      <li><a href="#{{ g.key }}">{{ g.nav | safe }}</a></li>
+      {% endif %}{% endfor %}
+    </ul>
+  </div>
+</nav>
+
 <section class="section" id="people">
   <div class="wrap">
     {% for g in groups %}
     {%- set members = collections.people | where("group", g.key) %}
     {% if members.length %}
-    <div class="people-group">
+    <div class="people-group" id="{{ g.key }}">
       <h2 class="people-group__title">{{ g.title }}</h2>
       <div class="people-row">
         {% for person in members %}{% include "partials/person-card.njk" %}{% endfor %}

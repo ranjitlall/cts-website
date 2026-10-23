@@ -791,8 +791,11 @@ strong { font-weight: 600; color: var(--navy); }
   padding-top: 0.9rem;
   border-top: 1px solid var(--mist-deep);
 }
-/* A card linked from the homepage strip: leave room for the sticky header. */
-.people-row .person { scroll-margin-top: 7rem; }
+/* Groups (from the "On this page" bar) and single cards (from the homepage
+   strip) must clear both sticky bars. html's scroll-padding-top already
+   clears the site header; this adds room for the section nav. */
+.people-group { scroll-margin-top: 4.5rem; }
+.people-row .person { scroll-margin-top: 4.5rem; }
 
 /* --- People on the homepage: a strip of small portraits ---------------------
    Everyone appears, in group order; each face links to that person's card on
