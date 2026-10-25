@@ -1,5 +1,25 @@
 [
   {
+    "number": "WP 2026-04",
+    "title": "The Political-Economic Risks of AI",
+    "authors": [
+      "Jean-Paul Carvalho"
+    ],
+    "date": "2026-10-25",
+    "dateLabel": "October 2026",
+    "abstract": "This essay explores the political-economic risks on the path to AGI. Due to AI\u2019s distinctive features\u2014automation of cognitive tasks, global scalability, general-purpose technology, and national security importance\u2014its impact could be unlike earlier rounds of automation. While AI holds the promise of superabundance and unprecedented freedom, I describe a scenario in which advanced AI results in massive concentration of the global economy, breakdown of democratic and egalitarian institutions, and collapse of human productivity. The closest precedent would be the cultural devastation of indigenous societies under colonialism. I propose measures to mitigate this risk and ensure AI has widespread benefits. Competition policy will be critical, as will adaptive changes to political institutions (e.g., sortition). Without appropriate measures, there may be no AI-driven growth takeoff and the inequality that emerges could dwarf anything experienced to date.",
+    "keywords": [
+      "AI",
+      "political economy",
+      "existential risk",
+      "democracy"
+    ],
+    "themes": [
+      "power"
+    ],
+    "pdf": "/assets/papers/CTS-WP-2026-04.pdf"
+  },
+  {
     "number": "WP 2026-03",
     "title": "Did US Worker Retraining Reduce Participant Automation Exposure?",
     "authors": [

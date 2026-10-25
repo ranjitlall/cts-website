@@ -1,5 +1,21 @@
 [
   {
+    "type": "Working paper",
+    "title": "Could AI concentrate power on an unprecedented scale?",
+    "authors": [
+      "Jean-Paul Carvalho"
+    ],
+    "outlet": "CTS Working Paper 2026-04",
+    "date": "2026-10-25",
+    "dateLabel": "25 October 2026",
+    "summary": "The gravest risk of advanced AI may come not from machines escaping human control, but from the people who control the machines. In <em>The Political-Economic Risks of AI</em>, Professor Carvalho sets out a scenario in which AI concentrates the global economy in a handful of firms, erodes democratic and egalitarian institutions, and causes human productivity to collapse. The closest precedent, he argues, is not earlier waves of automation but the devastation of indigenous societies under colonialism. To avert it, he proposes competition policy aimed at limiting the accumulation of economic control, stronger democratic institutions, including sortition, and sovereign AI for nations that can build it. Carvalho, Professor of Political Economy in Oxford\u2019s Department of Economics, joins the Centre as a Faculty Affiliate.",
+    "url": "/assets/papers/CTS-WP-2026-04.pdf",
+    "linkLabel": "Read the working paper",
+    "authorNotes": {
+      "Jean-Paul Carvalho": "CTS Faculty Affiliate"
+    }
+  },
+  {
     "type": "Commentary",
     "title": "Could physical AI create better manufacturing jobs?",
     "authors": [
