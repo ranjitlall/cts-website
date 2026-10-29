@@ -11,7 +11,7 @@
     <p class="output__byline">
       {%- for a in o.authors -%}
         {{ a }}{% if o.authorNotes[a] %}<span class="output__role">{{ o.authorNotes[a] }}</span>{% endif %}
-        {%- if not loop.last %} and {% endif -%}
+        {%- if loop.revindex == 2 %} and {% elif not loop.last %}, {% endif -%}
       {%- endfor %} &middot;&nbsp;<em>{{ o.outlet }}</em>
     </p>
     <p class="output__summary">{{ o.summary | safe }}</p>

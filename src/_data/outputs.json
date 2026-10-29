@@ -1,5 +1,23 @@
 [
   {
+    "type": "Essay",
+    "title": "Is a guaranteed income enough if AI takes our jobs?",
+    "authors": [
+      "Stephanie Chan",
+      "Julian Jacobs",
+      "Logan Cross"
+    ],
+    "outlet": "DeepMind Institute",
+    "date": "2026-10-29",
+    "dateLabel": "29 October 2026",
+    "summary": "Work gives people more than a pay cheque. In <em>What is work for? Human wellbeing and the value of work in the AGI era</em>, Chan, Jacobs and Cross draw on three new research papers to ask what that means if AI displaces human labour. A survey of more than 8,000 adults in the UK, US, Denmark and India finds that most people value their jobs for purpose, community and status as well as pay; in the UK, US and Denmark, about one in five would not leave their job even for a guaranteed income of up to 120% of their salary. Income support may be necessary in an AI transition, the authors conclude, but on its own it cannot replace the purpose, belonging and dignity that work provides.",
+    "url": "https://institute.deepmind.com/essays/what-is-work-for-human-wellbeing-and-the-value-of-work-in-the-agi-era/",
+    "linkLabel": "Read the essay",
+    "authorNotes": {
+      "Julian Jacobs": "CTS Doctoral Affiliate"
+    }
+  },
+  {
     "type": "Working paper",
     "title": "Could AI concentrate power on an unprecedented scale?",
     "authors": [
