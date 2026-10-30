@@ -1,0 +1,4 @@
+{
+  "layout": "layouts/insight.njk",
+  "permalink": "/insights/{{ page.fileSlug }}/index.html"
+}

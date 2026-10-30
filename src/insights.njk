@@ -1,0 +1,37 @@
+---
+layout: layouts/base.njk
+title: CTS Insights
+permalink: /insights/index.html
+description: Short, evidence-based pieces by researchers at the Centre for Technology and Society on how AI and other emerging technologies are reshaping economies and societies.
+---
+
+<section class="hero hero--compact hero--motif">
+  <div class="hero__bg" aria-hidden="true">{% include "partials/hero-motif.svg" %}</div>
+  <div class="wrap">
+    <span class="hero__kicker">Centre for Technology and Society</span>
+    <h1 style="max-width:20ch;">CTS Insights</h1>
+    <p class="hero__lede">
+      Short, evidence-based pieces by our researchers on how AI and other
+      emerging technologies are reshaping economies and societies.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <ul class="insight-list">
+      {% for post in collections.insights %}
+      {%- set person = collections.people | personBySlug(post.data.author) %}
+      <li class="insight-card">
+        <p class="insight-card__meta"><time datetime="{{ post.data.date | isoDate }}">{{ post.data.date | longDate }}</time>{% if post.data.series %} &middot; {{ post.data.series }}{% endif %}</p>
+        <h2 class="insight-card__title"><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
+        {% if post.data.standfirst %}<p class="insight-card__standfirst">{{ post.data.standfirst }}</p>{% endif %}
+        <p class="insight-card__author">
+          {% if person and person.data.photo %}<img src="{{ person.data.photo | url }}" alt="" width="400" height="400" loading="lazy">{% endif %}
+          <span>{{ person.data.name if person else post.data.authorName }}{% if person %}<span class="insight-card__role">{{ person.data.position }}</span>{% endif %}</span>
+        </p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

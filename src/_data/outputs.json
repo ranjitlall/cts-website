@@ -1,5 +1,21 @@
 [
   {
+    "type": "Insight",
+    "title": "Where is AI research happening in the Global South?",
+    "authors": [
+      "Juli\u00e1n D. Cort\u00e9s"
+    ],
+    "outlet": "CTS Insights",
+    "date": "2026-10-30",
+    "dateLabel": "30 October 2026",
+    "summary": "In the first piece for CTS Insights, the Centre\u2019s new blog, Professor Cort\u00e9s maps a decade of locally produced AI research across the Global South. Using OpenAlex, he identifies more than 93,000 AI research articles from 2016 to 2025 whose authors all work in the same country (China excluded). India and Indonesia lead, with over 28,000 and 22,000 articles respectively; Egypt leads in Africa and Brazil in Latin America. Each region has its own priorities, from sentiment analysis and cybersecurity in Asia to solar energy in Africa and Latin America. Interactive maps let readers explore the data.",
+    "url": "/insights/ai-rumble-global-south/",
+    "linkLabel": "Read the piece",
+    "authorNotes": {
+      "Juli\u00e1n D. Cort\u00e9s": "CTS Faculty Affiliate"
+    }
+  },
+  {
     "type": "Essay",
     "title": "Is a guaranteed income enough if AI takes our jobs?",
     "authors": [

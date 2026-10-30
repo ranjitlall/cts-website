@@ -62,7 +62,15 @@
 
     <nav class="nav" id="primary-nav" aria-label="Primary">
       <a href="{{ "/#about" | url }}">About</a>
-      <a href="{{ "/#research" | url }}">Research</a>
+      <div class="nav__group">
+        <a class="nav__parent" href="{{ "/#research" | url }}">Research<svg class="nav__chev" width="9" height="6" viewBox="0 0 9 6" aria-hidden="true"><path d="M1 1l3.5 3.5L8 1" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+        <ul class="nav__sub" aria-label="Research">
+          <li><a href="{{ "/#research" | url }}">Research themes</a></li>
+          <li><a href="{{ "/working-papers/" | url }}">Working Papers</a></li>
+          <li><a href="{{ "/insights/" | url }}">CTS Insights</a></li>
+          <li><a href="{{ "/news/" | url }}">News &amp; commentary</a></li>
+        </ul>
+      </div>
       <a href="{{ "/#activities" | url }}">Activities</a>
       <a href="{{ "/people/" | url }}">People</a>
       <a href="{{ "/sanjaya-lall-professorship/" | url }}">Visiting Professorship</a>
@@ -110,6 +118,8 @@
         <h4>Engagement</h4>
         <ul>
           <li><a href="{{ "/working-papers/" | url }}">Working Papers</a></li>
+          <li><a href="{{ "/insights/" | url }}">CTS Insights</a></li>
+          <li><a href="{{ "/news/" | url }}">News &amp; Commentary</a></li>
           <li><a href="{{ "/sanjaya-lall-professorship/" | url }}">Visiting Professorship</a></li>
           <li><a href="{{ "/#support" | url }}">Support the Centre</a></li>
           <li><a href="{{ "/#contact" | url }}">Contact</a></li>

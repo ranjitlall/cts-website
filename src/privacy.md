@@ -20,6 +20,11 @@ Open Science Framework, and University departmental pages. Those sites have
 their own privacy policies, which govern what they collect once you follow a
 link.
 
+Some CTS Insights pieces include interactive charts hosted by third-party
+services such as Datawrapper and Flourish. When you open one of those pages,
+your browser loads the charts directly from the provider, whose privacy policy
+then applies.
+
 ## If you contact us
 
 If you email the address given on this site, we will use your message only to

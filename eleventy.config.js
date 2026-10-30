@@ -25,6 +25,14 @@ export default function (eleventyConfig) {
       .sort((a, b) => a.data.date - b.data.date)
   );
 
+  // CTS Insights: short pieces by CTS researchers, newest first.
+  // One Markdown file per piece in src/content/insights/.
+  eleventyConfig.addCollection("insights", (collection) =>
+    collection
+      .getFilteredByGlob("src/content/insights/*.md")
+      .sort((a, b) => b.data.date - a.data.date)
+  );
+
   eleventyConfig.addCollection("people", (collection) =>
     collection
       .getFilteredByGlob("src/content/people/*.md")
@@ -52,6 +60,17 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("year", (value) => new Date(value).getUTCFullYear());
 
   eleventyConfig.addFilter("limit", (array, n) => array.slice(0, n));
+
+  // Approximate reading time for a piece, in minutes (about 220 words a minute)
+  eleventyConfig.addFilter("readingTime", (html) => {
+    const words = String(html || "").replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
+    return Math.max(1, Math.round(words / 220));
+  });
+
+  // Find a person (from collections.people) by their file name, e.g. "julian-cortes"
+  eleventyConfig.addFilter("personBySlug", (people, slug) =>
+    (people || []).find((p) => p.page.fileSlug === slug)
+  );
 
   // Working papers tagged with a research theme ("power", "labour", "supply-chains")
   eleventyConfig.addFilter("withTheme", (papers, theme) =>

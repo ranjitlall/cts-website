@@ -1,0 +1,54 @@
+---
+layout: layouts/base.njk
+---
+{#- One CTS Insights piece. Front matter: title, standfirst, author (a people file name,
+    e.g. "julian-cortes"), date, optional series. -#}
+{%- set person = collections.people | personBySlug(author) %}
+<section class="hero hero--compact hero--motif insight-hero">
+  <div class="hero__bg" aria-hidden="true">{% include "partials/hero-motif.svg" %}</div>
+  <div class="wrap">
+    <a class="hero__kicker insight-hero__kicker" href="{{ "/insights/" | url }}">CTS Insights{% if series %} &middot; {{ series }}{% endif %}</a>
+    <h1 class="insight-hero__title">{{ title }}</h1>
+    {% if standfirst %}<p class="hero__lede insight-hero__standfirst">{{ standfirst }}</p>{% endif %}
+    <div class="insight-meta">
+      {% if person and person.data.photo %}<img class="insight-meta__photo" src="{{ person.data.photo | url }}" alt="" width="400" height="400">{% endif %}
+      <div>
+        <p class="insight-meta__name">{% if person %}<a href="{{ "/people/" | url }}#{{ author }}">{{ person.data.name }}</a>{% else %}{{ authorName }}{% endif %}</p>
+        <p class="insight-meta__details">{% if person %}{{ person.data.position }} &middot; {% endif %}<time datetime="{{ date | isoDate }}">{{ date | longDate }}</time> &middot; {{ content | readingTime }} min read</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<article class="section insight">
+  <div class="wrap">
+   <div class="insight__col">
+    <div class="insight__body post-body">
+      {{ content | safe }}
+    </div>
+
+    {% if person %}
+    <aside class="insight-author" aria-label="About the author">
+      {% if person.data.photo %}<img class="insight-author__photo" src="{{ person.data.photo | url }}" alt="Portrait of {{ person.data.name }}" width="400" height="400" loading="lazy">{% endif %}
+      <div>
+        <p class="insight-author__label">About the author</p>
+        <p class="insight-author__bio">{{ authorBio | safe if authorBio else (person.data.name + ", " + person.data.affiliation) }}</p>
+      </div>
+    </aside>
+    {% endif %}
+
+    <p class="insight__more"><a href="{{ "/insights/" | url }}">&larr; All CTS Insights</a></p>
+   </div>
+  </div>
+</article>
+
+{#- Datawrapper charts report their own height; resize the frame to fit. -#}
+<script>
+window.addEventListener('message', function (e) {
+  var h = e.data && e.data['datawrapper-height'];
+  if (!h) return;
+  document.querySelectorAll('.embed iframe').forEach(function (f) {
+    for (var id in h) { if (f.src.indexOf(id) !== -1 && f.contentWindow === e.source) f.style.height = h[id] + 'px'; }
+  });
+});
+</script>
