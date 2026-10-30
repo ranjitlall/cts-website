@@ -8,6 +8,10 @@ export default function (eleventyConfig) {
   // ships it with the build. A missing file here is not an error.
   eleventyConfig.addPassthroughCopy("src/CNAME");
 
+  // A stamp that changes with every build. Added to the stylesheet link so
+  // browsers fetch the new styles after each deploy instead of a cached copy.
+  eleventyConfig.addGlobalData("buildVersion", Date.now().toString(36));
+
   // --- Collections -----------------------------------------------------
   // Each of these reads the Markdown files in src/content/<folder>/.
   // The CMS writes to exactly these folders, so anything a collaborator
