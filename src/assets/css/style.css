@@ -1105,6 +1105,34 @@ strong { font-weight: 600; color: var(--navy); }
 .wp-teaser__title a { color: inherit; text-decoration: none; }
 .wp-teaser__title a:hover { color: var(--violet); }
 
+/* CTS Insights: a slimmer companion panel below the working paper panel. */
+.insights-teaser {
+  display: grid;
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--verdigris);
+  border-radius: 4px;
+  padding: clamp(1.4rem, 2.5vw, 1.9rem) clamp(1.75rem, 3vw, 2.5rem);
+  margin-top: 1.25rem;
+}
+@media (min-width: 860px) { .insights-teaser { grid-template-columns: 1fr 1.15fr; align-items: center; } }
+.insights-teaser .eyebrow { color: var(--verdigris); }
+.insights-teaser h3 { font-size: clamp(1.1rem, 1rem + 0.5vw, 1.3rem); margin-bottom: 0.5rem; }
+.insights-teaser p { color: var(--slate); font-size: 0.93rem; margin-bottom: 0; }
+.insights-teaser__latest { border-left: 1px solid var(--rule); padding-left: clamp(1.25rem, 2.5vw, 1.75rem); }
+@media (max-width: 859px) { .insights-teaser__latest { border-left: 0; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 1.1rem; } }
+.insights-teaser__label {
+  font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--verdigris); display: block; margin-bottom: 0.5rem;
+}
+.insights-teaser .insights-teaser__title { font-family: var(--display); font-size: 1.08rem; font-weight: 600; color: var(--navy); line-height: 1.3; margin-bottom: 0.3rem; }
+.insights-teaser__title a { color: inherit; text-decoration: none; }
+.insights-teaser__title a:hover { color: var(--verdigris); }
+.insights-teaser .insights-teaser__author { font-size: 0.85rem; }
+.insights-teaser .insights-teaser__more { margin-top: 0.75rem; font-size: 0.85rem; font-weight: 500; }
+.insights-teaser__more a { text-decoration: none; }
+
 /* Working papers listed at the foot of each research theme card. */
 /* The card becomes a column so the papers block sits at the foot of every
    card, level across the row however long each card's text runs. */

@@ -188,6 +188,28 @@ permalink: /index.html
       </div>
     </div>
 
+    {#- CTS Insights: a slimmer companion to the working paper panel, showing the newest piece. -#}
+    {%- set latestInsight = collections.insights | first %}
+    {%- if latestInsight %}
+    {%- set insightAuthor = collections.people | personBySlug(latestInsight.data.author) %}
+    <div class="reveal insights-teaser">
+      <div>
+        <span class="eyebrow">CTS Insights</span>
+        <h3>Short reads on the evidence</h3>
+        <p>
+          Brief, evidence-based pieces by our researchers on how AI and other
+          emerging technologies are reshaping economies and societies.
+        </p>
+      </div>
+      <div class="insights-teaser__latest">
+        <span class="insights-teaser__label">Latest &middot; {{ latestInsight.data.date | longDate }}</span>
+        <p class="insights-teaser__title"><a href="{{ latestInsight.url | url }}">{{ latestInsight.data.title }}</a></p>
+        <p class="insights-teaser__author">{{ insightAuthor.data.name if insightAuthor else latestInsight.data.authorName }}</p>
+        <p class="insights-teaser__more"><a href="{{ "/insights/" | url }}">All CTS Insights &rarr;</a></p>
+      </div>
+    </div>
+    {%- endif %}
+
     <div class="reveal" style="margin-top: clamp(2.5rem, 5vw, 3.5rem);">
       <span class="eyebrow">Other themes of interest</span>
       <div class="tags">
