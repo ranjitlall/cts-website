@@ -1,5 +1,19 @@
 [
   {
+    "type": "Working paper",
+    "title": "If AI shrinks wages, how will governments pay for the state?",
+    "authors": [
+      "Jacob Edenhofer",
+      "Ben Ansell"
+    ],
+    "outlet": "CTS Working Paper 2026-05",
+    "date": "2026-11-02",
+    "dateLabel": "2 November 2026",
+    "summary": "Rich democracies fund themselves mainly by taxing labour. If AI shrinks the share of income going to workers, governments will need new sources of revenue, but the rents AI generates come from intangible assets that are hard to value and therefore hard to tax. In <em>The Crisis of the Tax State Revisited</em>, Edenhofer and Ansell argue that taxing them requires \u201cdigital fiscal capacity\u201d: the legal and administrative means to identify and value AI returns. Without it, blunt capital taxes fall mainly on conventional, non-AI firms; with it, the burden can shift to AI firms. Their model shows that conventional businesses become pivotal in the political fight over building this capacity, and that the speed of the AI transition and the political power of AI firms determine whether, and when, governments invest in it.",
+    "url": "/assets/papers/CTS-WP-2026-05.pdf",
+    "linkLabel": "Read the working paper"
+  },
+  {
     "type": "Insight",
     "title": "Where is AI research happening in the Global South?",
     "authors": [
