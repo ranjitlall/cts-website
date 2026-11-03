@@ -33,7 +33,7 @@ With so many definitions, I settled on defining metascience:
 
 > As the scientific approach to understanding and assessing how knowledge is generated and applied, its impact, and the structure of the actors involved, from individual researchers to (inter)national science systems.
 
-The Global South — a concept coined by the "Global North" that will not die, even though it explains little, as pointed out by historian Stephen Kotkin<sup class="fn"><a href="#fn-7" id="fnref-7">7</a></sup> — is multilaterally acknowledged as a set of developing countries in continents such as Africa, Latin America and the Caribbean, Asia (excluding Israel, Japan and South Korea) and Oceania.
+The Global South — a concept coined by the "Global North" that will not die, even though it explains little, as pointed out by historian Stephen Kotkin<sup class="fn"><a href="#fn-7" id="fnref-7">7</a></sup> — is multilaterally acknowledged as a set of developing countries in continents such as Africa, Latin America and the Caribbean, Asia (excluding Israel, Japan and South Korea) and Oceania (excluding Australia and New Zealand).
 
 In this piece, I'm interested in understanding more about AI in the Global South by using open access sources from the metascience infrastructure, with a focus on its *endogenous research capabilities* (a less politically charged term than *research sovereignty*).
 
