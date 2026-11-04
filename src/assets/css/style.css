@@ -1987,3 +1987,42 @@ strong { font-weight: 600; color: var(--navy); }
 
 /* Research themes: a second list (CTS Insights) under the working papers */
 .theme__papers-label--next { margin-top: 1.25rem; }
+
+/* CTS Insights: comparison table (e.g. two countries side by side) */
+.compare { margin: 2.75rem 0; padding: 1.5rem 1.6rem 1.1rem; border: 1px solid var(--rule); border-radius: 4px; }
+.compare__title {
+  font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--verdigris); margin: 0 0 0.9rem !important;
+}
+.compare table { width: 100%; border-collapse: collapse; font-size: 0.88rem; line-height: 1.5; }
+.compare thead th {
+  text-align: left; font-family: var(--display); font-weight: 600; font-size: 1rem; color: var(--navy);
+  padding: 0 0.9rem 0.6rem; border-bottom: 2px solid var(--gold);
+}
+.compare thead th:first-child { padding-left: 0; }
+.compare tbody th {
+  text-align: left; vertical-align: top; width: 9.5rem; padding: 0.75rem 0.9rem 0.75rem 0;
+  font-weight: 600; color: var(--navy); font-size: 0.84rem;
+}
+.compare td { vertical-align: top; padding: 0.75rem 0.9rem; color: var(--ink); }
+.compare tbody tr { border-bottom: 1px solid var(--rule); }
+.compare tbody tr:last-child { border-bottom: 0; }
+.compare tr.compare__group { border-top: 2px solid var(--mist-deep); }
+.compare__dim {
+  display: block; font-family: var(--mono); font-size: 0.66rem; font-weight: 500; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--gold-deep); margin-bottom: 0.15rem;
+}
+.compare figcaption { margin-top: 0.9rem; font-size: 0.78rem; color: var(--slate); }
+@media (max-width: 640px) {
+  .compare { padding: 1.25rem 1.1rem 1rem; }
+  .compare thead { display: none; }
+  .compare table, .compare tbody, .compare tr, .compare th, .compare td { display: block; width: auto; }
+  .compare tbody tr { padding: 0.8rem 0; }
+  .compare tr.compare__group { border-top: 0; }
+  .compare tbody th { width: auto; padding: 0 0 0.35rem; font-size: 0.9rem; }
+  .compare td { padding: 0.2rem 0 0.2rem 0; }
+  .compare td::before {
+    content: attr(data-label); display: block; font-family: var(--mono); font-size: 0.66rem;
+    letter-spacing: 0.08em; text-transform: uppercase; color: var(--slate); margin-top: 0.35rem;
+  }
+}

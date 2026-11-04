@@ -90,6 +90,48 @@ Assessments of the longer-term consequences differ. Aaron Bartnick<sup class="fn
 
 For technological autonomy, the question is whether domestic institutions can maintain computing services during disruptions. Doing so requires the ability to restore data and transfer workloads when a particular site is unavailable. Backup facilities and distributed infrastructure may improve resilience, although reliance on facilities abroad would introduce additional dependence on foreign providers and jurisdictions.
 
+<figure class="compare">
+  <p class="compare__title">The UAE and Saudi Arabia at a glance</p>
+  <table>
+    <thead>
+      <tr><th scope="col"><span class="visually-hidden">Dimension</span></th><th scope="col">United Arab Emirates</th><th scope="col">Saudi Arabia</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Flagship project</th>
+        <td data-label="UAE">Stargate UAE: a 1-gigawatt cluster within a planned 5-gigawatt campus in Abu Dhabi</td>
+        <td data-label="Saudi Arabia">HUMAIN, launched by the Public Investment Fund in May 2025; aims for 1 gigawatt by 2030</td>
+      </tr>
+      <tr>
+        <th scope="row">Main partners</th>
+        <td data-label="UAE">Microsoft, OpenAI, Oracle, NVIDIA, Cisco, SoftBank</td>
+        <td data-label="Saudi Arabia">AMD, Cisco, NVIDIA</td>
+      </tr>
+      <tr>
+        <th scope="row">Domestic capabilities</th>
+        <td data-label="UAE">Core42 sovereign cloud; Falcon open-source models (Technology Innovation Institute)</td>
+        <td data-label="Saudi Arabia">HUMAIN Chat, built on the ALLaM 34B Arabic-language model</td>
+      </tr>
+      <tr class="compare__group">
+        <th scope="row"><span class="compare__dim">Access</span> US chip approvals</th>
+        <td data-label="UAE">Up to 35,000 GB300-equivalent processors for G42 (Nov 2025). July 2026 rule eases controls, but G42’s license-free access expires April 6, 2027</td>
+        <td data-label="Saudi Arabia">Up to 35,000 GB300-equivalent processors for HUMAIN (Nov 2025). Not covered by the July 2026 rule</td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="compare__dim">Control</span> Who runs the facilities</th>
+        <td data-label="UAE">G42 builds Stargate UAE; OpenAI and Oracle operate it. G42 committed to Microsoft Azure</td>
+        <td data-label="Saudi Arabia">Of 84 megawatts planned with NVIDIA, 50 are dedicated to an unnamed American customer</td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="compare__dim">Continuity</span> Exposure to the Iran war</th>
+        <td data-label="UAE">Iranian strikes hit two AWS facilities, and one AWS availability zone could not be restored. Iran’s Revolutionary Guard threatened the Stargate UAE campus</td>
+        <td data-label="Saudi Arabia">Houthi attack on Riyadh’s airport killed 13; the Future Investment Initiative conference was postponed</td>
+      </tr>
+    </tbody>
+  </table>
+  <figcaption>Compiled from the sources cited in this piece.</figcaption>
+</figure>
+
 ## Implications for technological autonomy
 The Gulf experience suggests that computing investments should be assessed by the capabilities available to domestic institutions. The three capabilities examined in this piece provide a basis for this assessment, and each points to a priority for Gulf governments.
 
