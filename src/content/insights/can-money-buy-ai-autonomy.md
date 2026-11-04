@@ -4,6 +4,7 @@ standfirst: "Saudi Arabia and the UAE can pay for AI infrastructure on a scale f
 author: ahmet-ergurum
 authorBio: "Ahmet Ergurum is a PhD candidate in Political Science at the University of Wisconsin-Milwaukee and a Doctoral Affiliate of the Centre for Technology and Society. His research examines international security, coercive statecraft, the geopolitics of technology, and AI governance."
 date: 2026-11-04
+themes: ["supply-chains"]
 description: "Ahmet Ergurum examines whether Gulf investment in AI infrastructure has bought technological autonomy, given US export controls and the Iran war."
 ---
 

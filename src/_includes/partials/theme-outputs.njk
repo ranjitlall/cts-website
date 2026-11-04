@@ -1,0 +1,25 @@
+{#- Working papers and CTS Insights tagged with `theme`, listed at the foot of a research theme on the homepage.
+    Tag a paper with "themes" in papers.json, or an Insight with `themes:` in its front matter. -#}
+{%- set themePapers = papers | withTheme(theme) %}
+{%- set themeInsights = collections.insights | withTheme(theme) %}
+{%- if themePapers.length or themeInsights.length %}
+<div class="theme__papers">
+  {%- if themePapers.length %}
+  <span class="theme__papers-label">From the Working Paper Series</span>
+  <ul>
+    {%- for p in themePapers %}
+    <li><a href="{{ "/working-papers/" | url }}#{{ p.number | slugify }}">{{ p.title }}</a><span>{{ p.authors | join(" · ") }} &middot; <span class="nowrap">{{ p.number }}</span></span></li>
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+  {%- if themeInsights.length %}
+  <span class="theme__papers-label{% if themePapers.length %} theme__papers-label--next{% endif %}">From CTS Insights</span>
+  <ul>
+    {%- for i in themeInsights %}
+    {%- set ia = collections.people | personBySlug(i.data.author) %}
+    <li><a href="{{ i.url | url }}">{{ i.data.title }}</a><span>{{ ia.data.name if ia else i.data.authorName }} &middot; <span class="nowrap">{{ i.data.date | longDate }}</span></span></li>
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+</div>
+{%- endif %}

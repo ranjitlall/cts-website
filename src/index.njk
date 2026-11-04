@@ -97,17 +97,8 @@ permalink: /index.html
           <li>Does unequal access to frontier AI — between citizens, and between rich and developing economies — become unequal influence over public decisions?</li>
           <li>Or can institutional design — oversight, transparency, and cooperation across borders — keep influence widely shared?</li>
         </ul>
-        {%- set themePapers = papers | withTheme("power") %}
-        {%- if themePapers.length %}
-        <div class="theme__papers">
-          <span class="theme__papers-label">From the Working Paper Series</span>
-          <ul>
-            {%- for p in themePapers %}
-            <li><a href="{{ "/working-papers/" | url }}#{{ p.number | slugify }}">{{ p.title }}</a><span>{{ p.authors | join(" · ") }} &middot; <span class="nowrap">{{ p.number }}</span></span></li>
-            {%- endfor %}
-          </ul>
-        </div>
-        {%- endif %}
+        {%- set theme = "power" %}
+        {%- include "partials/theme-outputs.njk" %}
       </article>
 
       <article class="theme reveal">
@@ -124,17 +115,8 @@ permalink: /index.html
           <li>Where do the productivity gains accrue: to firms, to capital, or to workers themselves?</li>
           <li>Who bears the costs of adjustment, and do they fall hardest on women and younger workers?</li>
         </ul>
-        {%- set themePapers = papers | withTheme("labour") %}
-        {%- if themePapers.length %}
-        <div class="theme__papers">
-          <span class="theme__papers-label">From the Working Paper Series</span>
-          <ul>
-            {%- for p in themePapers %}
-            <li><a href="{{ "/working-papers/" | url }}#{{ p.number | slugify }}">{{ p.title }}</a><span>{{ p.authors | join(" · ") }} &middot; <span class="nowrap">{{ p.number }}</span></span></li>
-            {%- endfor %}
-          </ul>
-        </div>
-        {%- endif %}
+        {%- set theme = "labour" %}
+        {%- include "partials/theme-outputs.njk" %}
       </article>
 
       <article class="theme reveal">
@@ -152,17 +134,8 @@ permalink: /index.html
           <li>How do reshoring, nearshoring, and ally-shoring differ in cost, resilience, and political durability?</li>
           <li>Where does emerging robotics make domestic production viable, and where do technological limits still bind?</li>
         </ul>
-        {%- set themePapers = papers | withTheme("supply-chains") %}
-        {%- if themePapers.length %}
-        <div class="theme__papers">
-          <span class="theme__papers-label">From the Working Paper Series</span>
-          <ul>
-            {%- for p in themePapers %}
-            <li><a href="{{ "/working-papers/" | url }}#{{ p.number | slugify }}">{{ p.title }}</a><span>{{ p.authors | join(" · ") }} &middot; <span class="nowrap">{{ p.number }}</span></span></li>
-            {%- endfor %}
-          </ul>
-        </div>
-        {%- endif %}
+        {%- set theme = "supply-chains" %}
+        {%- include "partials/theme-outputs.njk" %}
       </article>
     </div>
 

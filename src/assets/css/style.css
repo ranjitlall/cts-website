@@ -1984,3 +1984,6 @@ strong { font-weight: 600; color: var(--navy); }
   font-size: clamp(1.2rem, 1.05rem + 0.7vw, 1.5rem); line-height: 1.4; color: var(--navy);
 }
 .insight__body .insight-quote blockquote p { margin: 0; max-width: none; }
+
+/* Research themes: a second list (CTS Insights) under the working papers */
+.theme__papers-label--next { margin-top: 1.25rem; }

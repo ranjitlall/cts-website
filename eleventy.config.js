@@ -76,9 +76,10 @@ export default function (eleventyConfig) {
     (people || []).find((p) => p.page.fileSlug === slug)
   );
 
-  // Working papers tagged with a research theme ("power", "labour", "supply-chains")
-  eleventyConfig.addFilter("withTheme", (papers, theme) =>
-    (papers || []).filter((p) => (p.themes || []).includes(theme))
+  // Working papers or Insights tagged with a research theme ("power", "labour", "supply-chains").
+  // Papers carry `themes` directly; Insights carry it in their front matter.
+  eleventyConfig.addFilter("withTheme", (items, theme) =>
+    (items || []).filter((p) => (p.themes || (p.data && p.data.themes) || []).includes(theme))
   );
 
   // Select collection items whose front-matter field equals a value
