@@ -1,5 +1,21 @@
 [
   {
+    "type": "Insight",
+    "title": "Can the Gulf buy its way to AI autonomy?",
+    "authors": [
+      "Ahmet Ergurum"
+    ],
+    "outlet": "CTS Insights",
+    "date": "2026-11-04",
+    "dateLabel": "4 November 2026",
+    "summary": "Saudi Arabia and the UAE are spending heavily on AI data centres and partnerships with American technology firms. But does money buy technological autonomy? In a new CTS Insights piece, Ahmet Ergurum argues that it buys access rather than control. Because the most advanced chips are American, US export rules still decide what Gulf facilities can build and upgrade; foreign partners often run the facilities; and Iranian strikes on regional data centres have shown that hosting infrastructure at home does not guarantee it keeps running. Real autonomy, he concludes, depends less on spending than on domestic expertise and flexibility over suppliers.",
+    "url": "/insights/can-money-buy-ai-autonomy/",
+    "linkLabel": "Read the piece",
+    "authorNotes": {
+      "Ahmet Ergurum": "CTS Doctoral Affiliate"
+    }
+  },
+  {
     "type": "Working paper",
     "title": "If AI shrinks wages, how will governments pay for the state?",
     "authors": [

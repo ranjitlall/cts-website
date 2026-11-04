@@ -1928,3 +1928,59 @@ strong { font-weight: 600; color: var(--navy); }
 @media (max-width: 620px) {
   .insight-author { flex-direction: column; }
 }
+
+/* --- CTS Insights: key points, timeline and pull quotes ----------------------
+   Optional elements for longer pieces, written as plain HTML in the Markdown. */
+
+.keypoints {
+  margin: 0 0 2.5rem;
+  padding: 1.4rem 1.6rem 1.2rem;
+  background: var(--mist);
+  border-left: 3px solid var(--verdigris);
+  border-radius: 4px;
+}
+.keypoints__title,
+.timeline__title {
+  font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--verdigris); margin: 0 0 0.75rem !important;
+}
+.keypoints ul { list-style: none; padding: 0; margin: 0; }
+.keypoints li { position: relative; padding-left: 1.1rem; margin-bottom: 0.6rem; font-size: 0.97rem; line-height: 1.55; }
+.keypoints li:last-child { margin-bottom: 0; }
+.keypoints li::before {
+  content: ""; position: absolute; left: 0; top: 0.62em;
+  width: 6px; height: 6px; border-radius: 50%; background: var(--verdigris);
+}
+.keypoints strong { color: var(--navy); }
+
+.timeline { margin: 2.75rem 0; padding: 1.5rem 1.6rem 1.25rem; border: 1px solid var(--rule); border-radius: 4px; }
+.timeline ol { list-style: none; margin: 0; padding: 0; position: relative; }
+.timeline ol::before {                       /* the vertical line */
+  content: ""; position: absolute; left: 5px; top: 0.7rem; bottom: 0.9rem; width: 2px; background: #c9d4df;
+}
+.timeline li {
+  position: relative; display: grid; grid-template-columns: 5.5rem 1fr; gap: 0.25rem 1rem;
+  padding-left: 1.6rem; margin: 0 0 0.85rem; font-size: 0.92rem; line-height: 1.5;
+}
+.timeline li:last-child { margin-bottom: 0; }
+.timeline li::before {                       /* the dot */
+  content: ""; position: absolute; left: 0; top: 0.42em;
+  width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 3px solid var(--gold); z-index: 1;
+}
+.timeline__date { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--navy); padding-top: 0.12em; white-space: nowrap; }
+.timeline__text { color: var(--ink); }
+.timeline__future::before { border-width: 2px !important; border-color: var(--slate) !important; }
+.timeline__future .timeline__date, .timeline__future .timeline__text { color: var(--slate); font-style: italic; }
+@media (max-width: 560px) {
+  .timeline { padding: 1.25rem 1.1rem 1rem; }
+  .timeline li { grid-template-columns: 1fr; gap: 0.1rem; }
+}
+
+.insight-quote { margin: 2.75rem 0; }
+.insight__body .insight-quote blockquote {
+  margin: 0; padding: 1.1rem 0 1.1rem 0; border: 0;
+  border-top: 2px solid var(--gold); border-bottom: 1px solid var(--rule);
+  font-family: var(--display); font-style: italic; font-weight: 500;
+  font-size: clamp(1.2rem, 1.05rem + 0.7vw, 1.5rem); line-height: 1.4; color: var(--navy);
+}
+.insight__body .insight-quote blockquote p { margin: 0; max-width: none; }
