@@ -161,10 +161,8 @@ permalink: /index.html
       </div>
     </div>
 
-    {#- CTS Insights: a slimmer companion to the working paper panel, showing the newest piece. -#}
-    {%- set latestInsight = collections.insights | first %}
-    {%- if latestInsight %}
-    {%- set insightAuthor = collections.people | personBySlug(latestInsight.data.author) %}
+    {#- CTS Insights: a slimmer companion to the working paper panel, showing the two newest pieces. -#}
+    {%- if collections.insights.length %}
     <div class="reveal insights-teaser">
       <div>
         <span class="eyebrow">CTS Insights</span>
@@ -175,9 +173,14 @@ permalink: /index.html
         </p>
       </div>
       <div class="insights-teaser__latest">
-        <span class="insights-teaser__label">Latest &middot; {{ latestInsight.data.date | longDate }}</span>
-        <p class="insights-teaser__title"><a href="{{ latestInsight.url | url }}">{{ latestInsight.data.title }}</a></p>
-        <p class="insights-teaser__author">{{ insightAuthor.data.name if insightAuthor else latestInsight.data.authorName }}</p>
+        {%- for ins in collections.insights | limit(2) %}
+        {%- set insightAuthor = collections.people | personBySlug(ins.data.author) %}
+        <div class="insights-teaser__item">
+          <span class="insights-teaser__label">{{ ins.data.date | longDate }}</span>
+          <p class="insights-teaser__title"><a href="{{ ins.url | url }}">{{ ins.data.title }}</a></p>
+          <p class="insights-teaser__author">{{ insightAuthor.data.name if insightAuthor else ins.data.authorName }}</p>
+        </div>
+        {%- endfor %}
         <p class="insights-teaser__more"><a href="{{ "/insights/" | url }}">All CTS Insights &rarr;</a></p>
       </div>
     </div>

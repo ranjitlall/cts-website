@@ -2026,3 +2026,8 @@ strong { font-weight: 600; color: var(--navy); }
     letter-spacing: 0.08em; text-transform: uppercase; color: var(--slate); margin-top: 0.35rem;
   }
 }
+
+/* CTS Insights panel: more than one piece */
+.insights-teaser__item + .insights-teaser__item {
+  margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(0,33,71,0.1);
+}
