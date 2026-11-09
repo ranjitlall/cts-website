@@ -1,6 +1,22 @@
 [
   {
     "type": "Insight",
+    "title": "How superintelligence could reshape global power",
+    "authors": [
+      "S. Yash Kalash"
+    ],
+    "outlet": "CTS Insights",
+    "date": "2026-11-09",
+    "dateLabel": "9 November 2026",
+    "summary": "If artificial superintelligence is achieved, the states closest to it may deploy their systems before they can trust them. In a new CTS Insights piece, Senior Fellow Yash Kalash argues that a coalition of middle powers, such as the Global Technology Stability Board proposed by Mark Carney, cannot govern that race on its own. Any credible regime has to start with Washington and Beijing, with India, Russia, chip-supply states and the frontier AI firms brought in where their decisions matter. He sets out what a first US\u2013China deal could include, from keeping humans in the loop on nuclear decisions to a joint crisis drill.",
+    "url": "/insights/superintelligence-global-power/",
+    "linkLabel": "Read the piece",
+    "authorNotes": {
+      "S. Yash Kalash": "CTS Senior Fellow"
+    }
+  },
+  {
+    "type": "Insight",
     "title": "Can the Gulf buy its way to AI autonomy?",
     "authors": [
       "Ahmet Ergurum"
