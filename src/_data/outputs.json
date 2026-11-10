@@ -1,5 +1,21 @@
 [
   {
+    "type": "Talk",
+    "title": "Can Europe keep pace in the age of AI?",
+    "authors": [
+      "Jean-Paul Carvalho"
+    ],
+    "outlet": "ESPAS Annual Conference, European Parliament",
+    "date": "2026-11-10",
+    "dateLabel": "10 November 2026",
+    "summary": "Speaking on the \u201cTechnology and Economy\u201d panel at the annual conference of the European Strategy and Policy Analysis System (ESPAS) in the European Parliament, Professor Carvalho takes up three questions for Europe\u2019s future: how it can achieve a feasible level of technological sovereignty, what political-economic risks it faces without a frontier AI model of its own, and how it can preserve its human capital in the face of AI-driven cognitive decline. His remarks build on his CTS working paper, <a href=\"/working-papers/#wp-2026-04\"><em>The Political-Economic Risks of AI</em></a>.",
+    "url": "https://www.youtube.com/watch?v=VK5V8UqaiXE",
+    "linkLabel": "Watch the talk",
+    "authorNotes": {
+      "Jean-Paul Carvalho": "CTS Faculty Affiliate"
+    }
+  },
+  {
     "type": "Insight",
     "title": "How superintelligence could reshape global power",
     "authors": [
