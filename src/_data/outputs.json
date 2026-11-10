@@ -1,5 +1,21 @@
 [
   {
+    "type": "Paper",
+    "title": "Why do people work, and what would AI take away?",
+    "authors": [
+      "Julian Jacobs"
+    ],
+    "outlet": "arXiv",
+    "date": "2026-11-10",
+    "dateLabel": "10 November 2026",
+    "summary": "In <em>What is Work For? Labor, Politics, and Meaning in the Age of AI</em>, Jacobs draws on an original survey of 8,234 working-age adults in the UK, US, Denmark and India, fielded with More in Common. Most people work for more than a pay cheque: 74% are motivated mainly by purpose, community or status, at every income level and in blue- and white-collar jobs alike. One in five would not quit even if offered 120% of their salary as a guaranteed income, and what people would do instead depends on why they work, from volunteering and caregiving to starting a business. White-collar workers now feel most exposed to AI, with 40% expecting it to replace their job within ten years. If AI does displace workers, Jacobs concludes, guaranteed income may be necessary but not sufficient to replace the purpose, community and dignity that work provides.",
+    "url": "https://arxiv.org/abs/2610.39375",
+    "linkLabel": "Read the paper",
+    "authorNotes": {
+      "Julian Jacobs": "CTS Doctoral Affiliate"
+    }
+  },
+  {
     "type": "Talk",
     "title": "Can Europe keep pace in the age of AI?",
     "authors": [
