@@ -1,5 +1,21 @@
 [
   {
+    "type": "Commentary",
+    "title": "Why AI policy must tell intelligence from consciousness",
+    "authors": [
+      "S. Yash Kalash"
+    ],
+    "outlet": "Centre for International Governance Innovation",
+    "date": "2026-11-12",
+    "dateLabel": "12 November 2026",
+    "summary": "An AI system can reason, plan and describe its own states without experiencing anything, Kalash argues, and the bigger near-term risk is not that AI becomes conscious but that people, companies and institutions start treating persuasive AI personas as if it were. Drawing on the Samkhya and Advaita Vedanta traditions, he warns that firms have a commercial incentive to blur the line, and that \u201cthe language of machine agency can easily become a mechanism of human evasion.\u201d He proposes five principles: no claims of AI consciousness without independently assessed evidence; a legal presumption of human and institutional accountability; separate regulation of anthropomorphic design; independent consciousness research; and graduated moral precaution that does not dilute corporate responsibility.",
+    "url": "https://www.cigionline.org/articles/intelligence-is-not-consciousness-and-policy-must-know-the-difference/",
+    "linkLabel": "Read the article",
+    "authorNotes": {
+      "S. Yash Kalash": "CTS Senior Fellow"
+    }
+  },
+  {
     "type": "Paper",
     "title": "Why do people work, and what would AI take away?",
     "authors": [
