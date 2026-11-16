@@ -1,5 +1,25 @@
 [
   {
+    "number": "WP 2026-06",
+    "title": "Interactionality: Interacting Systems and Their Accountability Gaps",
+    "authors": [
+      "Amna Usman Chaudhry"
+    ],
+    "date": "2026-11-17",
+    "dateLabel": "November 2026",
+    "abstract": "Governance of artificial intelligence is organised around individual systems, yet consequential outcomes increasingly arise from the way systems combine. I use interactionality to describe the condition in which interactions among technological, algorithmic and institutional systems materially shape outcomes that cannot be adequately understood by examining any system independently. Distinguishing interaction effects from governance-boundary crossings, I identify the Cross-System and Interaction-Level Accountability Gaps, alongside the Swarm Accountability Gap from earlier work. A structured comparison of eleven documented cases, drawn from judgments, regulatory orders, official inquiries and supervisory reports, shows that material interaction effects and governance-boundary crossings can be distinguished in practice. The cases also suggest that clearly assigned responsibility at governance boundaries can support accountability and remedy, while interaction-dependent outcomes may remain difficult to reconstruct or attribute. The findings are exploratory and make no causal or general claims. I review current financial supervision, discuss the economic incidence of unresolved accountability, including for financial inclusion, the Global South and women, and set out governance principles and a research agenda.",
+    "keywords": [
+      "interactionality",
+      "AI governance",
+      "accountability",
+      "Autonomous Finance"
+    ],
+    "themes": [
+      "power"
+    ],
+    "pdf": "/assets/papers/CTS-WP-2026-06.pdf"
+  },
+  {
     "number": "WP 2026-05",
     "title": "The Crisis of the Tax State Revisited: Artificial Intelligence, Business Conflict, and Digital Fiscal Capacity",
     "authors": [

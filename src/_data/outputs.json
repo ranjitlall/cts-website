@@ -1,5 +1,21 @@
 [
   {
+    "type": "Working paper",
+    "title": "When AI systems interact, who is accountable?",
+    "authors": [
+      "Amna Usman Chaudhry"
+    ],
+    "outlet": "CTS Working Paper 2026-06",
+    "date": "2026-11-17",
+    "dateLabel": "17 November 2026",
+    "summary": "AI governance is built around individual systems: each model is validated, each firm supervised, each product assessed on its own. Yet harmful outcomes increasingly arise from the way systems combine. In <em>Interactionality</em>, Usman Chaudhry names this condition and shows how it creates accountability gaps, where every component can pass its own checks while the outcome they produce together is harmful, and responsibility for it is hard to establish. Drawing on eleven documented cases, from bank transfers used to send abusive messages to the 2010 \u201cflash crash\u201d, she finds that interaction effects and boundary crossings can be told apart in practice, and that clearly assigned responsibility at the boundaries between systems can support accountability and remedy. The paper sets out principles for allocating responsibility, with particular attention to finance, financial inclusion, the Global South and women.",
+    "url": "/assets/papers/CTS-WP-2026-06.pdf",
+    "linkLabel": "Read the working paper",
+    "authorNotes": {
+      "Amna Usman Chaudhry": "CTS Research Fellow"
+    }
+  },
+  {
     "type": "Commentary",
     "title": "Why AI policy must tell intelligence from consciousness",
     "authors": [
