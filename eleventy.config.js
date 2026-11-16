@@ -76,6 +76,20 @@ export default function (eleventyConfig) {
     (people || []).find((p) => p.page.fileSlug === slug)
   );
 
+  // The most recent outputs for a research theme panel: working papers and Insights
+  // pooled, sorted newest first, capped at `max`, then split back into the two lists.
+  eleventyConfig.addFilter("latestThemeOutputs", (papers, insights, theme, max = 3) => {
+    const tagged = (x) => (x.themes || (x.data && x.data.themes) || []).includes(theme);
+    const pool = [
+      ...(papers || []).filter(tagged).map((x) => ({ kind: "paper", item: x, date: new Date(x.date) })),
+      ...(insights || []).filter(tagged).map((x) => ({ kind: "insight", item: x, date: new Date(x.date) })),
+    ].sort((a, b) => b.date - a.date).slice(0, max);
+    return {
+      papers: pool.filter((x) => x.kind === "paper").map((x) => x.item),
+      insights: pool.filter((x) => x.kind === "insight").map((x) => x.item),
+    };
+  });
+
   // Working papers or Insights tagged with a research theme ("power", "labour", "supply-chains").
   // Papers carry `themes` directly; Insights carry it in their front matter.
   eleventyConfig.addFilter("withTheme", (items, theme) =>

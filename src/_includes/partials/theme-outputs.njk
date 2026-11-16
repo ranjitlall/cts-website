@@ -1,7 +1,9 @@
-{#- Working papers and CTS Insights tagged with `theme`, listed at the foot of a research theme on the homepage.
+{#- Working papers and CTS Insights tagged with `theme`, listed at the foot of a research theme on the homepage
+    (the three most recent, papers and Insights together).
     Tag a paper with "themes" in papers.json, or an Insight with `themes:` in its front matter. -#}
-{%- set themePapers = papers | withTheme(theme) %}
-{%- set themeInsights = collections.insights | withTheme(theme) %}
+{%- set themeLatest = papers | latestThemeOutputs(collections.insights, theme, 3) %}
+{%- set themePapers = themeLatest.papers %}
+{%- set themeInsights = themeLatest.insights %}
 {%- if themePapers.length or themeInsights.length %}
 <div class="theme__papers">
   {%- if themePapers.length %}
