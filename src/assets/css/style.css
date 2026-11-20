@@ -2065,3 +2065,16 @@ strong { font-weight: 600; color: var(--navy); }
 }
 .measures__head { display: block; font-family: var(--display); font-weight: 600; font-size: 0.98rem; color: var(--navy); margin-bottom: 0.3rem; }
 @media (max-width: 560px) { .measures { padding: 1.25rem 1.1rem; } }
+
+/* Four research themes: a 2 × 2 grid on wide screens, one column on phones.
+   The two-up cards are wide enough for the normal type sizes again. */
+.themes-4 { grid-template-columns: 1fr; }
+@media (min-width: 860px) {
+  .themes-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .themes-4 .theme h3 { font-size: 1.22rem; }
+  .themes-4 .theme p { font-size: 0.96rem; }
+  .themes-4 .theme__questions li { font-size: 0.92rem; }
+}
+.theme:nth-of-type(4) { border-top-color: var(--cyan); }
+.theme:nth-of-type(4) .theme__q { color: #1d6f93; }
+.theme:nth-of-type(4) .theme__questions li::before { background: var(--cyan); }

@@ -4,6 +4,7 @@ standfirst: "The global conversation about AI is dominated by the Global North. 
 author: julian-cortes
 authorBio: "Julián D. Cortés is Principal Professor and Research Director at the School of Economics and Business, Universidad del Rosario, Colombia, and a Faculty Affiliate of the Centre for Technology and Society."
 date: 2026-10-30
+themes: ["methods"]
 series: "AI research in the Global South, part 1"
 description: "Julián D. Cortés maps a decade of locally produced AI research across the Global South, finding vast differences between and within regions."
 ---
