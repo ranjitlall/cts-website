@@ -1,5 +1,21 @@
 [
   {
+    "type": "Insight",
+    "title": "Can AI predict how a building will perform before it is built?",
+    "authors": [
+      "Conor Black"
+    ],
+    "outlet": "CTS Insights",
+    "date": "2026-11-23",
+    "dateLabel": "23 November 2026",
+    "summary": "Architecture has adopted AI quickly, but mostly to produce images and text: in the RIBA\u2019s 2026 survey, only 7% of AI-using practices applied it to building performance simulation. In an agenda-setting CTS Insights piece, Research Fellow Conor Black argues that world models, a resurgent class of AI that learns how environments change, could transform the core of design: testing how light, movement, sound and use will respond to a design before it is built. He sets out what an architectural world model would need, why it could either accelerate or undermine how architects acquire design judgement, and why the data, accountability and ownership questions it raises demand the profession\u2019s attention now, before such models arrive as finished products.",
+    "url": "/insights/predicting-buildings-world-models/",
+    "linkLabel": "Read the piece",
+    "authorNotes": {
+      "Conor Black": "CTS Research Fellow"
+    }
+  },
+  {
     "type": "Book",
     "title": "How are middle powers navigating the age of AI?",
     "authors": [
