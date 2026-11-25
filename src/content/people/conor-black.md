@@ -1,7 +1,7 @@
 ---
 group: fellows
 name: Conor Black
-position: "Research Fellow in Emerging Technologies"
+position: "Research Fellow"
 affiliation: "Computational Design Specialist, HOK"
 link: https://www.conorcarsonblack.com
 photo: "/assets/img/people/conor-black.jpg"

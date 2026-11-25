@@ -2,7 +2,7 @@
 title: "Predicting Buildings That Don’t Exist Yet: World Models and Architecture"
 standfirst: "Architecture has embraced AI for illustrating and writing. World models, a resurgent class of AI, point to something more valuable: testing what a design will do before it is built."
 author: conor-black
-authorBio: "Conor Black is a Computational Design Specialist at HOK and a Research Fellow in Emerging Technologies at the Centre for Technology and Society, University of Oxford. He works across architecture and computational design, and his research covers architectural geometry, machine learning for human experience, and AI in architectural education."
+authorBio: "Conor Black is a Computational Design Specialist at HOK and a Research Fellow at the Centre for Technology and Society, University of Oxford. He works across architecture and computational design, and his research covers architectural geometry, machine learning for human experience, and AI in architectural education."
 date: 2026-11-23
 themes: ["methods"]
 series: "AI and the built environment"
