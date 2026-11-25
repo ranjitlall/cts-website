@@ -1,6 +1,22 @@
 [
   {
     "type": "Insight",
+    "title": "When does online abuse become economic harm?",
+    "authors": [
+      "Amna Usman Chaudhry"
+    ],
+    "outlet": "CTS Insights",
+    "date": "2026-11-25",
+    "dateLabel": "25 November 2026",
+    "summary": "Published on the International Day for the Elimination of Violence against Women, this CTS Insights piece by Research Fellow Amna Usman Chaudhry shows how technology-facilitated abuse travels from platforms into payments and banking, from abusive messages hidden in bank transfers to lost jobs, income and careers. Drawing on evidence from Australia, Brazil, Malawi and Europe, she argues that these economic costs stay hidden because each institution sees only a fragment of the harm, and that accountability must follow it across systems, through risk assessments, connected reporting, remedies that reach economic loss and better measurement.",
+    "url": "/insights/digital-violence-financial-cost/",
+    "linkLabel": "Read the piece",
+    "authorNotes": {
+      "Amna Usman Chaudhry": "CTS Research Fellow"
+    }
+  },
+  {
+    "type": "Insight",
     "title": "Can AI predict how a building will perform before it is built?",
     "authors": [
       "Conor Black"

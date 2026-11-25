@@ -2168,3 +2168,48 @@ strong { font-weight: 600; color: var(--navy); }
 .insight__body .ss-credit { margin: 0.35rem 0 0; }
 .bim-el:focus:not(:focus-visible), .bar-row:focus:not(:focus-visible) { outline: none; }
 .closing-q { font-style: italic; }
+
+/* CTS Insights: boxed list of questions, and an author-date reference list (first used in Helena Zhang's piece) */
+.evalbox { margin: 2.75rem 0; padding: 1.5rem 1.6rem 1.3rem; background: var(--mist); border-left: 3px solid var(--gold); border-radius: 4px; }
+.evalbox__title {
+  font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--gold-deep); margin: 0 0 1rem !important;
+}
+.evalbox ol { list-style: none; counter-reset: evalq; margin: 0 !important; padding: 0 !important; }
+.evalbox li { counter-increment: evalq; position: relative; padding-left: 2.1rem; margin: 0 0 1.1rem; }
+.evalbox li:last-child { margin-bottom: 0; }
+.evalbox li::before {
+  content: counter(evalq); position: absolute; left: 0; top: 0.05rem; width: 1.45rem; height: 1.45rem; border-radius: 50%;
+  background: var(--navy); color: #fff; font-family: var(--mono); font-size: 0.72rem; line-height: 1.45rem; text-align: center;
+}
+.evalbox__q { font-family: var(--display); font-weight: 600; font-size: 1.02rem; color: var(--navy); margin: 0 0 0.3rem !important; line-height: 1.35; }
+.evalbox li p { font-size: 0.92rem; line-height: 1.6; margin: 0; }
+.footnotes--refs ul { list-style: none; padding-left: 0; margin: 0; }
+.footnotes--refs li { padding-left: 1.4rem; text-indent: -1.4rem; }
+@media (max-width: 560px) { .evalbox { padding: 1.25rem 1.1rem 1.1rem; } .evalbox li { padding-left: 1.9rem; } }
+
+/* CTS Insights: a flow across systems, and a strip of headline figures (first used in Amna Usman Chaudhry's piece on digital violence) */
+.flow, .stats { margin: 2.75rem 0; padding: 1.5rem 1.6rem 1.2rem; border: 1px solid var(--rule); border-radius: 4px; }
+.flow__title, .stats__title {
+  font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--verdigris); margin: 0 0 0.9rem !important;
+}
+.flow__steps { list-style: none; margin: 0 !important; padding: 0 !important; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.4rem; counter-reset: none; }
+.flow__steps li { position: relative; margin: 0; padding: 0.85rem 0.9rem 0.95rem; background: var(--mist); border-top: 3px solid var(--rule); border-radius: 0 0 4px 4px; }
+.flow__steps li::before { content: none; }
+.flow__steps li + li::after { content: "→"; position: absolute; left: -1.15rem; top: 50%; transform: translateY(-50%); color: var(--slate); font-size: 1rem; }
+.flow__steps li.is-open { border-top-color: var(--coral); background: #fdf0ed; }
+.flow__sys { display: block; font-family: var(--display); font-weight: 600; font-size: 0.95rem; color: var(--navy); margin-bottom: 0.25rem; }
+.flow__act { display: block; font-size: 0.84rem; line-height: 1.45; color: var(--ink); }
+.flow__person { margin: 1rem 0 0 !important; padding: 0.85rem 1rem; border: 2px solid var(--gold); border-radius: 4px; font-size: 0.9rem; line-height: 1.5; }
+.flow__person .flow__sys { display: inline; margin-right: 0.35rem; }
+.flow figcaption, .stats figcaption { margin-top: 0.9rem; font-size: 0.78rem; color: var(--slate); }
+.stats ul { list-style: none; margin: 0 !important; padding: 0 !important; display: grid; grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr)); gap: 0.9rem; }
+.stats li { margin: 0; padding: 0.2rem 0 0 0.85rem; border-left: 3px solid var(--gold); font-size: 0.84rem; line-height: 1.45; color: var(--ink); }
+.stats li::before { content: none; }
+.stats__num { display: block; font-family: var(--display); font-weight: 600; font-size: 1.7rem; line-height: 1.1; color: var(--navy); margin-bottom: 0.3rem; }
+@media (max-width: 640px) {
+  .flow, .stats { padding: 1.25rem 1.1rem 1rem; }
+  .flow__steps { grid-template-columns: 1fr; gap: 1.3rem; }
+  .flow__steps li + li::after { content: "↓"; left: 50%; top: -1.2rem; transform: translateX(-50%); }
+}
